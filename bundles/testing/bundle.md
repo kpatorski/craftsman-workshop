@@ -3,8 +3,7 @@ id: testing
 title: How a test suite is shaped
 description: >
   The rules a test suite must satisfy regardless of methodology: how it reads, how test data is built, how deep to
-  test a behaviour, and when a fake is a stub versus an in-memory implementation. Required by `tdd` and
-  `legacy-code` — both drive a suite that must already look like this.
+  test a behaviour, and when a fake is a stub versus an in-memory implementation.
 ---
 
 ## Schema
@@ -13,9 +12,8 @@ No fields of its own — see [core.md](../../../craftsman/plugins/craftsman/core
 
 ## Bundle
 
-This is the suite-shape contract, independent of *how* the suite gets written. `tdd-loop` and `characterize-loop`
-both produce a suite; both need it to read the same way, so this bundle is a dependency of both rather than owned
-by either — the `tdd` and `legacy-code` bundles both `requires: [testing]` (batches 6 and 7 of this migration).
+This is the suite-shape contract, independent of *how* the suite gets written: what a suite must already look like,
+never the moments that produce it.
 
 `test-style` composes `test-naming`, `test-as-story`, `suite-layout`; `test-data` composes `dummy-values`,
 `test-fixtures` — both nest inside this bundle exactly as they did at the top level, `composes` is unaffected by
@@ -43,5 +41,5 @@ Empty — nothing has been switched off yet.
 
 ## Protocols
 
-None. This bundle is criteria only — the moments that apply them (`decide-test-level`, `scaffold-suite`...) live in
-`tdd` and `legacy-code`, which both require this bundle.
+None. This bundle is criteria only — no moment, no start or end, nothing to check off. A bundle whose protocols
+drive a suite that must satisfy these rules names this bundle in its own `requires`.

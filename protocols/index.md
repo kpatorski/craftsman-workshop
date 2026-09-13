@@ -105,31 +105,26 @@ Empty — nothing has been switched off yet. Populated by `craftsman disable pro
 ### Domain design
 
 Migrated from `spec-style.md` / the `analyst` skill (batch 4 of 5). `domain-design` is the entry point (see plan
-decision 7, formerly `/analyst`). `scenario-analyze-input` was retired, not migrated — it was the only scenario, so
-there was nothing to dispatch between; its content folded directly into `domain-design`.
+decision 7, formerly `/analyst`). The spec-writing tail of this loop now lives in the
+[spec-writing](../bundles/spec-writing/bundle.md) bundle (decision 10); event storming stays here until batch 4.
 
 **Enabled**
 
-| No | Id                                                             | Title                                                       | Note        |
-|----|----------------------------------------------------------------|-------------------------------------------------------------|-------------|
-| 39 | [domain-design](domain-design/protocol.md)                     | Turn a requirements input into reviewed, written task specs | entry point |
-| 40 | [requirements-analysis](requirements-analysis/protocol.md)     | Requirements analysis loop                                  |             |
-| 41 | [event-storming](event-storming/protocol.md)                   | Event storming from a requirements input                    |             |
-| 42 | [attach-event-rules](attach-event-rules/protocol.md)           | Attach the rules that must hold for each event              | repeats     |
-| 43 | [detail-spec](detail-spec/protocol.md)                         | Draft each accepted candidate spec                          | repeats     |
-| 44 | [ingest](ingest/protocol.md)                                   | Read the input                                              |             |
-| 45 | [restate-understanding](restate-understanding/protocol.md)     | Restate what needs to be done                               |             |
-| 46 | [collect-events](collect-events/protocol.md)                   | Collect every domain event, Big Picture style               |             |
-| 47 | [attach-rules-batch](attach-rules-batch/protocol.md)           | Attach rules for a batch of events                          |             |
-| 48 | [identify-aggregates](identify-aggregates/protocol.md)         | Group events under the aggregate that owns them             |             |
-| 49 | [derive-commands](derive-commands/protocol.md)                 | Derive the command that triggers each event                 | notify      |
-| 50 | [derive-views](derive-views/protocol.md)                       | Derive the read models the use cases will need              | notify      |
-| 51 | [derive-use-cases](derive-use-cases/protocol.md)               | Derive use cases from command + aggregate + event           | notify      |
-| 52 | [draw-bounded-contexts](draw-bounded-contexts/protocol.md)     | Draw bounded contexts and how they communicate              |             |
-| 53 | [propose-candidate-specs](propose-candidate-specs/protocol.md) | Turn use cases into a candidate spec list                   |             |
-| 54 | [draft-spec](draft-spec/protocol.md)                           | Draft one spec                                              |             |
-| 55 | [collect-open-questions](collect-open-questions/protocol.md)   | Surface every unresolved open question                      |             |
-| 56 | [finalize](finalize/protocol.md)                               | Write the specs and close the run                           |             |
+| No | Id                                                         | Title                                                       | Note        |
+|----|------------------------------------------------------------|-------------------------------------------------------------|-------------|
+| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs | entry point |
+| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |             |
+| 41 | [event-storming](event-storming/protocol.md)               | Event storming from a requirements input                    |             |
+| 42 | [attach-event-rules](attach-event-rules/protocol.md)       | Attach the rules that must hold for each event              | repeats     |
+| 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |             |
+| 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |             |
+| 46 | [collect-events](collect-events/protocol.md)               | Collect every domain event, Big Picture style               |             |
+| 47 | [attach-rules-batch](attach-rules-batch/protocol.md)       | Attach rules for a batch of events                          |             |
+| 48 | [identify-aggregates](identify-aggregates/protocol.md)     | Group events under the aggregate that owns them             |             |
+| 49 | [derive-commands](derive-commands/protocol.md)             | Derive the command that triggers each event                 | notify      |
+| 50 | [derive-views](derive-views/protocol.md)                   | Derive the read models the use cases will need              | notify      |
+| 51 | [derive-use-cases](derive-use-cases/protocol.md)           | Derive use cases from command + aggregate + event           | notify      |
+| 52 | [draw-bounded-contexts](draw-bounded-contexts/protocol.md) | Draw bounded contexts and how they communicate              |             |
 
 **Disabled**
 

@@ -115,24 +115,16 @@ separate toggles too, folded into no directive yet — say the word if either sh
 
 ### Specs
 
-Migrated from `spec-style.md` (batch 4 of 5) — rules for writing a spec file that `implement` can act on without
-re-asking what "done" means.
+Everything that used to be here moved to the [spec-writing](../bundles/spec-writing/bundle.md) bundle
+(decision 10) — writing spec files is one theme, and none of these directives are used outside it.
 
 **Enabled**
 
-| No | Id                                                                    | Title                                                              |
-|----|-----------------------------------------------------------------------|--------------------------------------------------------------------|
-| 35 | [classify-task-shape](classify-task-shape/directive.md)               | Classify the shape of a candidate task                             |
-| 36 | [one-task-granularity](one-task-granularity/directive.md)             | One spec is one thing a single implement run can finish            |
-| 37 | [spec-rules](spec-rules/directive.md)                                 | How a spec is written                                              |
-| 38 | [acceptance-criteria-format](acceptance-criteria-format/directive.md) | Acceptance criteria are the Given/When/Then rules, carried through |
-| 39 | [definition-of-done](definition-of-done/directive.md)                 | What "done" means unless a spec says otherwise                     |
-| 40 | [no-invented-requirements](no-invented-requirements/directive.md)     | Unknowns go to Open questions, never guessed                       |
-| 41 | [dependencies-explicit](dependencies-explicit/directive.md)           | State ordering dependencies between specs                          |
+Empty — every entry that was here moved to the `spec-writing` bundle.
 
 **Disabled**
 
-Empty — every migrated Specs directive is stack-agnostic, none needed `enabled-by-default: false`.
+Empty.
 
 All migration batches complete (see the `craftsman` plan, "Kolejność realizacji", step 3). 41 directives total —
 digest-style.md contributed none, it has no directive-kind entries.

@@ -15,11 +15,7 @@ No fields of its own — see [core.md](../../../craftsman/plugins/craftsman/core
 This is pure extraction, not modelling: no aggregates, no domain design, just reading a section and stating the rules
 it already contains as Given/When/Then. `domain-design`'s own entry point can take this bundle's output
 (`business-rules.md`) as an authoritative input, but does not require it — it is equally happy starting from raw
-text.
-
-Reached from the fundament entry point [analyse](../../protocols/analyse/protocol.md), which locates and reads the
-input itself (the fundament step [read-input](../../protocols/read-input/protocol.md)) before handing off into this
-bundle.
+text. Input is already-read, section-split text; output is a written `business-rules.md`.
 
 ## Protocols
 

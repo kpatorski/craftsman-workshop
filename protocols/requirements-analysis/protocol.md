@@ -17,7 +17,7 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. [restate-understanding](../restate-understanding/protocol.md)
 2. [event-storming](../event-storming/protocol.md)
-3. [propose-candidate-specs](../propose-candidate-specs/protocol.md)
-4. [detail-spec](../detail-spec/protocol.md)
-5. [collect-open-questions](../collect-open-questions/protocol.md)
-6. [finalize](../finalize/protocol.md)
+3. [propose-candidate-specs](../../bundles/spec-writing/protocols/propose-candidate-specs/protocol.md)
+4. [detail-spec](../../bundles/spec-writing/protocols/detail-spec/protocol.md)
+5. [collect-open-questions](../../bundles/spec-writing/protocols/collect-open-questions/protocol.md)
+6. [finalize](../../bundles/spec-writing/protocols/finalize/protocol.md)
