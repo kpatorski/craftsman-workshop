@@ -36,7 +36,8 @@ Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question t
   whether a sequence runs once or several times — only whether it *is* a sequence.
 
 The canonical borderline pair, from `core.md`: [`decide-test-level`](decide-test-level/protocol.md) (a *protocol* — it
-is a moment with a checkpoint, part of a sequence) and [`how-high-to-test`](../directives/how-high-to-test/directive.md)
+is a moment with a checkpoint, part of a sequence) and
+[`how-high-to-test`](../bundles/testing/directives/how-high-to-test/directive.md)
 (a *directive* — the criteria that moment's decision must satisfy, true or not true independent of any sequence). Two
 angles on the same concern, correctly split.
 

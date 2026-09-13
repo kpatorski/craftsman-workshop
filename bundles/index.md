@@ -24,22 +24,23 @@ files under `bundles/<id>/` — `directives/` and `protocols/` inside it, mirror
 
 What belongs in a bundle, versus staying at the top level:
 
-- [`gwt-digest`](gwt-digest/bundle.md) — extracting rules section by section is one pipeline: nobody 
-  wants`extract-rules-batch` without `digest-requirements` to drive it. **Bundle.**
+- [`gwt-digest`](gwt-digest/bundle.md) — extracting rules section by section is one pipeline: nobody
+  wants `extract-rules-batch` without `digest-requirements` to drive it. **Bundle.**
 - [`locate-target`](../protocols/locate-target/protocol.md) — used by three different scenarios across two
   bundles (`tdd`, `module-bootstrap`). A part used by many themes is shared, not owned by one. **Fundament.**
 - [`prefer-lombok`](../directives/prefer-lombok/directive.md) — a single, standalone preference. Bundling one entry alone would just rename it. **Fundament.**
 
 ## Bundles
 
-Each bundle has two tables of its own — **Enabled** / **Disabled** — for its members, in its own `index.md`. This
-top table only tracks the bundles themselves.
+Each bundle has two tables of its own — **Enabled** / **Disabled** — for its members, inside its own `bundle.md`.
+This top table only tracks the bundles themselves.
 
 **Enabled**
 
 | No | Id         | Title                                               | Requires | Path                                         |
 |----|------------|-----------------------------------------------------|----------|----------------------------------------------|
 | 1  | gwt-digest | Extract Given/When/Then rules from raw requirements | —        | [gwt-digest/bundle.md](gwt-digest/bundle.md) |
+| 2  | testing    | How a test suite is shaped                          | —        | [testing/bundle.md](testing/bundle.md)       |
 
 **Disabled**
 

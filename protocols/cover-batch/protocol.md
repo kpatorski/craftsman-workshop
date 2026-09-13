@@ -14,5 +14,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-Consult [stub-vs-in-memory](../../directives/stub-vs-in-memory/directive.md) whenever a batch needs a fake for a
+Consult [stub-vs-in-memory](../../bundles/testing/directives/stub-vs-in-memory/directive.md) whenever a batch needs a fake for a
 collaborator.

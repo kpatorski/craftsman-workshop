@@ -11,7 +11,7 @@ enabled-by-default: true
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `composes` is the field a
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md). `composes` is the field a
 composing directive uses to name the directives it assembles, one level or many.
 
 ## Directive

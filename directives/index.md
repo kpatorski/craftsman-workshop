@@ -24,7 +24,7 @@ files under `directives/<id>/` — flat, not nested by category. Category groupi
 
 Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question test to real entries from this workshop:
 
-- [`test-naming`](test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any
+- [`test-naming`](../bundles/testing/directives/test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any
   moment; no checkpoint, no start or end; removing it changes how a test method's name looks, not what happens next.
   **Directive.**
 - [`production-code`](production-code/directive.md) — composes 14 rules, but composing is not the deciding factor (see
@@ -35,9 +35,10 @@ Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question t
   now?" is a yes/no question about the present. **Directive.**
 
 The canonical borderline pair, from `core.md`: [`decide-test-level`](../protocols/decide-test-level/protocol.md) (a
-*protocol* — it is a moment with a checkpoint, part of a sequence) and [
-`how-high-to-test`](how-high-to-test/directive.md) (a *directive* — the criteria that moment's decision must satisfy,
-true or not true independent of any sequence). Two angles on the same concern, correctly split.
+*protocol* — it is a moment with a checkpoint, part of a sequence) and
+[`how-high-to-test`](../bundles/testing/directives/how-high-to-test/directive.md) (a *directive* — the criteria that
+moment's decision must satisfy, true or not true independent of any sequence). Two angles on the same concern,
+correctly split.
 
 ## Directives
 
@@ -50,21 +51,13 @@ entries — same restraint as `core.md`'s golden rule, applied to structure inst
 
 ### Testing
 
-Migrated from `coding-style.md`'s test-writing sections. The agnostic ones (how a suite reads, how test data is
-built) are enabled by default; the stack-specific ones (naming a concrete library) are disabled by default — see
-`core.md`, "Fields specific to `directive`".
+Migrated from `coding-style.md`'s test-writing sections. Everything that used to be Enabled here now lives in the
+[testing](../bundles/testing/bundle.md) bundle (decision 10) — this section keeps only the stack-specific `prefer-*`
+toggles, standalone preferences that don't belong to any one theme.
 
 **Enabled**
 
-| No | Id                                          | Title                                            |
-|----|---------------------------------------------|--------------------------------------------------|
-| 1  | [test-style](test-style/directive.md)       | How a test suite should read                     |
-| 2  | [test-naming](test-naming/directive.md)     | Name a test by the state it describes            |
-| 3  | [test-as-story](test-as-story/directive.md) | Structure every test as given / when / then      |
-| 4  | [suite-layout](suite-layout/directive.md)   | Tests on top, helpers at the bottom              |
-| 5  | [test-data](test-data/directive.md)         | Values and object building in tests              |
-| 6  | [dummy-values](dummy-values/directive.md)   | Use placeholder values, not domain-specific ones |
-| 7  | [test-fixtures](test-fixtures/directive.md) | Extract a Fixture when object building repeats   |
+Empty — every entry that was here moved to the `testing` bundle.
 
 **Disabled**
 
@@ -75,8 +68,6 @@ built) are enabled by default; the stack-specific ones (naming a concrete librar
 | 10 | [prefer-mockito-under-junit](prefer-mockito-under-junit/directive.md)         | Mockito in JUnit suites                                   |
 | 11 | [prefer-assertj-under-junit](prefer-assertj-under-junit/directive.md)         | AssertJ in JUnit suites                                   |
 | 12 | [prefer-testcontainers-postgres](prefer-testcontainers-postgres/directive.md) | TestContainers with real PostgreSQL for persistence tests |
-| 13 | [how-high-to-test](how-high-to-test/directive.md)                             | How high to test a behaviour                              |
-| 14 | [stub-vs-in-memory](stub-vs-in-memory/directive.md)                           | Stub or in-memory implementation for a collaborator       |
 
 ### Production code
 

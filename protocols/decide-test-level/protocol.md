@@ -20,5 +20,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-Consult [how-high-to-test](../../directives/how-high-to-test/directive.md) for the level and the reasoning; state both
+Consult [how-high-to-test](../../bundles/testing/directives/how-high-to-test/directive.md) for the level and the reasoning; state both
 at the checkpoint above.
