@@ -17,5 +17,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 ## Protocol
 
 1. For each event, name the command whose handling produces it — the intent that, when carried out, results in that event.
-
-Used by: [event-storming](../event-storming/protocol.md).

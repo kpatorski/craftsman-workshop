@@ -25,5 +25,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
    [prefer-lombok](../../directives/prefer-lombok/directive.md), [prefer-spock](../../directives/prefer-spock/directive.md))
    to break the tie.
 4. Resolve every entry to its latest stable version before presenting the checkpoint above.
-
-Used by: [bootstrap-module](../bootstrap-module/protocol.md).

@@ -20,5 +20,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. From the confirmed use cases — and any new-module bootstrap needs surfaced by bounded contexts — propose one candidate spec title per task.
 2. Small, tightly-coupled use cases on the same aggregate may be proposed as one merged candidate — never merged silently, always flagged as a proposal.
-
-Used by: [requirements-analysis](../requirements-analysis/protocol.md).

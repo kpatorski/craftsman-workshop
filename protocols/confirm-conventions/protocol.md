@@ -2,7 +2,7 @@
 id: confirm-conventions
 title: Confirm structural conventions before creating classes
 description: >
-  Before scaffolding a class, settle the structural decisions it forces: which layer it belongs to, its package, whether it is a port or an adapter, its name per the layer's convention. Decisions already determined by architecture-profile or the existing project structure are applied silently; only genuinely open ones are raised.
+  Confirms structural conventions before creating a class.
 input: the target located by locate-target
 output: settled placement and naming decisions for the classes about to be created
 uses: [architecture-profile, feature-structure, naming]
@@ -20,5 +20,6 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-Used
-by: [scenario-new-use-case](../scenario-new-use-case/protocol.md), [scenario-change-existing-code](../scenario-change-existing-code/protocol.md).
+1. Settle the structural decisions a new class forces: which layer it belongs to, its package, whether it is a port or an adapter, its name per the layer's convention.
+2. Decisions already determined by architecture-profile or the existing project structure are applied silently.
+3. Only genuinely open ones are raised, at the checkpoint below.

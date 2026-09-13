@@ -18,5 +18,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. For each command/aggregate/event triple that represents one coherent operation, name it as a candidate use case.
 2. This is the seed for a spec — default 1:1, mergeable at review in propose-candidate-specs.
-
-Used by: [event-storming](../event-storming/protocol.md).

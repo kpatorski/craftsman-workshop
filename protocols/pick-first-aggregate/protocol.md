@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. From the domain-design output, choose the aggregate to build first.
 2. Hand its first case to [scenario-new-use-case](../scenario-new-use-case/protocol.md).
-
-Used by: [bootstrap-module](../bootstrap-module/protocol.md).

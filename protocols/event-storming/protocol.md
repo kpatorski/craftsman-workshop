@@ -22,5 +22,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 5. [derive-views](../derive-views/protocol.md)
 6. [derive-use-cases](../derive-use-cases/protocol.md)
 7. [draw-bounded-contexts](../draw-bounded-contexts/protocol.md)
-
-Used by: [requirements-analysis](../requirements-analysis/protocol.md).

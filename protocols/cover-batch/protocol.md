@@ -16,5 +16,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 Consult [stub-vs-in-memory](../../directives/stub-vs-in-memory/directive.md) whenever a batch needs a fake for a
 collaborator.
-
-Used by: [cover-cycle](../cover-cycle/protocol.md).

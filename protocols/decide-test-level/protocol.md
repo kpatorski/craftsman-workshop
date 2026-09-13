@@ -22,7 +22,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 Consult [how-high-to-test](../../directives/how-high-to-test/directive.md) for the level and the reasoning; state both
 at the checkpoint above.
-
-Used
-by: [tdd-loop](../tdd-loop/protocol.md), [characterize-loop](../characterize-loop/protocol.md). [scenario-utils](../scenario-utils/protocol.md)
-overrides it — forced to `util-unit-suite`, no checkpoint.

@@ -15,5 +15,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Add only the dependencies choose-stack agreed, each at its latest stable version.
 2. No speculative dependencies — nothing not explicitly agreed.
-
-Used by: [bootstrap-module](../bootstrap-module/protocol.md).

@@ -21,5 +21,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Show what was produced — new files, the test list, the whole diff.
 2. Confirm the procedure's `done-when` holds.
 3. Ask what happens next.
-
-Used by: [tdd-loop](../tdd-loop/protocol.md).

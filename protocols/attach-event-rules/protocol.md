@@ -19,5 +19,3 @@ see `repeat-until`.
 Repeat until the condition holds, processed in small batches, each stopping for confirmation:
 
 1. [attach-rules-batch](../attach-rules-batch/protocol.md)
-
-Used by: [event-storming](../event-storming/protocol.md).

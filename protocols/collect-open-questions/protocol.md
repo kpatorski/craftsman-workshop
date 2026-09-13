@@ -20,5 +20,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Gather Open questions across all drafted specs.
 2. Present them together, rather than leaving them hidden inside individual files.
 3. An answer folds back into the relevant spec and clears its `status: blocked` if that was the only blocker.
-
-Used by: [requirements-analysis](../requirements-analysis/protocol.md).

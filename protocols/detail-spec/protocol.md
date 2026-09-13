@@ -19,5 +19,3 @@ see `repeat-until`.
 Repeat until the condition holds:
 
 1. [draft-spec](../draft-spec/protocol.md)
-
-Used by: [requirements-analysis](../requirements-analysis/protocol.md).

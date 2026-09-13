@@ -17,5 +17,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. [extract-rules](../extract-rules/protocol.md)
 2. [finalize-digest](../finalize-digest/protocol.md)
-
-Used by: [analyse](../analyse/protocol.md).

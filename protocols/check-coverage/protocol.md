@@ -21,5 +21,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Before changing behaviour, check whether the code path is under test.
 2. If it is not covered, stop at the checkpoint below.
-
-Used by: [scenario-change-existing-code](../scenario-change-existing-code/protocol.md).

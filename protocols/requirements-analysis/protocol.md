@@ -21,5 +21,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 4. [detail-spec](../detail-spec/protocol.md)
 5. [collect-open-questions](../collect-open-questions/protocol.md)
 6. [finalize](../finalize/protocol.md)
-
-Used by: [domain-design](../domain-design/protocol.md).

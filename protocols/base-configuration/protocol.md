@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 3. If [prefer-liquibase-owned-schema](../../directives/prefer-liquibase-owned-schema/directive.md) is enabled, add a schema-migration baseline.
 4. Add a dev profile.
 5. Nothing feature-specific belongs here.
-
-Used by: [bootstrap-module](../bootstrap-module/protocol.md).

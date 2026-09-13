@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Summarise, in the product owner's language, what the input is asking for.
 2. Do this before running any analysis.
-
-Used by: [requirements-analysis](../requirements-analysis/protocol.md).

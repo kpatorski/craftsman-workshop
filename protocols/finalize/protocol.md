@@ -22,5 +22,3 @@ workshop's own closing step will need a different one; see the `craftsman` plan,
 1. Ensure every spec file is saved.
 2. Write or update specs/README.md as an index — id, title, status, shape.
 3. Summarise what was produced and set the session's Next.
-
-Used by: [requirements-analysis](../requirements-analysis/protocol.md).

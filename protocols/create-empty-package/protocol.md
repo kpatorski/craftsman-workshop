@@ -15,5 +15,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Create the empty package for the new use case.
 2. Mirror the structure of a sibling use case, unless this one genuinely needs a different convention.
-
-Used by: [scenario-new-use-case](../scenario-new-use-case/protocol.md).

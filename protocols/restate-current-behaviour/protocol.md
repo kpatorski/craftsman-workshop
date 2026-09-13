@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Summarise the current behaviour in the product owner's language.
 2. Usually internal; becomes a checkpoint only when the behaviour is tangled or ambiguous.
-
-Used by: [scenario-change-existing-code](../scenario-change-existing-code/protocol.md).

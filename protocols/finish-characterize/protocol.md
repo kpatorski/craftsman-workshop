@@ -24,5 +24,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 2. Confirm every observed path is covered.
 3. Surface anything parked — other uncovered code, suspected bugs.
 4. Set the session's Next line.
-
-Used by: [characterize-loop](../characterize-loop/protocol.md).

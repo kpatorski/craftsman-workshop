@@ -15,5 +15,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Load the input: a local `.md` file, a URL (fetched), or inline text given with the invocation.
 2. Identify its sections — headings, or natural paragraph/story breaks. These drive the extraction batches.
-
-Used by: [analyse](../analyse/protocol.md).

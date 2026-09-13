@@ -14,5 +14,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 ## Protocol
 
 `git stash create` then `git stash store` — never a plain `git stash`, which would touch the working tree.
-
-Used by: [tdd-loop](../tdd-loop/protocol.md).

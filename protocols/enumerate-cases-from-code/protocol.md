@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Derive the test cases from the existing implementation — branches, guards, edge values — not from requirements.
 2. Write each as a failing stub.
-
-Used by: [characterize-loop](../characterize-loop/protocol.md).

@@ -21,5 +21,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Check the code does not belong on a domain object or use case instead.
 2. Check it is not already provided by Apache Commons, Vavr, the standard library, or the framework in use — consult [libraries-first](../../directives/libraries-first/directive.md).
 3. Stop at the checkpoint below before proceeding.
-
-Used by: [scenario-utils](../scenario-utils/protocol.md).

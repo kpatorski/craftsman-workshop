@@ -16,5 +16,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Load the input: a local `.md` file, a URL (fetched), or inline text given with the invocation.
 2. Look for a `business-rules.md` — a path given explicitly, or a file sitting next to the input. If found, load it too.
 3. A found `business-rules.md`'s Given/When/Then rules are authoritative input for the rest of the loop — carry them through as-is, do not re-derive them from the raw text.
-
-Used by: [domain-design](../domain-design/protocol.md).

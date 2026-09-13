@@ -19,5 +19,3 @@ see `repeat-until`.
 Repeat until the condition holds:
 
 1. [extract-rules-batch](../extract-rules-batch/protocol.md)
-
-Used by: [digest-requirements](../digest-requirements/protocol.md).

@@ -21,8 +21,6 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 2. One rule per distinct precondition/outcome pair.
 3. Stop and confirm before moving to the next section.
 
-Used by: [extract-rules](../extract-rules/protocol.md).
-
 ## Examples
 
     ~~~rule

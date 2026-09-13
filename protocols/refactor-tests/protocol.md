@@ -22,5 +22,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Simplify methods, extract intent-revealing helpers.
 2. Introduce fixtures where the same complex object is built repeatedly.
 3. Keep the tests green throughout.
-
-Used by: [tdd-loop](../tdd-loop/protocol.md).

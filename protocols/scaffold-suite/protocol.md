@@ -14,5 +14,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 ## Protocol
 
 Create one file per the chosen level's shape. No cases, no assertions yet — that is enumerate-test-cases' job.
-
-Used by: [tdd-loop](../tdd-loop/protocol.md), [characterize-loop](../characterize-loop/protocol.md).

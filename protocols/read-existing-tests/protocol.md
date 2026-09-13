@@ -15,5 +15,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Read the current tests to learn what the code does.
 2. Note the conventions the suite follows — naming, given/when/then style, helpers, fixtures.
-
-Used by: [scenario-change-existing-code](../scenario-change-existing-code/protocol.md).

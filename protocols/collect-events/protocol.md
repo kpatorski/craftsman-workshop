@@ -21,5 +21,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 2. List every domain event: a significant, past-tense, domain-language change in the system.
 3. When rules are present, treat their `then` clauses as strong candidates — but this is still a judgement call, not a mechanical copy: merge duplicates, and don't promote a trivial rule outcome to event status.
 4. Work in rough chronological order, breadth-first — capture everything before judging it.
-
-Used by: [event-storming](../event-storming/protocol.md).

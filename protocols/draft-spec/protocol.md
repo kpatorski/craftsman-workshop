@@ -20,5 +20,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Write Context / Acceptance criteria / Out of scope / Open questions for one candidate.
 2. Apply [spec-rules](../../directives/spec-rules/directive.md) throughout.
-
-Used by: [detail-spec](../detail-spec/protocol.md).

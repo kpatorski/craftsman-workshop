@@ -15,5 +15,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Runs only after finish-characterize is approved.
 2. Commit the characterization tests as a standalone commit — never folded into an unrelated change.
-
-Used by: [characterize-loop](../characterize-loop/protocol.md).

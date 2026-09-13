@@ -22,5 +22,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Apply the [production-code](../../directives/production-code/directive.md) directive.
 2. Re-run the full relevant suite after each change.
 3. Stop and fix immediately on any red.
-
-Used by: [tdd-loop](../tdd-loop/protocol.md).

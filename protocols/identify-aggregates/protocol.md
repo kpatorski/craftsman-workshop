@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Group events, with their rules, under the aggregate responsible for them.
 2. Draw the aggregate boundary.
-
-Used by: [event-storming](../event-storming/protocol.md).

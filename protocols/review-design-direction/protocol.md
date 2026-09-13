@@ -24,5 +24,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Look at what the batch introduced — interfaces, public / package-private API, method and parameter names.
 2. State whether it is heading the right way, and why.
-
-Used by: [cover-cycle](../cover-cycle/protocol.md).

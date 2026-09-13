@@ -19,5 +19,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Group aggregates into bounded contexts.
 2. Settle how each pair of contexts talks — events, or a synchronous call.
-
-Used by: [event-storming](../event-storming/protocol.md).

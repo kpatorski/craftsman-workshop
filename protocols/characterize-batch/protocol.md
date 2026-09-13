@@ -22,5 +22,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. For 2-3 stubs, run the existing code and observe what it actually does.
 2. Write an assertion that captures that — the test asserts current behaviour, not desired behaviour.
 3. If the current behaviour looks wrong, note it; do not fix it here.
-
-Used by: [characterize-cycle](../characterize-cycle/protocol.md).

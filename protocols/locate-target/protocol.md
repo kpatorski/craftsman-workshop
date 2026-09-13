@@ -2,7 +2,7 @@
 id: locate-target
 title: Locate the module / package / class to work in
 description: >
-  Find where the work belongs before touching anything. For a new use case this is the package to create; for a change it is the existing class and its suite.
+  Locates the module, package, or class to work in, before touching anything.
 input: the task description
 output: the target package and, for changes, the existing test file(s)
 checkpoint:
@@ -17,5 +17,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-Used
-by: [scenario-new-use-case](../scenario-new-use-case/protocol.md), [scenario-change-existing-code](../scenario-change-existing-code/protocol.md), [scenario-utils](../scenario-utils/protocol.md).
+1. For a new use case, find the package to create.
+2. For a change, find the existing class and its suite.

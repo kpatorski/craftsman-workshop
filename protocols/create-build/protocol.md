@@ -15,5 +15,3 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 1. Set up the build tool — parent / plugin config, language version.
 2. Apply any baseline tool configuration the stack's enabled preferences call for.
-
-Used by: [bootstrap-module](../bootstrap-module/protocol.md).
