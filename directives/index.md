@@ -103,5 +103,25 @@ from task requirements, and a pre-loaded framework preference would work against
 separate toggles too, folded into no directive yet — say the word if either should get its own
 `prefer-*` directive.
 
+### Specs
+
+Migrated from `spec-style.md` (batch 4 of 5) — rules for writing a spec file that `implement` can act on without re-asking what "done" means.
+
+**Enabled**
+
+| No | Id | Title |
+|----|----|-------|
+| 35 | [classify-task-shape](classify-task-shape/directive.md) | Classify the shape of a candidate task |
+| 36 | [one-task-granularity](one-task-granularity/directive.md) | One spec is one thing a single implement run can finish |
+| 37 | [spec-rules](spec-rules/directive.md) | How a spec is written |
+| 38 | [acceptance-criteria-format](acceptance-criteria-format/directive.md) | Acceptance criteria are the Given/When/Then rules, carried through |
+| 39 | [definition-of-done](definition-of-done/directive.md) | What "done" means unless a spec says otherwise |
+| 40 | [no-invented-requirements](no-invented-requirements/directive.md) | Unknowns go to Open questions, never guessed |
+| 41 | [dependencies-explicit](dependencies-explicit/directive.md) | State ordering dependencies between specs |
+
+**Disabled**
+
+Empty — every migrated Specs directive is stack-agnostic, none needed `enabled-by-default: false`.
+
 Categories not yet migrated are filled in during the remaining migration batches from `coding-style.md` /
 `spec-style.md` / `digest-style.md` (see the `craftsman` plan, "Kolejność realizacji", step 3).
