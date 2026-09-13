@@ -20,6 +20,16 @@ files under `directives/<id>/` — flat, not nested by category. Category groupi
 |----------|-----------------|-------|
 | workshop | `.` (this repo) | local |
 
+## Examples
+
+Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question test to real entries from this workshop:
+
+- [`test-naming`](test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any moment; no checkpoint, no start or end; removing it changes how a test method's name looks, not what happens next. **Directive.**
+- [`production-code`](production-code/directive.md) — composes 14 rules, but composing is not the deciding factor (see core.md — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still no checkpoint. **Directive**, even though it is large.
+- [`architecture-profile`](architecture-profile/directive.md) — started life as a `reference` in the old format (a block of settled facts, not a rule). It still passes the same test: "is the domain free of framework dependencies right now?" is a yes/no question about the present. **Directive.**
+
+The canonical borderline pair, from `core.md`: [`decide-test-level`](../protocols/decide-test-level/protocol.md) (a *protocol* — it is a moment with a checkpoint, part of a sequence) and [`how-high-to-test`](how-high-to-test/directive.md) (a *directive* — the criteria that moment's decision must satisfy, true or not true independent of any sequence). Two angles on the same concern, correctly split.
+
 ## Directives
 
 Grouped by category, one `##` section per topic. Each category has two tables: **Enabled** (what a protocol step

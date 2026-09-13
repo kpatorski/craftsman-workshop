@@ -21,6 +21,16 @@ concern only.
 |----------|-----------------|-------|
 | workshop | `.` (this repo) | local |
 
+## Examples
+
+Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question test to real entries from this workshop:
+
+- [`enumerate-test-cases`](enumerate-test-cases/protocol.md) — "is this done yet?" is the only question that makes sense, not "is this true right now?"; it has a `checkpoint`, a clear start (an empty suite) and end (a full stub list); removing it changes what happens next in `tdd-loop`, not how any one piece of code looks. **Protocol.**
+- [`tdd-loop`](tdd-loop/protocol.md) — composes eight other protocols (`steps`), but composing is not the deciding factor (see core.md — both kinds nest). It is still a sequence with a start, an end (`done-when`), and steps that stop for checkpoints. **Protocol**, even though it is large.
+- [`cover-cycle`](cover-cycle/protocol.md) — repeats its steps until a condition holds (`repeat-until`). The old format had a separate `loop` kind for this; here it is an ordinary protocol, because the three-question test does not care whether a sequence runs once or several times — only whether it *is* a sequence.
+
+The canonical borderline pair, from `core.md`: [`decide-test-level`](decide-test-level/protocol.md) (a *protocol* — it is a moment with a checkpoint, part of a sequence) and [`how-high-to-test`](../directives/how-high-to-test/directive.md) (a *directive* — the criteria that moment's decision must satisfy, true or not true independent of any sequence). Two angles on the same concern, correctly split.
+
 ## Protocols
 
 Grouped by category, one `##` section per topic. Each category has two tables: **Enabled** (callable) and **Disabled**
