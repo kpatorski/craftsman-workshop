@@ -2,7 +2,7 @@
 id: collect-events
 title: Collect every domain event, Big Picture style
 description: >
-  Read the input end to end — the raw text and, where present, the digested Given/When/Then rules together — and list every domain event: a significant, past-tense, domain-language change in the system. When rules are present, their `then` clauses are strong candidates, but this is still a judgement call, not a mechanical copy — merge duplicates, and don't promote a trivial rule outcome to event status. Rough chronological order, breadth-first — capture everything before judging it.
+  Collects every domain event from the input, Big Picture style.
 input: the raw input and any digested rules from ingest
 output: an ordered list of domain events
 checkpoint:
@@ -16,5 +16,10 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Read the input end to end — the raw text and, where present, the digested Given/When/Then rules together.
+2. List every domain event: a significant, past-tense, domain-language change in the system.
+3. When rules are present, treat their `then` clauses as strong candidates — but this is still a judgement call, not a mechanical copy: merge duplicates, and don't promote a trivial rule outcome to event status.
+4. Work in rough chronological order, breadth-first — capture everything before judging it.
 
 Used by: [event-storming](../event-storming/protocol.md).

@@ -2,7 +2,7 @@
 id: finalize
 title: Write the specs and close the run
 description: >
-  Ensure every spec file is saved, write or update specs/README.md as an index (id, title, status, shape), summarise, and set the session's Next.
+  Writes every spec file, updates the index, and closes the run.
 input: all reviewed specs and their resolved open questions
 output: specs/ written to disk, specs/README.md current, a session ready to close or continue
 checkpoint:
@@ -18,5 +18,9 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 workshop's own closing step will need a different one; see the `craftsman` plan, R5.
 
 ## Protocol
+
+1. Ensure every spec file is saved.
+2. Write or update specs/README.md as an index — id, title, status, shape.
+3. Summarise what was produced and set the session's Next.
 
 Used by: [requirements-analysis](../requirements-analysis/protocol.md).

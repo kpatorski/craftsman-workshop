@@ -2,7 +2,7 @@
 id: finalize-digest
 title: Write the rules file
 description: >
-  Write all confirmed rules to business-rules.md, grouped by section, each rule as its own structured block — ready for any downstream reader (a human, `domain-design`, or anything else) to consume. Named `finalize-digest`, not `finalize` — `domain-design`'s own closing step already holds that id; see the `craftsman` plan, R5.
+  Writes the confirmed rules to business-rules.md and closes the run. Named `finalize-digest`, not `finalize` — that id was already taken by `domain-design`'s own closing step; see the `craftsman` plan, R5.
 input: all confirmed rules from extract-rules
 output: business-rules.md, grouped by section
 checkpoint:
@@ -16,5 +16,8 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Write all confirmed rules to business-rules.md, grouped by section.
+2. Each rule as its own structured block, ready for any downstream reader (a human, `domain-design`, or anything else) to consume.
 
 Used by: [digest-requirements](../digest-requirements/protocol.md).

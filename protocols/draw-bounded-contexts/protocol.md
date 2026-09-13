@@ -2,7 +2,7 @@
 id: draw-bounded-contexts
 title: Draw bounded contexts and how they communicate
 description: >
-  Group aggregates into bounded contexts and settle how each pair of contexts talks — events, or a synchronous call.
+  Draws bounded contexts and settles how they communicate.
 input: the aggregates identified by identify-aggregates
 output: bounded contexts, each with its aggregates and communication style (events / sync)
 checkpoint:
@@ -16,5 +16,8 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Group aggregates into bounded contexts.
+2. Settle how each pair of contexts talks — events, or a synchronous call.
 
 Used by: [event-storming](../event-storming/protocol.md).

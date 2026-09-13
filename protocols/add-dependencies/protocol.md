@@ -2,7 +2,7 @@
 id: add-dependencies
 title: Add the agreed dependencies
 description: >
-  Add only what choose-stack agreed, each at its latest stable version. No speculative dependencies.
+  Adds the dependencies choose-stack agreed on, nothing more.
 input: the stack agreed by choose-stack
 output: resolved dependencies, project still compiles
 ---
@@ -12,5 +12,8 @@ output: resolved dependencies, project still compiles
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Add only the dependencies choose-stack agreed, each at its latest stable version.
+2. No speculative dependencies — nothing not explicitly agreed.
 
 Used by: [bootstrap-module](../bootstrap-module/protocol.md).

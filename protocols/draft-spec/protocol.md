@@ -2,7 +2,7 @@
 id: draft-spec
 title: Draft one spec
 description: >
-  Write Context / Acceptance criteria / Out of scope / Open questions for one candidate, applying spec-rules.
+  Drafts one spec from an accepted candidate, applying spec-rules.
 input: one accepted candidate from propose-candidate-specs
 output: a spec file in specs/, not yet final
 uses: [spec-rules]
@@ -17,5 +17,8 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Write Context / Acceptance criteria / Out of scope / Open questions for one candidate.
+2. Apply [spec-rules](../../directives/spec-rules/directive.md) throughout.
 
 Used by: [detail-spec](../detail-spec/protocol.md).

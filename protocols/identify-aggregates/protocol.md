@@ -2,7 +2,7 @@
 id: identify-aggregates
 title: Group events under the aggregate that owns them
 description: >
-  Group events (with their rules) under the aggregate responsible for them, and draw the aggregate boundary.
+  Groups events under the aggregate that owns them.
 input: events and their attached rules
 output: aggregates, each with its owned events and rules
 checkpoint:
@@ -16,5 +16,8 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Group events, with their rules, under the aggregate responsible for them.
+2. Draw the aggregate boundary.
 
 Used by: [event-storming](../event-storming/protocol.md).

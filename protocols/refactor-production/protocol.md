@@ -2,7 +2,7 @@
 id: refactor-production
 title: Refactor the production code
 description: >
-  Only once the suite is in good shape. Apply the production-code directive, re-running the full relevant suite after each change. Stop and fix immediately on any red.
+  Refactors the production code, once the suite is in good shape.
 input: the refactored, green suite from refactor-tests
 output: refactored production code; whole suite green
 uses: [production-code]
@@ -18,5 +18,9 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Apply the [production-code](../../directives/production-code/directive.md) directive.
+2. Re-run the full relevant suite after each change.
+3. Stop and fix immediately on any red.
 
 Used by: [tdd-loop](../tdd-loop/protocol.md).

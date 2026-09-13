@@ -2,7 +2,7 @@
 id: refactor-tests
 title: Refactor the tests first
 description: >
-  Assess the suite before the production code. Simplify methods, extract intent-revealing helpers, introduce fixtures where the same complex object is built repeatedly. Tests stay green throughout.
+  Refactors the tests first, before touching production code.
 input: the green suite snapshotted by snapshot-green
 output: a suite that reads as prose, still green
 uses: [how-high-to-test]
@@ -18,5 +18,9 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Simplify methods, extract intent-revealing helpers.
+2. Introduce fixtures where the same complex object is built repeatedly.
+3. Keep the tests green throughout.
 
 Used by: [tdd-loop](../tdd-loop/protocol.md).

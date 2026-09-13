@@ -2,7 +2,7 @@
 id: collect-open-questions
 title: Surface every unresolved open question
 description: >
-  Gather Open questions across all drafted specs and present them together, rather than leaving them hidden inside individual files. An answer folds back into the relevant spec and clears its `status: blocked` if that was the only blocker.
+  Surfaces every unresolved open question across all drafted specs together.
 input: every spec drafted by detail-spec
 output: every remaining open question resolved, or explicitly left open with the spec marked blocked
 checkpoint:
@@ -16,5 +16,9 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Gather Open questions across all drafted specs.
+2. Present them together, rather than leaving them hidden inside individual files.
+3. An answer folds back into the relevant spec and clears its `status: blocked` if that was the only blocker.
 
 Used by: [requirements-analysis](../requirements-analysis/protocol.md).

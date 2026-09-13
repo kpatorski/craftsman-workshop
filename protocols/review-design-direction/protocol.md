@@ -2,7 +2,7 @@
 id: review-design-direction
 title: Confirm the design direction before the next batch
 description: >
-  Look at what the batch introduced — interfaces, public / package-private API, method and parameter names. State whether it is heading the right way and why.
+  Confirms the design direction before the next coverage batch.
 input: the test and production diffs from the current cover-cycle iteration
 output: a shared decision to continue as-is or adjust the design
 uses: [how-high-to-test]
@@ -21,5 +21,8 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Look at what the batch introduced — interfaces, public / package-private API, method and parameter names.
+2. State whether it is heading the right way, and why.
 
 Used by: [cover-cycle](../cover-cycle/protocol.md).

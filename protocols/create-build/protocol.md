@@ -2,7 +2,7 @@
 id: create-build
 title: Create the build
 description: >
-  Set up the build tool for the agreed stack — parent / plugin config, language version, and any baseline tool configuration the stack's preferences call for.
+  Sets up the build tool for the agreed stack.
 input: the stack agreed by choose-stack
 output: a compiling empty project
 ---
@@ -12,5 +12,8 @@ output: a compiling empty project
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Set up the build tool — parent / plugin config, language version.
+2. Apply any baseline tool configuration the stack's enabled preferences call for.
 
 Used by: [bootstrap-module](../bootstrap-module/protocol.md).

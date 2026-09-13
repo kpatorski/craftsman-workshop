@@ -2,7 +2,7 @@
 id: extract-rules-batch
 title: Extract GWT rules for one section
 description: >
-  For one section/story fragment, extract the business rules it implies as Given/When/Then statements — one rule per distinct precondition/outcome pair. Stop and confirm before the next section.
+  Extracts Given/When/Then rules for one section, stopping for confirmation before the next.
 input: one section of the input from read-input
 output: GWT rules for this section
 checkpoint:
@@ -16,6 +16,10 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. For one section/story fragment, extract the business rules it implies as Given/When/Then statements.
+2. One rule per distinct precondition/outcome pair.
+3. Stop and confirm before moving to the next section.
 
 Used by: [extract-rules](../extract-rules/protocol.md).
 

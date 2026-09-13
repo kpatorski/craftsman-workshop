@@ -2,7 +2,7 @@
 id: enumerate-cases-from-code
 title: Read the code to list the cases it already handles
 description: >
-  Derive the test cases from the existing implementation — branches, guards, edge values — not from requirements. Each becomes a failing stub.
+  Reads existing code to list the cases it already handles, one failing stub per case.
 input: existing, untested code
 output: one failing stub per observed behaviour path
 checkpoint:
@@ -16,5 +16,8 @@ checkpoint:
 Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
+
+1. Derive the test cases from the existing implementation — branches, guards, edge values — not from requirements.
+2. Write each as a failing stub.
 
 Used by: [characterize-loop](../characterize-loop/protocol.md).
