@@ -137,20 +137,16 @@ Empty — nothing has been switched off yet.
 ### Analyse
 
 Migrated from `digest-style.md` / the `digester` skill (batch 5 of 5, the smallest source file). `analyse` is the entry
-point (see plan decision 7, formerly `/digester`). `scenario-digest-input` retired the same way `scenario-analyze-input`
-was in batch 4 — the only scenario, nothing to dispatch between. The closing step is `finalize-digest`, not `finalize` —
-that id was already taken by `domain-design`'s own closing step (R5).
+point (see plan decision 7, formerly `/digester`). The GWT-extraction machinery this entry point drives now lives in
+the [gwt-digest](../bundles/gwt-digest/bundle.md) bundle (decision 10) — this section keeps only what is fundament:
+the entry point itself and the shared `read-input` step.
 
 **Enabled**
 
-| No | Id                                                     | Title                                                       | Note        |
-|----|--------------------------------------------------------|-------------------------------------------------------------|-------------|
-| 57 | [analyse](analyse/protocol.md)                         | Turn raw requirements into Given/When/Then business rules   | entry point |
-| 58 | [digest-requirements](digest-requirements/protocol.md) | Digest raw requirements into Given/When/Then business rules |             |
-| 59 | [extract-rules](extract-rules/protocol.md)             | Extract rules section by section                            | repeats     |
-| 60 | [read-input](read-input/protocol.md)                   | Read the input                                              |             |
-| 61 | [extract-rules-batch](extract-rules-batch/protocol.md) | Extract GWT rules for one section                           |             |
-| 62 | [finalize-digest](finalize-digest/protocol.md)         | Write the rules file                                        |             |
+| No | Id                                   | Title                                                     | Note        |
+|----|--------------------------------------|-----------------------------------------------------------|-------------|
+| 57 | [analyse](analyse/protocol.md)       | Turn raw requirements into Given/When/Then business rules | entry point |
+| 60 | [read-input](read-input/protocol.md) | Read the input                                            |             |
 
 **Disabled**
 
