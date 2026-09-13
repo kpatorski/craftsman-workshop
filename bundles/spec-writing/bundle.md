@@ -2,9 +2,9 @@
 id: spec-writing
 title: Turn accepted use cases into written task specs
 description: >
-  The tail of `domain-design`'s loop: takes the use cases event storming produced, turns them into candidate specs,
-  drafts each one to the format `implement` expects, and closes the run with open questions surfaced rather than
-  guessed. Enable this for `/craftsman:domain-design` to produce `specs/` files.
+  Turns a list of use cases into candidate specs, drafts each accepted one to a self-contained format — acceptance
+  criteria, a definition of done, explicit dependencies — and closes the run with every open question surfaced
+  rather than guessed.
 ---
 
 ## Schema

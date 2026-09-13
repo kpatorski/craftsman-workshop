@@ -57,46 +57,12 @@ decision 7, formerly `/developer`); everything else is reached only through it o
 
 **Enabled**
 
-| No | Id                                                                         | Title                                                     | Note        |
-|----|----------------------------------------------------------------------------|-----------------------------------------------------------|-------------|
-| 1  | [implement](implement/protocol.md)                                         | Drive a coding task in a HUMAN <-> AI loop                | entry point |
-| 2  | [scenario-new-use-case](scenario-new-use-case/protocol.md)                 | Add a new use case to an existing module                  |             |
-| 3  | [scenario-change-existing-code](scenario-change-existing-code/protocol.md) | Change behaviour in existing code                         |             |
-| 4  | [scenario-utils](scenario-utils/protocol.md)                               | Write or change a util                                    |             |
-| 5  | [scenario-missing-tests](scenario-missing-tests/protocol.md)               | Cover existing code that lacks tests                      |             |
-| 6  | [scenario-bootstrap-module](scenario-bootstrap-module/protocol.md)         | Found a new project or module                             |             |
-| 7  | [tdd-loop](tdd-loop/protocol.md)                                           | Test-first implementation loop                            |             |
-| 8  | [cover-cycle](cover-cycle/protocol.md)                                     | Batch coverage cycle                                      | repeats     |
-| 9  | [decide-test-level](decide-test-level/protocol.md)                         | Decide how high to test this                              |             |
-| 10 | [scaffold-suite](scaffold-suite/protocol.md)                               | Create the empty test suite                               |             |
-| 11 | [enumerate-test-cases](enumerate-test-cases/protocol.md)                   | List every known test case as a failing stub              |             |
-| 12 | [cover-batch](cover-batch/protocol.md)                                     | Implement bodies for a small batch of stubs               |             |
-| 13 | [minimal-production-code](minimal-production-code/protocol.md)             | Write the least production code that makes the batch pass |             |
-| 14 | [review-design-direction](review-design-direction/protocol.md)             | Confirm the design direction before the next batch        |             |
-| 15 | [snapshot-green](snapshot-green/protocol.md)                               | Snapshot the green suite before refactoring               |             |
-| 16 | [refactor-tests](refactor-tests/protocol.md)                               | Refactor the tests first                                  |             |
-| 17 | [refactor-production](refactor-production/protocol.md)                     | Refactor the production code                              |             |
-| 18 | [finish-loop](finish-loop/protocol.md)                                     | Close the loop                                            |             |
-| 19 | [characterize-loop](characterize-loop/protocol.md)                         | Characterization test loop                                |             |
-| 20 | [characterize-cycle](characterize-cycle/protocol.md)                       | Characterization batch cycle                              | repeats     |
-| 21 | [enumerate-cases-from-code](enumerate-cases-from-code/protocol.md)         | Read the code to list the cases it already handles        |             |
-| 22 | [characterize-batch](characterize-batch/protocol.md)                       | Lock in current behaviour for a small batch               |             |
-| 23 | [finish-characterize](finish-characterize/protocol.md)                     | Close the characterization loop                           |             |
-| 24 | [commit-tests](commit-tests/protocol.md)                                   | Commit the tests on their own                             |             |
-| 25 | [bootstrap-module](bootstrap-module/protocol.md)                           | Module bootstrap                                          |             |
-| 26 | [choose-stack](choose-stack/protocol.md)                                   | Agree the stack                                           |             |
-| 27 | [create-build](create-build/protocol.md)                                   | Create the build                                          |             |
-| 28 | [add-dependencies](add-dependencies/protocol.md)                           | Add the agreed dependencies                               |             |
-| 29 | [scaffold-package-skeleton](scaffold-package-skeleton/protocol.md)         | Lay out the package skeleton                              |             |
-| 30 | [base-configuration](base-configuration/protocol.md)                       | Add baseline configuration                                |             |
-| 31 | [pick-first-aggregate](pick-first-aggregate/protocol.md)                   | Pick the first aggregate to implement                     |             |
-| 32 | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in            | shared      |
-| 33 | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                           |             |
-| 34 | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                   |             |
-| 35 | [read-existing-tests](read-existing-tests/protocol.md)                     | Read the existing suite first                             |             |
-| 36 | [check-coverage](check-coverage/protocol.md)                               | Check the target is covered before changing it            |             |
-| 37 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                      |             |
-| 38 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes    | shared      |
+| No | Id                                                         | Title                                                       | Note        |
+|----|------------------------------------------------------------|-------------------------------------------------------------|-------------|
+| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs | entry point |
+| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |             |
+| 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |             |
+| 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |             |
 
 **Disabled**
 
@@ -105,8 +71,10 @@ Empty — nothing has been switched off yet. Populated by `craftsman disable pro
 ### Domain design
 
 Migrated from `spec-style.md` / the `analyst` skill (batch 4 of 5). `domain-design` is the entry point (see plan
-decision 7, formerly `/analyst`). The spec-writing tail of this loop now lives in the
-[spec-writing](../bundles/spec-writing/bundle.md) bundle (decision 10); event storming stays here until batch 4.
+decision 7, formerly `/analyst`). Both the event-storming and spec-writing parts of this loop now live in their own
+bundles — [event-storming](../bundles/event-storming/bundle.md) and
+[spec-writing](../bundles/spec-writing/bundle.md) (decision 10). This section keeps only what is fundament: the
+entry point, the orchestrator that calls into both bundles, and the two shared reading steps.
 
 **Enabled**
 
@@ -114,17 +82,8 @@ decision 7, formerly `/analyst`). The spec-writing tail of this loop now lives i
 |----|------------------------------------------------------------|-------------------------------------------------------------|-------------|
 | 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs | entry point |
 | 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |             |
-| 41 | [event-storming](event-storming/protocol.md)               | Event storming from a requirements input                    |             |
-| 42 | [attach-event-rules](attach-event-rules/protocol.md)       | Attach the rules that must hold for each event              | repeats     |
 | 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |             |
 | 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |             |
-| 46 | [collect-events](collect-events/protocol.md)               | Collect every domain event, Big Picture style               |             |
-| 47 | [attach-rules-batch](attach-rules-batch/protocol.md)       | Attach rules for a batch of events                          |             |
-| 48 | [identify-aggregates](identify-aggregates/protocol.md)     | Group events under the aggregate that owns them             |             |
-| 49 | [derive-commands](derive-commands/protocol.md)             | Derive the command that triggers each event                 | notify      |
-| 50 | [derive-views](derive-views/protocol.md)                   | Derive the read models the use cases will need              | notify      |
-| 51 | [derive-use-cases](derive-use-cases/protocol.md)           | Derive use cases from command + aggregate + event           | notify      |
-| 52 | [draw-bounded-contexts](draw-bounded-contexts/protocol.md) | Draw bounded contexts and how they communicate              |             |
 
 **Disabled**
 

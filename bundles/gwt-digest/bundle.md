@@ -2,8 +2,8 @@
 id: gwt-digest
 title: Extract Given/When/Then rules from raw requirements
 description: >
-  The machinery behind the analyse entry point: turns a prose requirements input into a `business-rules.md` file of
-  Given/When/Then rules, section by section, with a checkpoint after each batch. Enable this to use `/craftsman:analyse`.
+  Turns a prose requirements input into a `business-rules.md` file of Given/When/Then rules, section by section,
+  with a checkpoint after each batch.
 ---
 
 ## Schema
@@ -12,10 +12,9 @@ No fields of its own — see [core.md](../../../craftsman/plugins/craftsman/core
 
 ## Bundle
 
-This is pure extraction, not modelling: no aggregates, no domain design, just reading a section and stating the rules
-it already contains as Given/When/Then. `domain-design`'s own entry point can take this bundle's output
-(`business-rules.md`) as an authoritative input, but does not require it — it is equally happy starting from raw
-text. Input is already-read, section-split text; output is a written `business-rules.md`.
+This is pure extraction, not modelling: no aggregates, no domain design, just reading a section and stating the
+rules it already contains as Given/When/Then. Input is already-read, section-split text; output is a written
+`business-rules.md`.
 
 ## Protocols
 
