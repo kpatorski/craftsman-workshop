@@ -20,7 +20,7 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
       has tests.
     - [scenario-utils](../scenario-utils/protocol.md) — a genuine shared utility.
     - [scenario-missing-tests](../scenario-missing-tests/protocol.md) — covering existing, untested, working code.
-    - [scenario-bootstrap-module](../scenario-bootstrap-module/protocol.md) — a greenfield module.
+    - [scenario-bootstrap-module](../../bundles/module-bootstrap/protocols/scenario-bootstrap-module/protocol.md) — a greenfield module.
 2. If none fits cleanly, say so and ask the developer whether to proceed with the closest one or stop — never invent a
    process none of them describe.
 3. Everything past this point — loading the enabled directives an inner step's `applies-when` calls for, opening or

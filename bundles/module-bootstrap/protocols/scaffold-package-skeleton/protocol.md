@@ -14,10 +14,10 @@ checkpoint:
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
 1. Create the top-level package structure — feature packages, shared, core, config.
-2. Follow [architecture-profile](../../directives/architecture-profile/directive.md) and [feature-structure](../../directives/feature-structure/directive.md).
+2. Follow [architecture-profile](../../../../directives/architecture-profile/directive.md) and [feature-structure](../../../../directives/feature-structure/directive.md).
 3. Empty but present — no classes yet.

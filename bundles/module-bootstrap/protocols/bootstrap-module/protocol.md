@@ -11,7 +11,7 @@ done-when: the module compiles, an empty test runs, and the first aggregate is c
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 

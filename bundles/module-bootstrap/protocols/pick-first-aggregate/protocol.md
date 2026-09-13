@@ -13,9 +13,9 @@ checkpoint:
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
 1. From the domain-design output, choose the aggregate to build first.
-2. Hand its first case to [scenario-new-use-case](../scenario-new-use-case/protocol.md).
+2. Hand its first case to [scenario-new-use-case](../../../../protocols/scenario-new-use-case/protocol.md).

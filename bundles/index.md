@@ -37,12 +37,13 @@ This top table only tracks the bundles themselves.
 
 **Enabled**
 
-| No | Id             | Title                                               | Requires | Path                                                 |
-|----|----------------|-----------------------------------------------------|----------|------------------------------------------------------|
-| 1  | gwt-digest     | Extract Given/When/Then rules from raw requirements | —        | [gwt-digest/bundle.md](gwt-digest/bundle.md)         |
-| 2  | testing        | How a test suite is shaped                          | —        | [testing/bundle.md](testing/bundle.md)               |
-| 3  | spec-writing   | Turn accepted use cases into written task specs     | —        | [spec-writing/bundle.md](spec-writing/bundle.md)     |
-| 4  | event-storming | Event storming from a requirements input            | —        | [event-storming/bundle.md](event-storming/bundle.md) |
+| No | Id               | Title                                               | Requires | Path                                                     |
+|----|------------------|-----------------------------------------------------|----------|----------------------------------------------------------|
+| 1  | gwt-digest       | Extract Given/When/Then rules from raw requirements | —        | [gwt-digest/bundle.md](gwt-digest/bundle.md)             |
+| 2  | testing          | How a test suite is shaped                          | —        | [testing/bundle.md](testing/bundle.md)                   |
+| 3  | spec-writing     | Turn accepted use cases into written task specs     | —        | [spec-writing/bundle.md](spec-writing/bundle.md)         |
+| 4  | event-storming   | Event storming from a requirements input            | —        | [event-storming/bundle.md](event-storming/bundle.md)     |
+| 5  | module-bootstrap | Found a new project or module                       | —        | [module-bootstrap/bundle.md](module-bootstrap/bundle.md) |
 
 **Disabled**
 

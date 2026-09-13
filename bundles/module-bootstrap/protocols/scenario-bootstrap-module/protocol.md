@@ -12,9 +12,9 @@ done-when: bootstrap-module's done-when holds
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
 1. [bootstrap-module](../bootstrap-module/protocol.md) — set up the module from nothing, then hand off the first
-   aggregate's use case to [scenario-new-use-case](../scenario-new-use-case/protocol.md).
+   aggregate's use case to [scenario-new-use-case](../../../../protocols/scenario-new-use-case/protocol.md).

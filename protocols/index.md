@@ -53,16 +53,44 @@ entries — same restraint as `core.md`'s golden rule, applied to structure inst
 ### Implementation
 
 Migrated from `coding-style.md` / the `developer` skill (batch 3 of 5). `implement` is the entry point (see plan
-decision 7, formerly `/developer`); everything else is reached only through it or through a protocol it calls.
+decision 7, formerly `/developer`); everything else is reached only through it or through a protocol it calls. The
+module-bootstrap moment (`bootstrap-module` and everything it composes) now lives in the
+[module-bootstrap](../bundles/module-bootstrap/bundle.md) bundle (decision 10) — this section keeps the rest.
 
 **Enabled**
 
-| No | Id                                                         | Title                                                       | Note        |
-|----|------------------------------------------------------------|-------------------------------------------------------------|-------------|
-| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs | entry point |
-| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |             |
-| 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |             |
-| 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |             |
+| No | Id                                                                         | Title                                                     | Note        |
+|----|----------------------------------------------------------------------------|-----------------------------------------------------------|-------------|
+| 1  | [implement](implement/protocol.md)                                         | Drive a coding task in a HUMAN <-> AI loop                | entry point |
+| 2  | [scenario-new-use-case](scenario-new-use-case/protocol.md)                 | Add a new use case to an existing module                  |             |
+| 3  | [scenario-change-existing-code](scenario-change-existing-code/protocol.md) | Change behaviour in existing code                         |             |
+| 4  | [scenario-utils](scenario-utils/protocol.md)                               | Write or change a util                                    |             |
+| 5  | [scenario-missing-tests](scenario-missing-tests/protocol.md)               | Cover existing code that lacks tests                      |             |
+| 7  | [tdd-loop](tdd-loop/protocol.md)                                           | Test-first implementation loop                            |             |
+| 8  | [cover-cycle](cover-cycle/protocol.md)                                     | Batch coverage cycle                                      | repeats     |
+| 9  | [decide-test-level](decide-test-level/protocol.md)                         | Decide how high to test this                              |             |
+| 10 | [scaffold-suite](scaffold-suite/protocol.md)                               | Create the empty test suite                               |             |
+| 11 | [enumerate-test-cases](enumerate-test-cases/protocol.md)                   | List every known test case as a failing stub              |             |
+| 12 | [cover-batch](cover-batch/protocol.md)                                     | Implement bodies for a small batch of stubs               |             |
+| 13 | [minimal-production-code](minimal-production-code/protocol.md)             | Write the least production code that makes the batch pass |             |
+| 14 | [review-design-direction](review-design-direction/protocol.md)             | Confirm the design direction before the next batch        |             |
+| 15 | [snapshot-green](snapshot-green/protocol.md)                               | Snapshot the green suite before refactoring               |             |
+| 16 | [refactor-tests](refactor-tests/protocol.md)                               | Refactor the tests first                                  |             |
+| 17 | [refactor-production](refactor-production/protocol.md)                     | Refactor the production code                              |             |
+| 18 | [finish-loop](finish-loop/protocol.md)                                     | Close the loop                                            |             |
+| 19 | [characterize-loop](characterize-loop/protocol.md)                         | Characterization test loop                                |             |
+| 20 | [characterize-cycle](characterize-cycle/protocol.md)                       | Characterization batch cycle                              | repeats     |
+| 21 | [enumerate-cases-from-code](enumerate-cases-from-code/protocol.md)         | Read the code to list the cases it already handles        |             |
+| 22 | [characterize-batch](characterize-batch/protocol.md)                       | Lock in current behaviour for a small batch               |             |
+| 23 | [finish-characterize](finish-characterize/protocol.md)                     | Close the characterization loop                           |             |
+| 24 | [commit-tests](commit-tests/protocol.md)                                   | Commit the tests on their own                             |             |
+| 32 | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in            | shared      |
+| 33 | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                           |             |
+| 34 | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                   |             |
+| 35 | [read-existing-tests](read-existing-tests/protocol.md)                     | Read the existing suite first                             |             |
+| 36 | [check-coverage](check-coverage/protocol.md)                               | Check the target is covered before changing it            |             |
+| 37 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                      |             |
+| 38 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes    | shared      |
 
 **Disabled**
 
