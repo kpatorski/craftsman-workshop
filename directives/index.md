@@ -123,5 +123,4 @@ Migrated from `spec-style.md` (batch 4 of 5) — rules for writing a spec file t
 
 Empty — every migrated Specs directive is stack-agnostic, none needed `enabled-by-default: false`.
 
-Categories not yet migrated are filled in during the remaining migration batches from `coding-style.md` /
-`spec-style.md` / `digest-style.md` (see the `craftsman` plan, "Kolejność realizacji", step 3).
+All migration batches complete (see the `craftsman` plan, "Kolejność realizacji", step 3). 41 directives total — digest-style.md contributed none, it has no directive-kind entries.
