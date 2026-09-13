@@ -19,7 +19,7 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
     - [scenario-change-existing-code](../scenario-change-existing-code/protocol.md) — changing behaviour that already
       has tests.
     - [scenario-utils](../scenario-utils/protocol.md) — a genuine shared utility.
-    - [scenario-missing-tests](../scenario-missing-tests/protocol.md) — covering existing, untested, working code.
+    - [scenario-missing-tests](../../bundles/legacy-code/protocols/scenario-missing-tests/protocol.md) — covering existing, untested, working code.
     - [scenario-bootstrap-module](../../bundles/module-bootstrap/protocols/scenario-bootstrap-module/protocol.md) — a greenfield module.
 2. If none fits cleanly, say so and ask the developer whether to proceed with the closest one or stop — never invent a
    process none of them describe.

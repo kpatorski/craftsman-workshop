@@ -11,12 +11,12 @@ done-when: every observed behaviour path has a passing test and they are committ
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
-1. [decide-test-level](../../bundles/tdd/protocols/decide-test-level/protocol.md)
-2. [scaffold-suite](../../bundles/tdd/protocols/scaffold-suite/protocol.md)
+1. [decide-test-level](../../../tdd/protocols/decide-test-level/protocol.md)
+2. [scaffold-suite](../../../tdd/protocols/scaffold-suite/protocol.md)
 3. [enumerate-cases-from-code](../enumerate-cases-from-code/protocol.md)
 4. [characterize-cycle](../characterize-cycle/protocol.md)
 5. [finish-characterize](../finish-characterize/protocol.md)

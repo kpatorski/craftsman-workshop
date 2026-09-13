@@ -11,7 +11,7 @@ repeat-until: every stub from enumerate-cases-from-code has a passing body
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). Replaces the old `loop` kind —
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md). Replaces the old `loop` kind —
 see `repeat-until`.
 
 ## Protocol

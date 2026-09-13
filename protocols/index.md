@@ -56,12 +56,11 @@ entries — same restraint as `core.md`'s golden rule, applied to structure inst
 ### Implementation
 
 Migrated from `coding-style.md` / the `developer` skill (batch 3 of 5). `implement` is the entry point (see plan
-decision 7, formerly `/developer`); everything else is reached only through it or through a protocol it calls. The
-[tdd](../bundles/tdd/bundle.md) bundle holds the red-green-refactor loop itself, and
-[module-bootstrap](../bundles/module-bootstrap/bundle.md) the new-project moment (decision 10). The three scenarios
-that call into `tdd` stay here: each is mostly fundament steps (`locate-target`, `confirm-conventions`...) plus one
-call to `tdd-loop`, the same "orchestrator over several bundles" shape as `requirements-analysis` — not owned by
-any one bundle it calls into.
+decision 7, formerly `/developer`); everything else is reached only through it or through a protocol it calls. Four
+bundles now hold most of what used to be here — [tdd](../bundles/tdd/bundle.md),
+[legacy-code](../bundles/legacy-code/bundle.md), [module-bootstrap](../bundles/module-bootstrap/bundle.md) — this
+section keeps the entry point, the three scenarios that orchestrate across bundles (mostly fundament steps plus one
+call into `tdd`, the same shape as `requirements-analysis`), and the shared steps several scenarios reuse.
 
 **Enabled**
 
@@ -71,13 +70,6 @@ any one bundle it calls into.
 | 2  | [scenario-new-use-case](scenario-new-use-case/protocol.md)                 | Add a new use case to an existing module               |             |
 | 3  | [scenario-change-existing-code](scenario-change-existing-code/protocol.md) | Change behaviour in existing code                      |             |
 | 4  | [scenario-utils](scenario-utils/protocol.md)                               | Write or change a util                                 |             |
-| 5  | [scenario-missing-tests](scenario-missing-tests/protocol.md)               | Cover existing code that lacks tests                   |             |
-| 19 | [characterize-loop](characterize-loop/protocol.md)                         | Characterization test loop                             |             |
-| 20 | [characterize-cycle](characterize-cycle/protocol.md)                       | Characterization batch cycle                           | repeats     |
-| 21 | [enumerate-cases-from-code](enumerate-cases-from-code/protocol.md)         | Read the code to list the cases it already handles     |             |
-| 22 | [characterize-batch](characterize-batch/protocol.md)                       | Lock in current behaviour for a small batch            |             |
-| 23 | [finish-characterize](finish-characterize/protocol.md)                     | Close the characterization loop                        |             |
-| 24 | [commit-tests](commit-tests/protocol.md)                                   | Commit the tests on their own                          |             |
 | 32 | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in         | shared      |
 | 33 | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                        |             |
 | 34 | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                |             |
