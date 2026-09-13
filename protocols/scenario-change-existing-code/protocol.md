@@ -25,5 +25,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 3. [check-coverage](../check-coverage/protocol.md) — confirm the target is covered before changing it.
 4. [restate-current-behaviour](../restate-current-behaviour/protocol.md) — state the baseline in plain language.
 5. [confirm-conventions](../confirm-conventions/protocol.md) — settle any placement decision the change forces.
-6. [tdd-loop](../tdd-loop/protocol.md) — extend the suite and the production code, with the overrides above applied to
+6. [tdd-loop](../../bundles/tdd/protocols/tdd-loop/protocol.md) — extend the suite and the production code, with the overrides above applied to
    its `enumerate-test-cases` and `decide-test-level` steps.

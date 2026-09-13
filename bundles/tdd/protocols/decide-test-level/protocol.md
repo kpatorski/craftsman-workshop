@@ -16,9 +16,9 @@ checkpoint:
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
-Consult [how-high-to-test](../../bundles/testing/directives/how-high-to-test/directive.md) for the level and the reasoning; state both
+Consult [how-high-to-test](../../../testing/directives/how-high-to-test/directive.md) for the level and the reasoning; state both
 at the checkpoint above.

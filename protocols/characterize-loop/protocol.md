@@ -15,8 +15,8 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-1. [decide-test-level](../decide-test-level/protocol.md)
-2. [scaffold-suite](../scaffold-suite/protocol.md)
+1. [decide-test-level](../../bundles/tdd/protocols/decide-test-level/protocol.md)
+2. [scaffold-suite](../../bundles/tdd/protocols/scaffold-suite/protocol.md)
 3. [enumerate-cases-from-code](../enumerate-cases-from-code/protocol.md)
 4. [characterize-cycle](../characterize-cycle/protocol.md)
 5. [finish-characterize](../finish-characterize/protocol.md)

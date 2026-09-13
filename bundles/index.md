@@ -44,6 +44,7 @@ This top table only tracks the bundles themselves.
 | 3  | spec-writing     | Turn accepted use cases into written task specs     | —        | [spec-writing/bundle.md](spec-writing/bundle.md)         |
 | 4  | event-storming   | Event storming from a requirements input            | —        | [event-storming/bundle.md](event-storming/bundle.md)     |
 | 5  | module-bootstrap | Found a new project or module                       | —        | [module-bootstrap/bundle.md](module-bootstrap/bundle.md) |
+| 6  | tdd              | Test-first implementation loop                      | testing  | [tdd/bundle.md](tdd/bundle.md)                           |
 
 **Disabled**
 

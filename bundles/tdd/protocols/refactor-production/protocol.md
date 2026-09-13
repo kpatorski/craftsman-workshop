@@ -15,10 +15,10 @@ checkpoint:
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
-1. Apply the [production-code](../../directives/production-code/directive.md) directive.
+1. Apply the [production-code](../../../../directives/production-code/directive.md) directive.
 2. Re-run the full relevant suite after each change.
 3. Stop and fix immediately on any red.

@@ -19,4 +19,4 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. [locate-target](../locate-target/protocol.md) — find the module to work in.
 2. [confirm-conventions](../confirm-conventions/protocol.md) — settle placement and naming before creating anything.
 3. [create-empty-package](../create-empty-package/protocol.md) — create the empty target package.
-4. [tdd-loop](../tdd-loop/protocol.md) — build the use case test-first.
+4. [tdd-loop](../../bundles/tdd/protocols/tdd-loop/protocol.md) — build the use case test-first.

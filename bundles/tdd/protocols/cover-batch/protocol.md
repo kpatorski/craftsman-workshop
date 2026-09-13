@@ -10,9 +10,9 @@ uses: [stub-vs-in-memory]
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
 
 ## Protocol
 
-Consult [stub-vs-in-memory](../../bundles/testing/directives/stub-vs-in-memory/directive.md) whenever a batch needs a fake for a
+Consult [stub-vs-in-memory](../../../testing/directives/stub-vs-in-memory/directive.md) whenever a batch needs a fake for a
 collaborator.

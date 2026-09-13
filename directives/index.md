@@ -34,8 +34,9 @@ Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question t
   of settled facts, not a rule). It still passes the same test: "is the domain free of framework dependencies right
   now?" is a yes/no question about the present. **Directive.**
 
-The canonical borderline pair, from `core.md`: [`decide-test-level`](../protocols/decide-test-level/protocol.md) (a
-*protocol* — it is a moment with a checkpoint, part of a sequence) and
+The canonical borderline pair, from `core.md`:
+[`decide-test-level`](../bundles/tdd/protocols/decide-test-level/protocol.md) (a *protocol* — it is a moment with a
+checkpoint, part of a sequence) and
 [`how-high-to-test`](../bundles/testing/directives/how-high-to-test/directive.md) (a *directive* — the criteria that
 moment's decision must satisfy, true or not true independent of any sequence). Two angles on the same concern,
 correctly split.
