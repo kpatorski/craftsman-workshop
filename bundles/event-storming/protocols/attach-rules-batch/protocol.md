@@ -17,6 +17,6 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 
 ## Protocol
 
-1. For a small batch of events, attach the digested rule(s) that produced each.
+1. For a small batch of events, attach the digested rule (s) that produced each.
 2. If no digested rules exist, write the precondition phrases directly instead.
 3. Stop and confirm before moving to the next batch.

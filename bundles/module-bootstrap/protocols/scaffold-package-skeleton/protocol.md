@@ -19,5 +19,6 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 ## Protocol
 
 1. Create the top-level package structure — feature packages, shared, core, config.
-2. Follow [architecture-profile](../../../../directives/architecture-profile/directive.md) and [feature-structure](../../../../directives/feature-structure/directive.md).
+2. Follow [architecture-profile](../../../../directives/architecture-profile/directive.md)
+   and [feature-structure](../../../../directives/feature-structure/directive.md).
 3. Empty but present — no classes yet.

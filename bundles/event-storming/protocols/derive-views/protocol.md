@@ -16,4 +16,5 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 
 ## Protocol
 
-1. For each command/event pair, name the read model a caller would need — to decide whether to issue that command, or to see its result.
+1. For each command/event pair, name the read model a caller would need — to decide whether to issue that command, or to
+   see its result.

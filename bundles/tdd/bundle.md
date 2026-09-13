@@ -1,7 +1,7 @@
 ---
 id: tdd
 title: Test-first implementation loop
-requires: [testing]
+requires: [ testing ]
 description: >
   The red-green-refactor loop: decide how deep to test, scaffold the suite, enumerate every known case as a
   failing stub, implement in small batches with a design-direction checkpoint between them, then refactor tests

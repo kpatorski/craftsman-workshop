@@ -16,6 +16,7 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 
 1. Add a Clock bean, per the [determinism](../../../../directives/determinism/directive.md) directive.
 2. Add environment-based secrets configuration.
-3. If [prefer-liquibase-owned-schema](../../../../directives/prefer-liquibase-owned-schema/directive.md) is enabled, add a schema-migration baseline.
+3. If [prefer-liquibase-owned-schema](../../../../directives/prefer-liquibase-owned-schema/directive.md) is enabled, add
+   a schema-migration baseline.
 4. Add a dev profile.
 5. Nothing feature-specific belongs here.

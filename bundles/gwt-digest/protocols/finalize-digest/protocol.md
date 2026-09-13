@@ -18,4 +18,5 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 ## Protocol
 
 1. Write all confirmed rules to business-rules.md, grouped by section.
-2. Each rule as its own structured block, ready for any downstream reader (a human, `domain-design`, or anything else) to consume.
+2. Each rule as its own structured block, ready for any downstream reader (a human, `domain-design`, or anything else)
+   to consume.

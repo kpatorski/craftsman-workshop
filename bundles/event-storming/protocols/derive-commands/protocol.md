@@ -16,4 +16,5 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 
 ## Protocol
 
-1. For each event, name the command whose handling produces it — the intent that, when carried out, results in that event.
+1. For each event, name the command whose handling produces it — the intent that, when carried out, results in that
+   event.

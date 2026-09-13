@@ -14,5 +14,6 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 
 ## Protocol
 
-Apply the [production-code](../../../../directives/production-code/directive.md) directive while writing. A newly discovered
+Apply the [production-code](../../../../directives/production-code/directive.md) directive while writing. A newly
+discovered
 case gets a failing stub immediately — that feeds back into the current cover-cycle iteration, not a derailment.

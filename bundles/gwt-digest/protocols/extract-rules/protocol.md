@@ -5,13 +5,13 @@ description: >
   Each iteration extracts the Given/When/Then rules for one section and stops for confirmation before the next.
 input: sections identified by read-input
 output: every section of the input has its rules extracted and confirmed
-steps: [extract-rules-batch]
+steps: [ extract-rules-batch ]
 repeat-until: every section of the input has its rules extracted and confirmed
 ---
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md). Replaces the old 
+Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md). Replaces the old
 `loop` kind — see `repeat-until`.
 
 ## Protocol

@@ -28,7 +28,8 @@ What belongs in a bundle, versus staying at the top level:
   wants `extract-rules-batch` without `digest-requirements` to drive it. **Bundle.**
 - [`locate-target`](../protocols/locate-target/protocol.md) — used by three different scenarios across two
   bundles (`tdd`, `module-bootstrap`). A part used by many themes is shared, not owned by one. **Fundament.**
-- [`prefer-lombok`](../directives/prefer-lombok/directive.md) — a single, standalone preference. Bundling one entry alone would just rename it. **Fundament.**
+- [`prefer-lombok`](../directives/prefer-lombok/directive.md) — a single, standalone preference. Bundling one entry
+  alone would just rename it. **Fundament.**
 
 ## Bundles
 

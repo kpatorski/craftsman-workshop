@@ -19,5 +19,6 @@ Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craf
 
 1. Read the input end to end — the raw text and, where present, the digested Given/When/Then rules together.
 2. List every domain event: a significant, past-tense, domain-language change in the system.
-3. When rules are present, treat their `then` clauses as strong candidates — but this is still a judgement call, not a mechanical copy: merge duplicates, and don't promote a trivial rule outcome to event status.
+3. When rules are present, treat their `then` clauses as strong candidates — but this is still a judgement call, not a
+   mechanical copy: merge duplicates, and don't promote a trivial rule outcome to event status.
 4. Work in rough chronological order, breadth-first — capture everything before judging it.
