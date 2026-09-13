@@ -16,4 +16,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-1. [characterize-loop](../characterize-loop/protocol.md) — lock in current behaviour with passing tests, no production code changes.
+1. [characterize-loop](../characterize-loop/protocol.md) — lock in current behaviour with passing tests, no production
+   code changes.

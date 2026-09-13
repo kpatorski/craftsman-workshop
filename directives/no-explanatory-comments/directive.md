@@ -18,4 +18,5 @@ Must:
 
 - no comments that explain how confusing code works — rename, extract, simplify instead
 
-Allowed: legal headers, public API docs where genuinely needed, non-obvious external constraints, explicitly-requested actionable TODOs.
+Allowed: legal headers, public API docs where genuinely needed, non-obvious external constraints, explicitly-requested
+actionable TODOs.

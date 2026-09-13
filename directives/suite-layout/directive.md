@@ -14,4 +14,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Directive
 
-Test methods first, in the order a reader should meet them. Helper methods — stubbing, asserting, building — after, in whatever order groups them sensibly. A reader scanning top to bottom sees the requirements before the machinery.
+Test methods first, in the order a reader should meet them. Helper methods — stubbing, asserting, building — after, in
+whatever order groups them sensibly. A reader scanning top to bottom sees the requirements before the machinery.

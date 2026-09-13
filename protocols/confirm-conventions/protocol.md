@@ -20,4 +20,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-Used by: [scenario-new-use-case](../scenario-new-use-case/protocol.md), [scenario-change-existing-code](../scenario-change-existing-code/protocol.md).
+Used
+by: [scenario-new-use-case](../scenario-new-use-case/protocol.md), [scenario-change-existing-code](../scenario-change-existing-code/protocol.md).

@@ -15,14 +15,19 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 ## Protocol
 
 1. Read the task. Check each alternative below's `match` against it, in order, and run the first one that fits:
-   - [scenario-new-use-case](../scenario-new-use-case/protocol.md) — a new use case in a module that already has some.
-   - [scenario-change-existing-code](../scenario-change-existing-code/protocol.md) — changing behaviour that already has tests.
-   - [scenario-utils](../scenario-utils/protocol.md) — a genuine shared utility.
-   - [scenario-missing-tests](../scenario-missing-tests/protocol.md) — covering existing, untested, working code.
-   - [scenario-bootstrap-module](../scenario-bootstrap-module/protocol.md) — a greenfield module.
-2. If none fits cleanly, say so and ask the developer whether to proceed with the closest one or stop — never invent a process none of them describe.
-3. Everything past this point — loading the enabled directives an inner step's `applies-when` calls for, opening or resuming the per-task session file, walking the chosen scenario's steps, honouring every checkpoint — is the execution mechanics described in the `craftsman` skill itself, not repeated per protocol.
+    - [scenario-new-use-case](../scenario-new-use-case/protocol.md) — a new use case in a module that already has some.
+    - [scenario-change-existing-code](../scenario-change-existing-code/protocol.md) — changing behaviour that already
+      has tests.
+    - [scenario-utils](../scenario-utils/protocol.md) — a genuine shared utility.
+    - [scenario-missing-tests](../scenario-missing-tests/protocol.md) — covering existing, untested, working code.
+    - [scenario-bootstrap-module](../scenario-bootstrap-module/protocol.md) — a greenfield module.
+2. If none fits cleanly, say so and ask the developer whether to proceed with the closest one or stop — never invent a
+   process none of them describe.
+3. Everything past this point — loading the enabled directives an inner step's `applies-when` calls for, opening or
+   resuming the per-task session file, walking the chosen scenario's steps, honouring every checkpoint — is the
+   execution mechanics described in the `craftsman` skill itself, not repeated per protocol.
 
 ## Examples
 
-"Add a `CancelReservation` use case to the booking module" matches `scenario-new-use-case`. "Cover the `PricingCalculator` class, which works but has no tests" matches `scenario-missing-tests`.
+"Add a `CancelReservation` use case to the booking module" matches `scenario-new-use-case`. "Cover the
+`PricingCalculator` class, which works but has no tests" matches `scenario-missing-tests`.

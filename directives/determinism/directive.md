@@ -16,5 +16,6 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 Must:
 
-- never call `Instant.now()` / `LocalDate.now()` directly in business logic — inject a Clock and pass it into domain methods
+- never call `Instant.now()` / `LocalDate.now()` directly in business logic — inject a Clock and pass it into domain
+  methods
 - the same for random values and other non-deterministic sources

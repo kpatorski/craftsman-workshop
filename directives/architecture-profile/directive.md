@@ -14,7 +14,8 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Directive
 
-Style: Clean Architecture — default, overridable per project. Also respected: DDD tactical patterns, bounded-context isolation, application logic kept out of infrastructure.
+Style: Clean Architecture — default, overridable per project. Also respected: DDD tactical patterns, bounded-context
+isolation, application logic kept out of infrastructure.
 
 Layering:
 
@@ -26,4 +27,5 @@ Communication: events between bounded contexts; ports & adapters at the boundary
 
 Package layout: see [feature-structure](../feature-structure/directive.md).
 
-Assumes event storming is done — events, aggregates, commands and views are known before implementation starts. See the `domain-design` entry point for how that gets produced.
+Assumes event storming is done — events, aggregates, commands and views are known before implementation starts. See the
+`domain-design` entry point for how that gets produced.

@@ -15,7 +15,8 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Directive
 
-1. [acceptance-criteria-format](../acceptance-criteria-format/directive.md) — acceptance criteria are the Given/When/Then rules, carried through.
+1. [acceptance-criteria-format](../acceptance-criteria-format/directive.md) — acceptance criteria are the
+   Given/When/Then rules, carried through.
 2. [definition-of-done](../definition-of-done/directive.md) — what "done" means unless the spec says otherwise.
 3. [no-invented-requirements](../no-invented-requirements/directive.md) — unknowns go to Open questions, never guessed.
 4. [dependencies-explicit](../dependencies-explicit/directive.md) — state ordering dependencies between specs.

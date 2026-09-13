@@ -11,7 +11,8 @@ done-when: the whole suite is green and both tests and production code are refac
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `cover-cycle` is itself a protocol with `repeat-until` — nesting goes as deep as the process does.
+Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `cover-cycle` is itself a
+protocol with `repeat-until` — nesting goes as deep as the process does.
 
 ## Protocol
 
@@ -24,4 +25,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 7. [refactor-production](../refactor-production/protocol.md)
 8. [finish-loop](../finish-loop/protocol.md)
 
-A case discovered mid-loop is added as a stub immediately and the current step continues — that is the loop working, not a derailment.
+A case discovered mid-loop is added as a stub immediately and the current step continues — that is the loop working, not
+a derailment.

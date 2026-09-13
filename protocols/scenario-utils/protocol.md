@@ -15,10 +15,12 @@ done-when: tdd-loop's done-when holds
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `overrides` is defined there, "Fields specific to `protocol`".
+Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `overrides` is defined there,
+"Fields specific to `protocol`".
 
 ## Protocol
 
 1. [challenge-the-util](../challenge-the-util/protocol.md) — confirm a util is really the right home.
 2. [locate-target](../locate-target/protocol.md) — find where the util belongs.
-3. [tdd-loop](../tdd-loop/protocol.md) — build it test-first, with the overrides above applied to its `decide-test-level` step and to the [test-naming](../../directives/test-naming/directive.md) directive.
+3. [tdd-loop](../tdd-loop/protocol.md) — build it test-first, with the overrides above applied to its
+   `decide-test-level` step and to the [test-naming](../../directives/test-naming/directive.md) directive.

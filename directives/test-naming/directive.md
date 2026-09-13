@@ -19,7 +19,8 @@ Must:
 - no wish prefixes (`shouldCreate...`, `testValidation`, `validNameTest`)
 - no implementation terms in the name — no method names, no "calls X", no "passes Y"
 
-Exception: a small utility class, or a case where method-level naming is genuinely clearer, may name the method instead of the state.
+Exception: a small utility class, or a case where method-level naming is genuinely clearer, may name the method instead
+of the state.
 
 ## Examples
 

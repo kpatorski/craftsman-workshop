@@ -18,7 +18,9 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 
 ## Protocol
 
-Used by: [tdd-loop](../tdd-loop/protocol.md). [scenario-change-existing-code](../scenario-change-existing-code/protocol.md) overrides it — means adding stubs or assertions to the existing suite, following its convention, not starting a new one.
+Used
+by: [tdd-loop](../tdd-loop/protocol.md). [scenario-change-existing-code](../scenario-change-existing-code/protocol.md)
+overrides it — means adding stubs or assertions to the existing suite, following its convention, not starting a new one.
 
 ## Examples
 

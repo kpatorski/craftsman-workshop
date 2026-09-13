@@ -19,4 +19,5 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. [ingest](../ingest/protocol.md) — read the input and any `business-rules.md`.
 2. [requirements-analysis](../requirements-analysis/protocol.md) — event storming, then one spec per accepted candidate.
 
-Session file handling, directive loading, and resuming are the execution mechanics described in the `craftsman` skill itself, not repeated per protocol — see [implement](../implement/protocol.md) for the same note.
+Session file handling, directive loading, and resuming are the execution mechanics described in the `craftsman` skill
+itself, not repeated per protocol — see [implement](../implement/protocol.md) for the same note.

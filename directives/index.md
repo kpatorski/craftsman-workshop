@@ -24,11 +24,20 @@ files under `directives/<id>/` — flat, not nested by category. Category groupi
 
 Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question test to real entries from this workshop:
 
-- [`test-naming`](test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any moment; no checkpoint, no start or end; removing it changes how a test method's name looks, not what happens next. **Directive.**
-- [`production-code`](production-code/directive.md) — composes 14 rules, but composing is not the deciding factor (see core.md — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still no checkpoint. **Directive**, even though it is large.
-- [`architecture-profile`](architecture-profile/directive.md) — started life as a `reference` in the old format (a block of settled facts, not a rule). It still passes the same test: "is the domain free of framework dependencies right now?" is a yes/no question about the present. **Directive.**
+- [`test-naming`](test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any
+  moment; no checkpoint, no start or end; removing it changes how a test method's name looks, not what happens next.
+  **Directive.**
+- [`production-code`](production-code/directive.md) — composes 14 rules, but composing is not the deciding factor (see
+  core.md — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still no
+  checkpoint. **Directive**, even though it is large.
+- [`architecture-profile`](architecture-profile/directive.md) — started life as a `reference` in the old format (a block
+  of settled facts, not a rule). It still passes the same test: "is the domain free of framework dependencies right
+  now?" is a yes/no question about the present. **Directive.**
 
-The canonical borderline pair, from `core.md`: [`decide-test-level`](../protocols/decide-test-level/protocol.md) (a *protocol* — it is a moment with a checkpoint, part of a sequence) and [`how-high-to-test`](how-high-to-test/directive.md) (a *directive* — the criteria that moment's decision must satisfy, true or not true independent of any sequence). Two angles on the same concern, correctly split.
+The canonical borderline pair, from `core.md`: [`decide-test-level`](../protocols/decide-test-level/protocol.md) (a
+*protocol* — it is a moment with a checkpoint, part of a sequence) and [
+`how-high-to-test`](how-high-to-test/directive.md) (a *directive* — the criteria that moment's decision must satisfy,
+true or not true independent of any sequence). Two angles on the same concern, correctly split.
 
 ## Directives
 
@@ -47,27 +56,27 @@ built) are enabled by default; the stack-specific ones (naming a concrete librar
 
 **Enabled**
 
-| No | Id                                                    | Title                                          |
-|----|--------------------------------------------------------|-------------------------------------------------|
-| 1  | [test-style](test-style/directive.md)                 | How a test suite should read                   |
-| 2  | [test-naming](test-naming/directive.md)               | Name a test by the state it describes          |
-| 3  | [test-as-story](test-as-story/directive.md)           | Structure every test as given / when / then    |
-| 4  | [suite-layout](suite-layout/directive.md)             | Tests on top, helpers at the bottom            |
-| 5  | [test-data](test-data/directive.md)                   | Values and object building in tests            |
-| 6  | [dummy-values](dummy-values/directive.md)             | Use placeholder values, not domain-specific ones |
-| 7  | [test-fixtures](test-fixtures/directive.md)           | Extract a Fixture when object building repeats |
+| No | Id                                          | Title                                            |
+|----|---------------------------------------------|--------------------------------------------------|
+| 1  | [test-style](test-style/directive.md)       | How a test suite should read                     |
+| 2  | [test-naming](test-naming/directive.md)     | Name a test by the state it describes            |
+| 3  | [test-as-story](test-as-story/directive.md) | Structure every test as given / when / then      |
+| 4  | [suite-layout](suite-layout/directive.md)   | Tests on top, helpers at the bottom              |
+| 5  | [test-data](test-data/directive.md)         | Values and object building in tests              |
+| 6  | [dummy-values](dummy-values/directive.md)   | Use placeholder values, not domain-specific ones |
+| 7  | [test-fixtures](test-fixtures/directive.md) | Extract a Fixture when object building repeats   |
 
 **Disabled**
 
-| No | Id                                                                    | Title                                       |
-|----|--------------------------------------------------------------------------|-----------------------------------------------|
-| 8  | [prefer-spock](prefer-spock/directive.md)                               | Spock by default, even on Java                |
-| 9  | [prefer-spock-mocks](prefer-spock-mocks/directive.md)                   | Native Spock Mock/Stub in Spock suites        |
-| 10 | [prefer-mockito-under-junit](prefer-mockito-under-junit/directive.md)   | Mockito in JUnit suites                       |
-| 11 | [prefer-assertj-under-junit](prefer-assertj-under-junit/directive.md)   | AssertJ in JUnit suites                       |
+| No | Id                                                                            | Title                                                     |
+|----|-------------------------------------------------------------------------------|-----------------------------------------------------------|
+| 8  | [prefer-spock](prefer-spock/directive.md)                                     | Spock by default, even on Java                            |
+| 9  | [prefer-spock-mocks](prefer-spock-mocks/directive.md)                         | Native Spock Mock/Stub in Spock suites                    |
+| 10 | [prefer-mockito-under-junit](prefer-mockito-under-junit/directive.md)         | Mockito in JUnit suites                                   |
+| 11 | [prefer-assertj-under-junit](prefer-assertj-under-junit/directive.md)         | AssertJ in JUnit suites                                   |
 | 12 | [prefer-testcontainers-postgres](prefer-testcontainers-postgres/directive.md) | TestContainers with real PostgreSQL for persistence tests |
-| 13 | [how-high-to-test](how-high-to-test/directive.md)                       | How high to test a behaviour                  |
-| 14 | [stub-vs-in-memory](stub-vs-in-memory/directive.md)                     | Stub or in-memory implementation for a collaborator |
+| 13 | [how-high-to-test](how-high-to-test/directive.md)                             | How high to test a behaviour                              |
+| 14 | [stub-vs-in-memory](stub-vs-in-memory/directive.md)                           | Stub or in-memory implementation for a collaborator       |
 
 ### Production code
 
@@ -78,33 +87,33 @@ product, only a pattern — see each directive's own description for the caveat.
 
 **Enabled**
 
-| No | Id                                                                  | Title                                          |
-|----|------------------------------------------------------------------------|---------------------------------------------------|
-| 15 | [production-code](production-code/directive.md)                       | Production code assessment                        |
-| 16 | [visibility](visibility/directive.md)                                 | Lowest visibility by default                      |
-| 17 | [naming](naming/directive.md)                                         | Domain-language names, verb-noun use cases        |
-| 18 | [rich-domain](rich-domain/directive.md)                               | Behaviour lives on the domain object               |
-| 19 | [error-handling](error-handling/directive.md)                         | Results over exceptions, no internal null          |
-| 20 | [interfaces](interfaces/directive.md)                                 | No interface without a reason                      |
-| 21 | [abstraction-timing](abstraction-timing/directive.md)                 | Stay concrete until the second use case            |
-| 22 | [feature-structure](feature-structure/directive.md)                   | Organise by feature, not by layer                  |
-| 23 | [determinism](determinism/directive.md)                               | No ambient time or randomness in business logic    |
-| 24 | [specifications](specifications/directive.md)                         | Explicit business rules as Specifications          |
-| 25 | [single-responsibility](single-responsibility/directive.md)           | One responsibility per class                       |
-| 26 | [framework-isolation](framework-isolation/directive.md)               | The domain drives the structure                    |
-| 27 | [libraries-first](libraries-first/directive.md)                       | Check for an existing library before writing a util |
-| 28 | [functional-style](functional-style/directive.md)                     | Functional constructs where they clarify           |
-| 29 | [no-explanatory-comments](no-explanatory-comments/directive.md)       | Rename and extract instead of commenting           |
-| 30 | [defer-discovered-gaps](defer-discovered-gaps/directive.md)           | Park a coverage gap, don't derail                  |
-| 31 | [architecture-profile](architecture-profile/directive.md)             | Architecture the tool must respect                 |
+| No | Id                                                              | Title                                               |
+|----|-----------------------------------------------------------------|-----------------------------------------------------|
+| 15 | [production-code](production-code/directive.md)                 | Production code assessment                          |
+| 16 | [visibility](visibility/directive.md)                           | Lowest visibility by default                        |
+| 17 | [naming](naming/directive.md)                                   | Domain-language names, verb-noun use cases          |
+| 18 | [rich-domain](rich-domain/directive.md)                         | Behaviour lives on the domain object                |
+| 19 | [error-handling](error-handling/directive.md)                   | Results over exceptions, no internal null           |
+| 20 | [interfaces](interfaces/directive.md)                           | No interface without a reason                       |
+| 21 | [abstraction-timing](abstraction-timing/directive.md)           | Stay concrete until the second use case             |
+| 22 | [feature-structure](feature-structure/directive.md)             | Organise by feature, not by layer                   |
+| 23 | [determinism](determinism/directive.md)                         | No ambient time or randomness in business logic     |
+| 24 | [specifications](specifications/directive.md)                   | Explicit business rules as Specifications           |
+| 25 | [single-responsibility](single-responsibility/directive.md)     | One responsibility per class                        |
+| 26 | [framework-isolation](framework-isolation/directive.md)         | The domain drives the structure                     |
+| 27 | [libraries-first](libraries-first/directive.md)                 | Check for an existing library before writing a util |
+| 28 | [functional-style](functional-style/directive.md)               | Functional constructs where they clarify            |
+| 29 | [no-explanatory-comments](no-explanatory-comments/directive.md) | Rename and extract instead of commenting            |
+| 30 | [defer-discovered-gaps](defer-discovered-gaps/directive.md)     | Park a coverage gap, don't derail                   |
+| 31 | [architecture-profile](architecture-profile/directive.md)       | Architecture the tool must respect                  |
 
 **Disabled**
 
-| No | Id                                                                        | Title                                          |
-|----|--------------------------------------------------------------------------|-------------------------------------------------|
-| 32 | [prefer-lombok](prefer-lombok/directive.md)                             | Prefer Lombok over hand-written boilerplate       |
-| 33 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL |
-| 34 | [prefer-result-type-library](prefer-result-type-library/directive.md)   | Use the online.goodcode:result library for the Result type |
+| No | Id                                                                          | Title                                                      |
+|----|-----------------------------------------------------------------------------|------------------------------------------------------------|
+| 32 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
+| 33 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
+| 34 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
 
 **Dropped from migration, flagged rather than silently lost:** `default-stack`'s Spring Boot preference was not
 carried forward as a toggle — `choose-stack` (still to migrate, see protocol batches) now owns that decision
@@ -115,22 +124,24 @@ separate toggles too, folded into no directive yet — say the word if either sh
 
 ### Specs
 
-Migrated from `spec-style.md` (batch 4 of 5) — rules for writing a spec file that `implement` can act on without re-asking what "done" means.
+Migrated from `spec-style.md` (batch 4 of 5) — rules for writing a spec file that `implement` can act on without
+re-asking what "done" means.
 
 **Enabled**
 
-| No | Id | Title |
-|----|----|-------|
-| 35 | [classify-task-shape](classify-task-shape/directive.md) | Classify the shape of a candidate task |
-| 36 | [one-task-granularity](one-task-granularity/directive.md) | One spec is one thing a single implement run can finish |
-| 37 | [spec-rules](spec-rules/directive.md) | How a spec is written |
+| No | Id                                                                    | Title                                                              |
+|----|-----------------------------------------------------------------------|--------------------------------------------------------------------|
+| 35 | [classify-task-shape](classify-task-shape/directive.md)               | Classify the shape of a candidate task                             |
+| 36 | [one-task-granularity](one-task-granularity/directive.md)             | One spec is one thing a single implement run can finish            |
+| 37 | [spec-rules](spec-rules/directive.md)                                 | How a spec is written                                              |
 | 38 | [acceptance-criteria-format](acceptance-criteria-format/directive.md) | Acceptance criteria are the Given/When/Then rules, carried through |
-| 39 | [definition-of-done](definition-of-done/directive.md) | What "done" means unless a spec says otherwise |
-| 40 | [no-invented-requirements](no-invented-requirements/directive.md) | Unknowns go to Open questions, never guessed |
-| 41 | [dependencies-explicit](dependencies-explicit/directive.md) | State ordering dependencies between specs |
+| 39 | [definition-of-done](definition-of-done/directive.md)                 | What "done" means unless a spec says otherwise                     |
+| 40 | [no-invented-requirements](no-invented-requirements/directive.md)     | Unknowns go to Open questions, never guessed                       |
+| 41 | [dependencies-explicit](dependencies-explicit/directive.md)           | State ordering dependencies between specs                          |
 
 **Disabled**
 
 Empty — every migrated Specs directive is stack-agnostic, none needed `enabled-by-default: false`.
 
-All migration batches complete (see the `craftsman` plan, "Kolejność realizacji", step 3). 41 directives total — digest-style.md contributed none, it has no directive-kind entries.
+All migration batches complete (see the `craftsman` plan, "Kolejność realizacji", step 3). 41 directives total —
+digest-style.md contributed none, it has no directive-kind entries.

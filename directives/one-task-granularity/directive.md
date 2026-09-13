@@ -21,4 +21,5 @@ Must:
 
 ## Examples
 
-Two small use cases on the same aggregate (`assign-role` / `revoke-role`) may merge into one spec; a use case touching two bounded contexts must split into two.
+Two small use cases on the same aggregate (`assign-role` / `revoke-role`) may merge into one spec; a use case touching
+two bounded contexts must split into two.

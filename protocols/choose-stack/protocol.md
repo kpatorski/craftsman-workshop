@@ -22,7 +22,8 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 1. Derive candidates from the requirements alone — do not load any `prefer-*` directive yet.
 2. If one candidate clearly fits best, propose it with the reasoning, skipping straight to the checkpoint.
 3. If candidates are genuinely comparable, only then consult the enabled `prefer-*` directives (e.g.
-   [prefer-lombok](../../directives/prefer-lombok/directive.md), [prefer-spock](../../directives/prefer-spock/directive.md)) to break the tie.
+   [prefer-lombok](../../directives/prefer-lombok/directive.md), [prefer-spock](../../directives/prefer-spock/directive.md))
+   to break the tie.
 4. Resolve every entry to its latest stable version before presenting the checkpoint above.
 
 Used by: [bootstrap-module](../bootstrap-module/protocol.md).

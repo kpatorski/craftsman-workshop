@@ -10,11 +10,13 @@ enabled-by-default: false
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `enabled-by-default: false` because this names a concrete library — see core.md, "Fields specific to `directive`".
+Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `enabled-by-default: false`
+because this names a concrete library — see core.md, "Fields specific to `directive`".
 
 ## Directive
 
 Must:
 
-- use `online.goodcode:result` for `Result.success(...)` / `Result.failure(...)`, rather than a hand-rolled Result type or a different library
+- use `online.goodcode:result` for `Result.success(...)` / `Result.failure(...)`, rather than a hand-rolled Result type
+  or a different library
 - if the target module does not already depend on it, ask before adding the dependency

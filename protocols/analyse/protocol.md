@@ -17,6 +17,8 @@ Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/
 ## Protocol
 
 1. [read-input](../read-input/protocol.md) — read the input and split it into sections.
-2. [digest-requirements](../digest-requirements/protocol.md) — extract Given/When/Then rules section by section, write the rules file.
+2. [digest-requirements](../digest-requirements/protocol.md) — extract Given/When/Then rules section by section, write
+   the rules file.
 
-Session file handling, directive loading, and resuming are the execution mechanics described in the `craftsman` skill itself, not repeated per protocol — see [implement](../implement/protocol.md) for the same note.
+Session file handling, directive loading, and resuming are the execution mechanics described in the `craftsman` skill
+itself, not repeated per protocol — see [implement](../implement/protocol.md) for the same note.
