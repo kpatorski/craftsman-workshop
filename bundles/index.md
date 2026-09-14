@@ -8,7 +8,7 @@ description: >
 ## Schema
 
 No fields of its own beyond `Sources` below. `id`, `title`, `description`, `requires` are defined once in
-[core.md](../../craftsman/plugins/craftsman/core.md) — every bundle's own `## Schema` section links back there
+`core.md` — every bundle's own `## Schema` section links back there
 instead of repeating the definition.
 
 ## Sources

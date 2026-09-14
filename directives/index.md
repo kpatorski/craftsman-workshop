@@ -8,7 +8,7 @@ description: >
 ## Schema
 
 No fields of its own beyond `Sources` below. `checkpoint`, `applies-when`, `precedence`, `enabled-by-default`,
-`composes` are defined once in [core.md](../../craftsman/plugins/craftsman/core.md) — every directive's own `## Schema`
+`composes` are defined once in `core.md` — every directive's own `## Schema`
 section links back there instead of repeating the definition.
 
 ## Sources
@@ -22,13 +22,13 @@ files under `directives/<id>/` — flat, not nested by category. Category groupi
 
 ## Examples
 
-Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question test to real entries from this workshop:
+Applying `core.md`'s three-question test to real entries from this workshop:
 
 - [`test-naming`](../bundles/testing/directives/test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any
   moment; no checkpoint, no start or end; removing it changes how a test method's name looks, not what happens next.
   **Directive.**
 - [`production-code`](production-code/directive.md) — composes 14 rules, but composing is not the deciding factor (see
-  core.md — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still no
+  `core.md` — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still no
   checkpoint. **Directive**, even though it is large.
 - [`architecture-profile`](architecture-profile/directive.md) — started life as a `reference` in the old format (a block
   of settled facts, not a rule). It still passes the same test: "is the domain free of framework dependencies right

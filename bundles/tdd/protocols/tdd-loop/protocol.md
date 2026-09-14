@@ -11,7 +11,7 @@ done-when: the whole suite is green and both tests and production code are refac
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md). `cover-cycle` is itself a
+Introduces no new fields — see `core.md`. `cover-cycle` is itself a
 protocol with `repeat-until` — nesting goes as deep as the process does.
 
 ## Protocol

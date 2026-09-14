@@ -10,8 +10,8 @@ enabled-by-default: false
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `enabled-by-default: false`
-because this names a concrete library, not an agnostic rule — see core.md, "Fields specific to `directive`".
+Introduces no new fields — see `core.md`. `enabled-by-default: false`
+because this names a concrete library, not an agnostic rule — see `core.md`, "Fields specific to `directive`".
 
 ## Directive
 

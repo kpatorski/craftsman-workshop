@@ -10,7 +10,7 @@ enabled-by-default: true
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see `core.md`.
 
 ## Directive
 

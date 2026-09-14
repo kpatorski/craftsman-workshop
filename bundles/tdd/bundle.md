@@ -10,7 +10,7 @@ description: >
 
 ## Schema
 
-No fields of its own — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+No fields of its own — see `core.md`.
 
 ## Bundle
 

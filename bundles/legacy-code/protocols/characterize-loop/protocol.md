@@ -11,7 +11,7 @@ done-when: every observed behaviour path has a passing test and they are committ
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see `core.md`.
 
 ## Protocol
 

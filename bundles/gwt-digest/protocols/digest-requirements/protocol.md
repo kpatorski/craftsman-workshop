@@ -11,7 +11,7 @@ done-when: every section has its rules extracted and confirmed, and the rules fi
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see `core.md`.
 
 ## Protocol
 

@@ -15,7 +15,7 @@ done-when: tdd-loop's done-when holds
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `overrides` is defined there,
+Introduces no new fields — see `core.md`. `overrides` is defined there,
 "Fields specific to `protocol`".
 
 ## Protocol

@@ -11,7 +11,7 @@ done-when: "every accepted candidate has a spec file, every blocking open questi
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md).
+Introduces no new fields — see `core.md`.
 
 ## Protocol
 

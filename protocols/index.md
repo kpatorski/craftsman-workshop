@@ -8,7 +8,7 @@ description: >
 ## Schema
 
 No fields of its own beyond `Sources` below. `checkpoint`, `input`, `output`, `steps`, `repeat-until`, `done-when`,
-`entry-point` are defined once in [core.md](../../craftsman/plugins/craftsman/core.md) — every protocol's own
+`entry-point` are defined once in `core.md` — every protocol's own
 `## Schema` section links back there instead of repeating the definition.
 
 ## Sources
@@ -23,14 +23,14 @@ concern only.
 
 ## Examples
 
-Applying [core.md](../../craftsman/plugins/craftsman/core.md)'s three-question test to real entries from this workshop:
+Applying `core.md`'s three-question test to real entries from this workshop:
 
 - [`enumerate-test-cases`](../bundles/tdd/protocols/enumerate-test-cases/protocol.md) — "is this done yet?" is the
   only question that makes sense, not "is this true right now?"; it has a `checkpoint`, a clear start (an empty
   suite) and end (a full stub list); removing it changes what happens next in `tdd-loop`, not how any one piece of
   code looks. **Protocol.**
 - [`tdd-loop`](../bundles/tdd/protocols/tdd-loop/protocol.md) — composes eight other protocols (`steps`), but
-  composing is not the deciding factor (see core.md — both kinds nest). It is still a sequence with a start, an end
+  composing is not the deciding factor (see `core.md` — both kinds nest). It is still a sequence with a start, an end
   (`done-when`), and steps that stop for checkpoints. **Protocol**, even though it is large.
 - [`cover-cycle`](../bundles/tdd/protocols/cover-cycle/protocol.md) — repeats its steps until a condition holds
   (`repeat-until`). The old format had a separate `loop` kind for this; here it is an ordinary protocol, because the

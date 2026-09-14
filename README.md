@@ -5,6 +5,12 @@ must be true about the code right now), protocols (what order to work in, and wh
 groups of the two, installed and enabled together). Written against the format defined in craftsman's own
 [`core.md`](https://github.com/kpatorski/craftsman/blob/main/plugins/craftsman/core.md).
 
+This workshop is useless without the `craftsman` plugin installed — every directive, protocol, and bundle assumes it.
+Individual files here mention `core.md` by name only, without a link: the plugin caches its own code under a path
+that moves on every update, so no fixed link from this repo could stay valid. An agent running a `craftsman` protocol
+already has `core.md` locally (it loaded it the same way it loaded this workshop's content); the link above is for a
+human browsing this repo to find the current copy on GitHub.
+
 It is a starting point, not a default everyone must adopt: install it, fork it privately, or write your own from
 scratch against `core.md`.
 

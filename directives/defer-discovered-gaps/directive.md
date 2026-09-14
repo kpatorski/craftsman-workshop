@@ -10,7 +10,7 @@ enabled-by-default: true
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../craftsman/plugins/craftsman/core.md). `applies-when: any` is a
+Introduces no new fields — see `core.md`. `applies-when: any` is a
 universal scope: this directive is relevant everywhere, not tied to one situation.
 
 ## Directive

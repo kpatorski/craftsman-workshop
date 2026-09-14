@@ -14,7 +14,7 @@ checkpoint:
 
 ## Schema
 
-Introduces no new fields — see [core.md](../../../../../craftsman/plugins/craftsman/core.md). Reserved id — the
+Introduces no new fields — see `core.md`. Reserved id — the
 `analyse`
 workshop's own closing step will need a different one; see the `craftsman` plan, R5.
 
