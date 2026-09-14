@@ -2,7 +2,7 @@
 id: implement
 title: Drive a coding task in a HUMAN <-> AI loop
 description: >
-  Entry point for turning one defined task — a spec, or a task description on its own — into working code. Never a large generated drop: advances in small, checkpoint-gated moves, following whichever of the scenarios below actually fits the task. Migrated from the `developer` skill's `SKILL.md`.
+  Entry point for turning one defined task — a spec, or a task description on its own — into working code. Never a large generated drop: advances in small, checkpoint-gated moves, following whichever of the scenarios below actually fits the task.
 input: a task description or a spec file, plus optionally `style=<name|path>` and `session=<path>`
 output: a green, refactored suite and production code, or a session left `blocked`/`active` with a clear `Next`
 entry-point: true

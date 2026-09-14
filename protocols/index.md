@@ -55,28 +55,27 @@ entries — same restraint as `core.md`'s golden rule, applied to structure inst
 
 ### Implementation
 
-Migrated from `coding-style.md` / the `developer` skill (batch 3 of 5). `implement` is the entry point (see plan
-decision 7, formerly `/developer`); everything else is reached only through it or through a protocol it calls. Four
-bundles now hold most of what used to be here — [tdd](../bundles/tdd/bundle.md),
+`implement` is the entry point; everything else is reached only through it or through a protocol it calls. Three
+bundles hold most of what implementation actually needs — [tdd](../bundles/tdd/bundle.md),
 [legacy-code](../bundles/legacy-code/bundle.md), [module-bootstrap](../bundles/module-bootstrap/bundle.md) — this
 section keeps the entry point, the three scenarios that orchestrate across bundles (mostly fundament steps plus one
 call into `tdd`, the same shape as `requirements-analysis`), and the shared steps several scenarios reuse.
 
 **Enabled**
 
-| No | Id                                                                         | Title                                                  | Note        |
-|----|----------------------------------------------------------------------------|--------------------------------------------------------|-------------|
-| 1  | [implement](implement/protocol.md)                                         | Drive a coding task in a HUMAN <-> AI loop             | entry point |
-| 2  | [scenario-new-use-case](scenario-new-use-case/protocol.md)                 | Add a new use case to an existing module               |             |
-| 3  | [scenario-change-existing-code](scenario-change-existing-code/protocol.md) | Change behaviour in existing code                      |             |
-| 4  | [scenario-utils](scenario-utils/protocol.md)                               | Write or change a util                                 |             |
-| 32 | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in         | shared      |
-| 33 | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                        |             |
-| 34 | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                |             |
-| 35 | [read-existing-tests](read-existing-tests/protocol.md)                     | Read the existing suite first                          |             |
-| 36 | [check-coverage](check-coverage/protocol.md)                               | Check the target is covered before changing it         |             |
-| 37 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                   |             |
-| 38 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes | shared      |
+| No | Id                                                                         | Title                                                  |
+|----|----------------------------------------------------------------------------|--------------------------------------------------------|
+| 1  | [implement](implement/protocol.md)                                         | Drive a coding task in a HUMAN <-> AI loop             |
+| 2  | [scenario-new-use-case](scenario-new-use-case/protocol.md)                 | Add a new use case to an existing module               |
+| 3  | [scenario-change-existing-code](scenario-change-existing-code/protocol.md) | Change behaviour in existing code                      |
+| 4  | [scenario-utils](scenario-utils/protocol.md)                               | Write or change a util                                 |
+| 32 | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in         |
+| 33 | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                        |
+| 34 | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                |
+| 35 | [read-existing-tests](read-existing-tests/protocol.md)                     | Read the existing suite first                          |
+| 36 | [check-coverage](check-coverage/protocol.md)                               | Check the target is covered before changing it         |
+| 37 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                   |
+| 38 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes |
 
 **Disabled**
 
@@ -84,20 +83,19 @@ Empty — nothing has been switched off yet. Populated by `craftsman disable pro
 
 ### Domain design
 
-Migrated from `spec-style.md` / the `analyst` skill (batch 4 of 5). `domain-design` is the entry point (see plan
-decision 7, formerly `/analyst`). Both the event-storming and spec-writing parts of this loop now live in their own
+`domain-design` is the entry point. Both the event-storming and spec-writing parts of this loop live in their own
 bundles — [event-storming](../bundles/event-storming/bundle.md) and
-[spec-writing](../bundles/spec-writing/bundle.md) (decision 10). This section keeps only what is fundament: the
-entry point, the orchestrator that calls into both bundles, and the two shared reading steps.
+[spec-writing](../bundles/spec-writing/bundle.md). This section keeps only what is fundament: the entry point, the
+orchestrator that calls into both bundles, and the two shared reading steps.
 
 **Enabled**
 
-| No | Id                                                         | Title                                                       | Note        |
-|----|------------------------------------------------------------|-------------------------------------------------------------|-------------|
-| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs | entry point |
-| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |             |
-| 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |             |
-| 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |             |
+| No | Id                                                         | Title                                                       |
+|----|------------------------------------------------------------|-------------------------------------------------------------|
+| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs |
+| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |
+| 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |
+| 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |
 
 **Disabled**
 
@@ -105,20 +103,19 @@ Empty — nothing has been switched off yet.
 
 ### Analyse
 
-Migrated from `digest-style.md` / the `digester` skill (batch 5 of 5, the smallest source file). `analyse` is the entry
-point (see plan decision 7, formerly `/digester`). The GWT-extraction machinery this entry point drives now lives in
-the [gwt-digest](../bundles/gwt-digest/bundle.md) bundle (decision 10) — this section keeps only what is fundament:
-the entry point itself and the shared `read-input` step.
+`analyse` is the entry point. The GWT-extraction machinery it drives lives in the
+[gwt-digest](../bundles/gwt-digest/bundle.md) bundle — this section keeps only what is fundament: the entry point
+itself and the shared `read-input` step.
 
 **Enabled**
 
-| No | Id                                   | Title                                                     | Note        |
-|----|--------------------------------------|-----------------------------------------------------------|-------------|
-| 57 | [analyse](analyse/protocol.md)       | Turn raw requirements into Given/When/Then business rules | entry point |
-| 60 | [read-input](read-input/protocol.md) | Read the input                                            |             |
+| No | Id                                   | Title                                                     |
+|----|--------------------------------------|-----------------------------------------------------------|
+| 57 | [analyse](analyse/protocol.md)       | Turn raw requirements into Given/When/Then business rules |
+| 60 | [read-input](read-input/protocol.md) | Read the input                                            |
 
 **Disabled**
 
 Empty — nothing has been switched off yet.
 
-All migration batches complete (see the `craftsman` plan, "Kolejność realizacji", step 3). 62 protocols total.
+62 protocols total.

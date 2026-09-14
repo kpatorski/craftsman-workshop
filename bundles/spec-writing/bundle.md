@@ -20,13 +20,13 @@ whatever produced it. This bundle does not depend on any one source for that lis
 
 **Enabled**
 
-| No | Id                                                                       | Title                                     | Note    |
-|----|--------------------------------------------------------------------------|-------------------------------------------|---------|
-| 1  | [propose-candidate-specs](protocols/propose-candidate-specs/protocol.md) | Turn use cases into a candidate spec list |         |
-| 2  | [detail-spec](protocols/detail-spec/protocol.md)                         | Draft each accepted candidate spec        | repeats |
-| 3  | [draft-spec](protocols/draft-spec/protocol.md)                           | Draft one spec                            |         |
-| 4  | [collect-open-questions](protocols/collect-open-questions/protocol.md)   | Surface every unresolved open question    |         |
-| 5  | [finalize](protocols/finalize/protocol.md)                               | Write the specs and close the run         |         |
+| No | Id                                                                       | Title                                     |
+|----|--------------------------------------------------------------------------|-------------------------------------------|
+| 1  | [propose-candidate-specs](protocols/propose-candidate-specs/protocol.md) | Turn use cases into a candidate spec list |
+| 2  | [detail-spec](protocols/detail-spec/protocol.md)                         | Draft each accepted candidate spec        |
+| 3  | [draft-spec](protocols/draft-spec/protocol.md)                           | Draft one spec                            |
+| 4  | [collect-open-questions](protocols/collect-open-questions/protocol.md)   | Surface every unresolved open question    |
+| 5  | [finalize](protocols/finalize/protocol.md)                               | Write the specs and close the run         |
 
 **Disabled**
 

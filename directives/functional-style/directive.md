@@ -2,7 +2,7 @@
 id: functional-style
 title: Functional constructs where they clarify
 description: >
-  Functional constructs replace null checks and manual loops when they read better — clarity is the test, not novelty. The named types (Optional, Stream) are JVM-flavored; the underlying idea generalizes. Originally scoped `stack: jvm` in the source this was migrated from.
+  Functional constructs replace null checks and manual loops when they read better — clarity is the test, not novelty. The named types (Optional, Stream) are JVM-flavored; the underlying idea generalizes to any language with the equivalent constructs.
 applies-when: a null check or a manual loop could be replaced with a functional construct
 precedence: the project's existing convention wins
 enabled-by-default: true

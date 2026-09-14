@@ -5,7 +5,7 @@ description: >
   Each iteration covers a small batch of stubs and stops for the developer's go-ahead before the next one. A stub discovered mid-iteration is added immediately, then the current iteration continues.
 input: the stub list from enumerate-test-cases
 output: every stub from enumerate-test-cases has a passing body
-steps: [ cover-batch, minimal-production-code, review-design-direction ]
+steps: [cover-batch, minimal-production-code, review-design-direction]
 repeat-until: every stub from enumerate-test-cases has a passing body
 ---
 

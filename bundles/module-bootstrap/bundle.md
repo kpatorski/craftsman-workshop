@@ -25,16 +25,16 @@ candidates — never let a preference pre-decide the stack.
 
 **Enabled**
 
-| No | Id                                                                           | Title                                 | Note |
-|----|------------------------------------------------------------------------------|---------------------------------------|------|
-| 1  | [bootstrap-module](protocols/bootstrap-module/protocol.md)                   | Module bootstrap                      |      |
-| 2  | [choose-stack](protocols/choose-stack/protocol.md)                           | Agree the stack                       |      |
-| 3  | [create-build](protocols/create-build/protocol.md)                           | Create the build                      |      |
-| 4  | [add-dependencies](protocols/add-dependencies/protocol.md)                   | Add the agreed dependencies           |      |
-| 5  | [scaffold-package-skeleton](protocols/scaffold-package-skeleton/protocol.md) | Lay out the package skeleton          |      |
-| 6  | [base-configuration](protocols/base-configuration/protocol.md)               | Add baseline configuration            |      |
-| 7  | [pick-first-aggregate](protocols/pick-first-aggregate/protocol.md)           | Pick the first aggregate to implement |      |
-| 8  | [scenario-bootstrap-module](protocols/scenario-bootstrap-module/protocol.md) | Found a new project or module         |      |
+| No | Id                                                                           | Title                                 |
+|----|------------------------------------------------------------------------------|---------------------------------------|
+| 1  | [bootstrap-module](protocols/bootstrap-module/protocol.md)                   | Module bootstrap                      |
+| 2  | [choose-stack](protocols/choose-stack/protocol.md)                           | Agree the stack                       |
+| 3  | [create-build](protocols/create-build/protocol.md)                           | Create the build                      |
+| 4  | [add-dependencies](protocols/add-dependencies/protocol.md)                   | Add the agreed dependencies           |
+| 5  | [scaffold-package-skeleton](protocols/scaffold-package-skeleton/protocol.md) | Lay out the package skeleton          |
+| 6  | [base-configuration](protocols/base-configuration/protocol.md)               | Add baseline configuration            |
+| 7  | [pick-first-aggregate](protocols/pick-first-aggregate/protocol.md)           | Pick the first aggregate to implement |
+| 8  | [scenario-bootstrap-module](protocols/scenario-bootstrap-module/protocol.md) | Found a new project or module         |
 
 **Disabled**
 

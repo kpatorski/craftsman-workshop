@@ -2,7 +2,7 @@
 id: analyse
 title: Turn raw requirements into Given/When/Then business rules
 description: >
-  Entry point for turning raw requirements prose into structured business rules — pure extraction, no domain modelling (no events, aggregates, contexts; that is `domain-design`'s job). Migrated from the `digester` skill's `SKILL.md` and its single `scenario-digest-input`, retired here as a separate file because there was only ever one path — nothing to dispatch between. Never references an id from any other workshop content; its output is plain structured data any downstream reader can consume without `analyse` knowing that reader exists.
+  Entry point for turning raw requirements prose into structured business rules — pure extraction, no domain modelling (no events, aggregates, contexts; that is `domain-design`'s job). There is only ever one path here, nothing to dispatch between. Never references an id from any other workshop content; its output is plain structured data any downstream reader can consume without `analyse` knowing that reader exists.
 input: "a requirements input (file, URL, or inline text), plus optionally `style=<name|path>` / `session=<path>`"
 output: "`business-rules.md`, grouped by section, ready for `domain-design` or any other reader"
 entry-point: true

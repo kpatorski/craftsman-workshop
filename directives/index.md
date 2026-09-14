@@ -52,9 +52,8 @@ entries — same restraint as `core.md`'s golden rule, applied to structure inst
 
 ### Testing
 
-Migrated from `coding-style.md`'s test-writing sections. Everything that used to be Enabled here now lives in the
-[testing](../bundles/testing/bundle.md) bundle (decision 10) — this section keeps only the stack-specific `prefer-*`
-toggles, standalone preferences that don't belong to any one theme.
+The suite-shape rules live in the [testing](../bundles/testing/bundle.md) bundle — this section keeps only the
+stack-specific `prefer-*` toggles, standalone preferences that don't belong to any one theme.
 
 **Enabled**
 
@@ -72,10 +71,9 @@ Empty — every entry that was here moved to the `testing` bundle.
 
 ### Production code
 
-Migrated from `coding-style.md`'s `production-code` ruleset (14 rules) plus `architecture-profile` and the
-remaining pieces of `default-stack`. `error-handling`, `feature-structure` and `functional-style` were tagged
-`stack: jvm` in the source; kept enabled by default here because the underlying rule does not name a specific
-product, only a pattern — see each directive's own description for the caveat.
+`error-handling`, `feature-structure` and `functional-style` might look stack-specific at a glance, but stay
+enabled by default: the underlying rule does not name a specific product, only a pattern — see each directive's own
+description for the caveat.
 
 **Enabled**
 
@@ -107,17 +105,10 @@ product, only a pattern — see each directive's own description for the caveat.
 | 33 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
 | 34 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
 
-**Dropped from migration, flagged rather than silently lost:** `default-stack`'s Spring Boot preference was not
-carried forward as a toggle — `choose-stack` (still to migrate, see protocol batches) now owns that decision
-from task requirements, and a pre-loaded framework preference would work against `choose-stack`'s
-"preferences only break ties" rule (plan decision 5). REST-Assured and the Java LTS pin were dropped as
-separate toggles too, folded into no directive yet — say the word if either should get its own
-`prefer-*` directive.
-
 ### Specs
 
-Everything that used to be here moved to the [spec-writing](../bundles/spec-writing/bundle.md) bundle
-(decision 10) — writing spec files is one theme, and none of these directives are used outside it.
+Everything that used to be here moved to the [spec-writing](../bundles/spec-writing/bundle.md) bundle — writing
+spec files is one theme, and none of these directives are used outside it.
 
 **Enabled**
 
@@ -127,5 +118,4 @@ Empty — every entry that was here moved to the `spec-writing` bundle.
 
 Empty.
 
-All migration batches complete (see the `craftsman` plan, "Kolejność realizacji", step 3). 41 directives total —
-digest-style.md contributed none, it has no directive-kind entries.
+41 directives total.

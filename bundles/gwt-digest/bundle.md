@@ -20,12 +20,12 @@ rules it already contains as Given/When/Then. Input is already-read, section-spl
 
 **Enabled**
 
-| No | Id                                                               | Title                                                       | Note    |
-|----|------------------------------------------------------------------|-------------------------------------------------------------|---------|
-| 1  | [digest-requirements](protocols/digest-requirements/protocol.md) | Digest raw requirements into Given/When/Then business rules |         |
-| 2  | [extract-rules](protocols/extract-rules/protocol.md)             | Extract rules section by section                            | repeats |
-| 3  | [extract-rules-batch](protocols/extract-rules-batch/protocol.md) | Extract GWT rules for one section                           |         |
-| 4  | [finalize-digest](protocols/finalize-digest/protocol.md)         | Write the rules file                                        |         |
+| No | Id                                                               | Title                                                       |
+|----|------------------------------------------------------------------|-------------------------------------------------------------|
+| 1  | [digest-requirements](protocols/digest-requirements/protocol.md) | Digest raw requirements into Given/When/Then business rules |
+| 2  | [extract-rules](protocols/extract-rules/protocol.md)             | Extract rules section by section                            |
+| 3  | [extract-rules-batch](protocols/extract-rules-batch/protocol.md) | Extract GWT rules for one section                           |
+| 4  | [finalize-digest](protocols/finalize-digest/protocol.md)         | Write the rules file                                        |
 
 **Disabled**
 

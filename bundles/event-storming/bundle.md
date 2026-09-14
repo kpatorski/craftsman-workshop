@@ -26,17 +26,17 @@ in the `tdd` bundle, applied to modelling instead of testing.
 
 **Enabled**
 
-| No | Id                                                                   | Title                                             | Note    |
-|----|----------------------------------------------------------------------|---------------------------------------------------|---------|
-| 1  | [event-storming](protocols/event-storming/protocol.md)               | Event storming from a requirements input          |         |
-| 2  | [collect-events](protocols/collect-events/protocol.md)               | Collect every domain event, Big Picture style     |         |
-| 3  | [attach-event-rules](protocols/attach-event-rules/protocol.md)       | Attach the rules that must hold for each event    | repeats |
-| 4  | [attach-rules-batch](protocols/attach-rules-batch/protocol.md)       | Attach rules for a batch of events                |         |
-| 5  | [identify-aggregates](protocols/identify-aggregates/protocol.md)     | Group events under the aggregate that owns them   |         |
-| 6  | [derive-commands](protocols/derive-commands/protocol.md)             | Derive the command that triggers each event       | notify  |
-| 7  | [derive-views](protocols/derive-views/protocol.md)                   | Derive the read models the use cases will need    | notify  |
-| 8  | [derive-use-cases](protocols/derive-use-cases/protocol.md)           | Derive use cases from command + aggregate + event | notify  |
-| 9  | [draw-bounded-contexts](protocols/draw-bounded-contexts/protocol.md) | Draw bounded contexts and how they communicate    |         |
+| No | Id                                                                   | Title                                             |
+|----|----------------------------------------------------------------------|---------------------------------------------------|
+| 1  | [event-storming](protocols/event-storming/protocol.md)               | Event storming from a requirements input          |
+| 2  | [collect-events](protocols/collect-events/protocol.md)               | Collect every domain event, Big Picture style     |
+| 3  | [attach-event-rules](protocols/attach-event-rules/protocol.md)       | Attach the rules that must hold for each event    |
+| 4  | [attach-rules-batch](protocols/attach-rules-batch/protocol.md)       | Attach rules for a batch of events                |
+| 5  | [identify-aggregates](protocols/identify-aggregates/protocol.md)     | Group events under the aggregate that owns them   |
+| 6  | [derive-commands](protocols/derive-commands/protocol.md)             | Derive the command that triggers each event       |
+| 7  | [derive-views](protocols/derive-views/protocol.md)                   | Derive the read models the use cases will need    |
+| 8  | [derive-use-cases](protocols/derive-use-cases/protocol.md)           | Derive use cases from command + aggregate + event |
+| 9  | [draw-bounded-contexts](protocols/draw-bounded-contexts/protocol.md) | Draw bounded contexts and how they communicate    |
 
 **Disabled**
 

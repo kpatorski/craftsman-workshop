@@ -24,15 +24,15 @@ the same case-map-first shape, applied to code that already exists instead of a 
 
 **Enabled**
 
-| No | Id                                                                           | Title                                              | Note    |
-|----|------------------------------------------------------------------------------|----------------------------------------------------|---------|
-| 1  | [characterize-loop](protocols/characterize-loop/protocol.md)                 | Characterization test loop                         |         |
-| 2  | [characterize-cycle](protocols/characterize-cycle/protocol.md)               | Characterization batch cycle                       | repeats |
-| 3  | [characterize-batch](protocols/characterize-batch/protocol.md)               | Lock in current behaviour for a small batch        |         |
-| 4  | [enumerate-cases-from-code](protocols/enumerate-cases-from-code/protocol.md) | Read the code to list the cases it already handles |         |
-| 5  | [finish-characterize](protocols/finish-characterize/protocol.md)             | Close the characterization loop                    |         |
-| 6  | [commit-tests](protocols/commit-tests/protocol.md)                           | Commit the tests on their own                      |         |
-| 7  | [scenario-missing-tests](protocols/scenario-missing-tests/protocol.md)       | Cover existing code that lacks tests               |         |
+| No | Id                                                                           | Title                                              |
+|----|------------------------------------------------------------------------------|----------------------------------------------------|
+| 1  | [characterize-loop](protocols/characterize-loop/protocol.md)                 | Characterization test loop                         |
+| 2  | [characterize-cycle](protocols/characterize-cycle/protocol.md)               | Characterization batch cycle                       |
+| 3  | [characterize-batch](protocols/characterize-batch/protocol.md)               | Lock in current behaviour for a small batch        |
+| 4  | [enumerate-cases-from-code](protocols/enumerate-cases-from-code/protocol.md) | Read the code to list the cases it already handles |
+| 5  | [finish-characterize](protocols/finish-characterize/protocol.md)             | Close the characterization loop                    |
+| 6  | [commit-tests](protocols/commit-tests/protocol.md)                           | Commit the tests on their own                      |
+| 7  | [scenario-missing-tests](protocols/scenario-missing-tests/protocol.md)       | Cover existing code that lacks tests               |
 
 **Disabled**
 

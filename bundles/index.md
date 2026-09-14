@@ -2,7 +2,7 @@
 name: bundles-index
 description: >
   Lookup table for every bundle in this workshop — named groups of directives and protocols that install and
-  enable together (decision 10). `craftsman search` and `craftsman list bundle` read this first.
+  enable together. `craftsman search` and `craftsman list bundle` read this first.
 ---
 
 ## Schema
