@@ -14,11 +14,13 @@ instead of repeating the definition.
 ## Sources
 
 Where installed bundles came from. `craftsman install <uri>` appends a row here and materializes the bundle's
-files under `bundles/<id>/` — `directives/` and `protocols/` inside it, mirroring the top level.
+files under `bundles/<id>/` — `directives/` and `protocols/` inside it, mirroring the top level. `Version` is the
+source's commit sha at last sync, when it is a git repository — re-run `craftsman install <uri>` with the same URI
+any time to check whether it has moved on.
 
-| Name     | Location        | Kind  |
-|----------|-----------------|-------|
-| workshop | `.` (this repo) | local |
+| Name     | Location        | Kind  | Version |
+|----------|-----------------|-------|---------|
+| workshop | `.` (this repo) | local | —       |
 
 ## Examples
 

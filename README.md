@@ -33,6 +33,18 @@ From inside a Claude Code session with the `craftsman` plugin installed:
 
 See craftsman's own [README](https://github.com/kpatorski/craftsman#readme) for installing the plugin itself first.
 
+## Updating
+
+No auto-update. Re-run the same command any time:
+
+```
+/craftsman:install https://github.com/kpatorski/craftsman-workshop
+```
+
+If nothing changed since your last install, it says so and stops. If something did, it shows what and asks before
+touching anything — see craftsman's own `MANAGEMENT.md`, "Checking a known source for updates":
+[github.com/kpatorski/craftsman/blob/main/plugins/craftsman/MANAGEMENT.md](https://github.com/kpatorski/craftsman/blob/main/plugins/craftsman/MANAGEMENT.md)
+
 ## License
 
 [PolyForm Internal Use License 1.0.0](LICENSE.md) — free to use, including commercially, for your own internal

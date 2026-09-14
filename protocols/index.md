@@ -15,11 +15,12 @@ No fields of its own beyond `Sources` below. `checkpoint`, `input`, `output`, `s
 
 Where installed protocols came from. `craftsman install <uri>` appends a row here and materializes each
 protocol's files under `protocols/<id>/` — flat, not nested by category. Category grouping below is an index
-concern only.
+concern only. `Version` is the source's commit sha at last sync, when it is a git repository — re-run
+`craftsman install <uri>` with the same URI any time to check whether it has moved on.
 
-| Name     | Location        | Kind  |
-|----------|-----------------|-------|
-| workshop | `.` (this repo) | local |
+| Name     | Location        | Kind  | Version |
+|----------|-----------------|-------|---------|
+| workshop | `.` (this repo) | local | —       |
 
 ## Examples
 
