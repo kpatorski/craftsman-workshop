@@ -45,6 +45,11 @@ If nothing changed since your last install, it says so and stops. If something d
 touching anything — see craftsman's own `MANAGEMENT.md`, "Checking a known source for updates":
 [github.com/kpatorski/craftsman/blob/main/plugins/craftsman/MANAGEMENT.md](https://github.com/kpatorski/craftsman/blob/main/plugins/craftsman/MANAGEMENT.md)
 
+Your own edits to a file from this workshop are never silently overwritten, and anything you've written yourself is
+never a deletion candidate — but the cleanest way to build on this workshop is still your own entry under your own
+`id` (or an `overrides`), rather than editing a file that stays owned by this source. That way there's never a
+conflict to resolve in the first place.
+
 ## License
 
 [PolyForm Internal Use License 1.0.0](LICENSE.md) — free to use, including commercially, for your own internal
