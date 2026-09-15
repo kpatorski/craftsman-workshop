@@ -14,6 +14,9 @@ Introduces no new fields — see `core.md`.
 
 ## Protocol
 
-Apply the [production-code](../../../../directives/production-code/directive.md) directive while writing. A newly
-discovered
-case gets a failing stub immediately — that feeds back into the current cover-cycle iteration, not a derailment.
+1. Apply the [production-code](../../../../directives/production-code/directive.md) directive while writing. A
+   newly discovered case gets a failing stub immediately — that feeds back into the current cover-cycle iteration,
+   not a derailment.
+2. **Run the suite and confirm this batch is now actually green before moving on** — the same discipline as
+   `cover-batch`'s own run, the other side of it. `output` above says "suite green for covered stubs"; that is a
+   claim about what a real run shows, not an expectation to state without having watched it happen.
