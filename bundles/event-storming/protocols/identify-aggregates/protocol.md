@@ -8,7 +8,12 @@ output: aggregates, each with its owned events and rules
 checkpoint:
   type: ask
   blocking: true
-  prompt: "Aggregates: <name -> events, with the invariant each one protects>. Boundaries right?"
+  prompt: >
+    Aggregates: <name -> events, with the invariant each one protects>. <If step 3's visibility check failed for
+    any proposed root: name both resolutions with what each actually costs — (a) merge into <aggregate>, one true
+    consistency boundary, the invariant always holds; (b) keep <name>s separate, downgrade this from an aggregate
+    invariant to an application-level constraint, enforced by <mechanism — a spanning unique constraint, a
+    reconciling process, or an accepted race> — and ask which.> Boundaries right?
 ---
 
 ## Schema
@@ -26,8 +31,25 @@ Introduces no new fields — see `core.md`.
    never assume it holds just because the events are grouped together. The classic trap: a "no duplicate / no
    conflict across many instances of the same aggregate" invariant can't be enforced by that aggregate at all — one
    `Reservation` has no visibility into a sibling `Reservation` for the same desk and day, so it cannot be the one
-   stopping them from coexisting. When the invariant needs visibility the proposed root doesn't have, move the
-   boundary to whichever aggregate *does* have it (often the contended-for resource, not the thing contending for
-   it), or say plainly that this is an application-level uniqueness constraint, not an aggregate invariant — never
-   claim an aggregate protects something it structurally cannot see.
-4. Draw the aggregate boundary.
+   stopping them from coexisting.
+
+   When this happens, there are exactly two legitimate resolutions — present both, with what each one actually
+   costs, and let the developer pick; never default to either silently:
+   - **Merge the boundary** to whichever aggregate *does* have the needed visibility (often the contended-for
+     resource, not the thing contending for it) — one true aggregate, one consistency boundary, the invariant is
+     always true. This is the right call when the events genuinely belong to one bounded context and the
+     invariant must never be violated, not even briefly.
+   - **Keep the aggregates separate** — a real option, not a fallback, when the proposed roots genuinely belong to
+     different bounded contexts or use cases that should not be coupled into one consistency boundary. This means
+     admitting the invariant is no longer an *aggregate* invariant but an application-level constraint, and naming
+     what actually enforces it instead: a database-level constraint (e.g. a unique/exclusion constraint) spanning
+     both, a saga or reconciling process that corrects a rare violation after the fact, or a documented, accepted
+     risk of a race. Never claim this constraint "just holds" without naming the mechanism — that is the same
+     mistake as claiming an aggregate protects something it structurally cannot see, one layer up.
+4. Draw the aggregate boundary — whichever resolution was chosen.
+
+**This boundary is a consistency guarantee, not a Java class.** "One aggregate" means one persisted record every
+owning command must read and write through — it does not mean one shared domain class reused verbatim by every use
+case that touches it. How that split happens in code, once several use cases share this aggregate, is
+[feature-structure](../../../../directives/feature-structure/directive.md)'s call, made at
+[confirm-conventions](../../../../protocols/confirm-conventions/protocol.md) — not this protocol's.
