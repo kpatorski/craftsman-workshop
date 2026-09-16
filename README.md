@@ -50,6 +50,22 @@ never a deletion candidate — but the cleanest way to build on this workshop is
 `id` (or an `overrides`), rather than editing a file that stays owned by this source. That way there's never a
 conflict to resolve in the first place.
 
+## Contributing
+
+Before committing a change to this repo, once:
+
+```
+git config core.hooksPath .githooks
+```
+
+This runs `scripts/validate_content.py` (from the `craftsman` plugin — a sibling checkout, or the installed
+plugin's own cache) before every commit: id uniqueness across `directives/`/`protocols/`/`bundles/`, every
+relative link resolving, required frontmatter fields and sections present, and every id on disk appearing in
+exactly one Enabled/Disabled table. A real id collision (`event-storming`, used by both a bundle and its own entry
+protocol) shipped to `main` unnoticed before this existed — the check only ran when someone happened to install
+this repo, not on every commit. If the script can't be found (no sibling `craftsman` checkout, plugin not
+installed), the hook prints a warning and lets the commit through rather than blocking everyone.
+
 ## License
 
 [PolyForm Internal Use License 1.0.0](LICENSE.md) — free to use, including commercially, for your own internal
