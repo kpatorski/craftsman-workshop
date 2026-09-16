@@ -53,3 +53,5 @@ Introduces no new fields — see `core.md`.
      into either aggregate's use case.
 4. A "command" that only reads and changes nothing is not a command — it is a view; hand it to
    [derive-views](../derive-views/protocol.md).
+5. Once confirmed, append a `## Commands` section to `event-model.md` — each command with its event, aggregate,
+   rejectable/unconditional marker and failure outcomes, plus any process manager named in step 3.

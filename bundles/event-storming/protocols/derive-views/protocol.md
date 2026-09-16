@@ -46,3 +46,5 @@ Introduces no new fields — see `core.md`.
    is listed at [draw-bounded-contexts](../draw-bounded-contexts/protocol.md), not invented separately here.
 5. Do not invent views nobody asked for: every view traces to a command someone must decide to issue, or an
    outcome someone must see.
+6. Once confirmed, append a `## Views` section to `event-model.md` — each view with its source and, where the
+   source is a projection, the staleness the business accepts.

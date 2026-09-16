@@ -36,6 +36,8 @@ Introduces no new fields — see `core.md`.
 6. A process manager surfaced by [derive-commands](../derive-commands/protocol.md) is a use case in its own
    right — named with its trigger event, the command it issues, and its compensation. Never folded into either
    aggregate's use case.
+7. Once confirmed, append a `## Use cases` section to `event-model.md` — each candidate with its triple and, where
+   merged, the one decision that justified it.
 
 This names *candidate* use cases; whether two candidates become one *spec* is `propose-candidate-specs`' call
 under `one-task-granularity` — the criterion there is "can one implement run finish it", a different question

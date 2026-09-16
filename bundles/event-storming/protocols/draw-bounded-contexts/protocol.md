@@ -65,3 +65,8 @@ Introduces no new fields — see `core.md`.
    event schema owned by the upstream context; Conformist → their types used at your adapter layer only, never
    past it (see [framework-isolation](../../../../directives/framework-isolation/directive.md)); Separate Ways →
    nothing, and say so.
+6. Once confirmed, append a `## Bounded contexts` section to `event-model.md` and close it out — every earlier
+   step already wrote its own section as it was confirmed (`collect-events` created the file; `attach-rules-batch`,
+   `identify-aggregates`, `derive-commands`, `derive-views`, `derive-use-cases` each appended theirs), so this is
+   the last section, not the first time anything in it becomes visible. `event-model.md` is the input
+   `propose-candidate-specs` reads from next — never re-derive the model from the conversation there.

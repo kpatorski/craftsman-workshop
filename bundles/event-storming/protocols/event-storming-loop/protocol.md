@@ -5,7 +5,9 @@ description: >
   Big Picture event storming run against the input document. Breadth-first: collect everything before judging any of it.
   Produces the building blocks a use case needs.
 input: the input read by ingest, plus restate-understanding's confirmed summary
-output: events, their rules, aggregates, commands, views, use cases and bounded contexts, all confirmed
+output: >
+  events, their rules, aggregates, commands, views, use cases and bounded contexts, all confirmed and already in
+  event-model.md — each step writes its own section as it is confirmed, not just the last one
 steps: [collect-events, attach-event-rules, identify-aggregates, derive-commands, derive-views, derive-use-cases,
   draw-bounded-contexts]
 done-when: events, their rules, aggregates, commands, views, use cases and bounded contexts are all confirmed

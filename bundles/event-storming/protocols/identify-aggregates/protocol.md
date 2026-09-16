@@ -50,6 +50,9 @@ Introduces no new fields — see `core.md`.
 4. Draw the aggregate boundary — whichever resolution was chosen. Keep the result small — see
    [aggregate-design](../../../../directives/aggregate-design/directive.md) for sizing and how sibling aggregates
    should be referenced.
+5. Once confirmed, append a `## Aggregates` section to `event-model.md` (created by `collect-events`) — each
+   aggregate with its owned events and the invariant it protects, same discipline as `attach-rules-batch` writing
+   its own section immediately rather than deferring to `draw-bounded-contexts`.
 
 **This boundary is a consistency guarantee, not a Java class.** "One aggregate" means one persisted record every
 owning command must read and write through — it does not mean one shared domain class reused verbatim by every use
