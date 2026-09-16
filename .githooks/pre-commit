@@ -1,0 +1,31 @@
+#!/bin/sh
+# Runs the craftsman plugin's scripts/validate_content.py against this repo before allowing a commit -- see
+# MANAGEMENT.md (in the craftsman plugin repo), "Duplicate detection" and "Syntax validation". Exists because a
+# real id collision shipped to origin/main unnoticed: the check that would have caught it only ran when an agent
+# happened to run `craftsman install` against this repo, not on every commit to the source itself.
+#
+# One-time setup after cloning this repo:
+#   git config core.hooksPath .githooks
+set -e
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+SCRIPT=""
+
+for candidate in \
+    "$REPO_ROOT/../craftsman/plugins/craftsman/scripts/validate_content.py" \
+    "$(ls -d "$HOME"/.claude/plugins/cache/craftsman/craftsman/*/scripts/validate_content.py 2>/dev/null | sort -V | tail -1)"
+do
+    if [ -n "$candidate" ] && [ -f "$candidate" ]; then
+        SCRIPT="$candidate"
+        break
+    fi
+done
+
+if [ -z "$SCRIPT" ]; then
+    echo "pre-commit: validate_content.py not found (checked a sibling craftsman checkout and the installed" >&2
+    echo "plugin cache under ~/.claude/plugins/cache/craftsman/) -- skipping content validation for this commit." >&2
+    echo "Install the craftsman plugin, or clone kpatorski/craftsman as a sibling directory, to enable this check." >&2
+    exit 0
+fi
+
+python3 "$SCRIPT" "$REPO_ROOT"
