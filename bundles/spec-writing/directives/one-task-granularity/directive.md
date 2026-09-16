@@ -2,7 +2,8 @@
 id: one-task-granularity
 title: One spec is one thing a single implement run can finish
 description: >
-  Keeps a spec small enough that `implement` can carry it through in one go, without hitting its own architecture decision mid-way.
+  Keeps a spec small enough that `implement` can carry it through in one go, without hitting its own architecture
+  decision mid-way.
 applies-when: proposing or reviewing a candidate spec
 precedence: none — this always applies
 enabled-by-default: true

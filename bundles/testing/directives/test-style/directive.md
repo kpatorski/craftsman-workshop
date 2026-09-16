@@ -2,7 +2,8 @@
 id: test-style
 title: How a test suite should read
 description: >
-  A suite reads like a business analyst describing the system's requirements. It states behaviour, not mechanics — never which method was called or which argument was passed. Technical complexity hides behind small, human-named helpers.
+  A suite reads like a business analyst describing the system's requirements. It states behaviour, not mechanics — never
+  which method was called or which argument was passed. Technical complexity hides behind small, human-named helpers.
 applies-when: writing, extending or refactoring any test suite
 composes: [test-naming, test-as-story, suite-layout]
 precedence: the project's existing suite conventions win

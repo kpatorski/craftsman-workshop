@@ -2,7 +2,9 @@
 id: prefer-spock
 title: Spock by default, even on Java
 description: >
-  Spock is chosen for readability — native given/when/then, data tables, expressive assertions. A stack-specific preference: only relevant once the stack itself includes the JVM, and only breaks a tie between test frameworks — it never pre-decides the stack. See `choose-stack`.
+  Spock is chosen for readability — native given/when/then, data tables, expressive assertions. A stack-specific
+  preference: only relevant once the stack itself includes the JVM, and only breaks a tie between test frameworks — it
+  never pre-decides the stack. See `choose-stack`.
 applies-when: choosing or writing a test suite on a JVM project
 precedence: the project's existing test framework wins
 enabled-by-default: false

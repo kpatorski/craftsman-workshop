@@ -2,7 +2,8 @@
 id: prefer-assertj-under-junit
 title: AssertJ in JUnit suites
 description: >
-  A JUnit suite asserts with AssertJ's fluent `assertThat(...)`, not JUnit's own assertion methods. Spock suites do not need this — Spock's native condition blocks already read fluently.
+  A JUnit suite asserts with AssertJ's fluent `assertThat(...)`, not JUnit's own assertion methods. Spock suites do not
+  need this — Spock's native condition blocks already read fluently.
 applies-when: asserting in a JUnit suite
 precedence: the project's existing assertion library wins
 enabled-by-default: false

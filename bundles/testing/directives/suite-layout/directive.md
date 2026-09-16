@@ -2,7 +2,8 @@
 id: suite-layout
 title: Tests on top, helpers at the bottom
 description: >
-  Test methods sit at the top of the class; helper methods (stubbing, asserting, building) sit at the bottom. The reader meets the business rules first. This is deliberately unlike production-code ordering.
+  Test methods sit at the top of the class; helper methods (stubbing, asserting, building) sit at the bottom. The reader
+  meets the business rules first. This is deliberately unlike production-code ordering.
 applies-when: laying out a test class
 precedence: the project's existing file layout wins
 enabled-by-default: true

@@ -2,7 +2,8 @@
 id: test-data
 title: Values and object building in tests
 description: >
-  Test data should lower the reader's cognitive load: placeholder values signal "irrelevant here", and object building is factored out once it repeats.
+  Test data should lower the reader's cognitive load: placeholder values signal "irrelevant here", and object building
+  is factored out once it repeats.
 applies-when: building or stubbing an object inside a test
 composes: [dummy-values, test-fixtures]
 precedence: the project's existing test-data convention wins

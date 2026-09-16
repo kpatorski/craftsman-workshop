@@ -26,12 +26,12 @@ with the same URI any time to check whether it has moved on.
 
 Applying `core.md`'s three-question test to real entries from this workshop:
 
-- [`test-naming`](../bundles/testing/directives/test-naming/directive.md) — "is the test named by the state it describes?" has a yes/no answer at any
-  moment; no checkpoint, no start or end; removing it changes how a test method's name looks, not what happens next.
-  **Directive.**
+- [`test-naming`](../bundles/testing/directives/test-naming/directive.md) — "is the test named by the state it
+  describes?" has a yes/no answer at any moment; no checkpoint, no start or end; removing it changes how a test method's
+  name looks, not what happens next. **Directive.**
 - [`production-code`](production-code/directive.md) — composes 14 rules, but composing is not the deciding factor (see
-  `core.md` — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still no
-  checkpoint. **Directive**, even though it is large.
+  `core.md` — both kinds nest). It is still a yes/no check ("does this class follow the production-code rules?"), still
+  no checkpoint. **Directive**, even though it is large.
 - [`architecture-profile`](architecture-profile/directive.md) — started life as a `reference` in the old format (a block
   of settled facts, not a rule). It still passes the same test: "is the domain free of framework dependencies right
   now?" is a yes/no question about the present. **Directive.**

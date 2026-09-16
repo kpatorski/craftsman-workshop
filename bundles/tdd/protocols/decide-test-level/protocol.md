@@ -2,7 +2,8 @@
 id: decide-test-level
 title: Decide how high to test this
 description: >
-  Before scaffolding, decide the level the behaviour is tested at, using the how-high-to-test directive. Default is high / black-box through a package entry point; go lower only when that directive's reasons apply.
+  Before scaffolding, decide the level the behaviour is tested at, using the how-high-to-test directive. Default is high
+  / black-box through a package entry point; go lower only when that directive's reasons apply.
 input: the behaviour to be tested and its target module
 output: the chosen test level and the target entry point for the suite
 uses: [how-high-to-test]

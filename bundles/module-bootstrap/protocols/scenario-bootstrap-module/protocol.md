@@ -2,7 +2,8 @@
 id: scenario-bootstrap-module
 title: Found a new project or module
 description: >
-  A greenfield module. No sibling use cases to mirror, so structural decisions are made explicitly against the architecture-profile directive. Ends by handing the first aggregate's case to scenario-new-use-case.
+  A greenfield module. No sibling use cases to mirror, so structural decisions are made explicitly against the
+  architecture-profile directive. Ends by handing the first aggregate's case to scenario-new-use-case.
 input: a decision to start a new project or module, and the output of domain-design (events, aggregates)
 output: a compiling, runnable module with baseline configuration and its first aggregate chosen
 match: task is to start a new project or module from nothing

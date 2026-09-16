@@ -2,7 +2,8 @@
 id: architecture-profile
 title: Architecture the tool must respect
 description: >
-  Applied when a protocol decides where a class lives and how modules talk. Anything already fixed by the existing project or a project-level style wins over this profile.
+  Applied when a protocol decides where a class lives and how modules talk. Anything already fixed by the existing
+  project or a project-level style wins over this profile.
 applies-when: deciding where a class or module lives, or how two modules communicate
 precedence: the project's existing architecture wins — this is a default, not a mandate
 enabled-by-default: true

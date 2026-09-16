@@ -2,10 +2,12 @@
 id: event-storming
 title: Event storming from a requirements input
 description: >
-  Big Picture event storming run against the input document. Breadth-first: collect everything before judging any of it. Produces the building blocks a use case needs.
+  Big Picture event storming run against the input document. Breadth-first: collect everything before judging any of it.
+  Produces the building blocks a use case needs.
 input: the input read by ingest, plus restate-understanding's confirmed summary
 output: events, their rules, aggregates, commands, views, use cases and bounded contexts, all confirmed
-steps: [collect-events, attach-event-rules, identify-aggregates, derive-commands, derive-views, derive-use-cases, draw-bounded-contexts]
+steps: [collect-events, attach-event-rules, identify-aggregates, derive-commands, derive-views, derive-use-cases,
+  draw-bounded-contexts]
 done-when: events, their rules, aggregates, commands, views, use cases and bounded contexts are all confirmed
 ---
 

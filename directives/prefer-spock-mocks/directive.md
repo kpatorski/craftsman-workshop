@@ -2,7 +2,9 @@
 id: prefer-spock-mocks
 title: Native Spock Mock/Stub in Spock suites
 description: >
-  A Spock suite mocks and stubs with Spock's own `Mock()` / `Stub()`, not a separate mocking library. Whether to mock at all is governed by the `stub-vs-in-memory` heuristic and the black-box testing rules — this directive is only about which library, once mocking is the right call.
+  A Spock suite mocks and stubs with Spock's own `Mock()` / `Stub()`, not a separate mocking library. Whether to mock at
+  all is governed by the `stub-vs-in-memory` heuristic and the black-box testing rules — this directive is only about
+  which library, once mocking is the right call.
 applies-when: a Spock suite needs a mock or a stub for a collaborator
 precedence: the project's existing mocking convention wins
 enabled-by-default: false

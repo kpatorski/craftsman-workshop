@@ -2,7 +2,8 @@
 id: no-explanatory-comments
 title: Rename and extract instead of commenting
 description: >
-  A comment explaining how confusing code works is a fix applied to the wrong place — rename, extract, or simplify the code instead.
+  A comment explaining how confusing code works is a fix applied to the wrong place — rename, extract, or simplify the
+  code instead.
 applies-when: about to write a comment explaining what code does
 precedence: the project's existing convention wins
 enabled-by-default: true

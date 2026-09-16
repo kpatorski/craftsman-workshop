@@ -2,7 +2,9 @@
 id: error-handling
 title: Results over exceptions, no internal null
 description: >
-  Business failures are modelled as data, not control flow. The pattern is language-agnostic; the concrete types below (Result, Optional) are JVM-flavored — swap for the equivalent in another language. An ordinary directive, not a `prefer-*` toggle, because the underlying rule does not name a specific product, only a pattern.
+  Business failures are modelled as data, not control flow. The pattern is language-agnostic; the concrete types below
+  (Result, Optional) are JVM-flavored — swap for the equivalent in another language. An ordinary directive, not a
+  `prefer-*` toggle, because the underlying rule does not name a specific product, only a pattern.
 applies-when: a business operation can fail, or a value can be absent
 precedence: the project's existing error-handling convention wins
 enabled-by-default: true

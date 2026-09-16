@@ -2,7 +2,9 @@
 id: acceptance-criteria-format
 title: Acceptance criteria are the Given/When/Then rules, carried through
 description: >
-  Same philosophy as `test-naming` — state behaviour in the product owner's language, not implementation. A checklist, not prose. When the event(s) backing this spec have digested Given/When/Then rules attached, each criterion is that rule verbatim — not paraphrased or rewritten. Only write a fresh criterion when no digested rule covers the case.
+  Same philosophy as `test-naming` — state behaviour in the product owner's language, not implementation. A checklist,
+  not prose. When the event(s) backing this spec have digested Given/When/Then rules attached, each criterion is that
+  rule verbatim — not paraphrased or rewritten. Only write a fresh criterion when no digested rule covers the case.
 applies-when: writing acceptance criteria for a spec
 precedence: none — this always applies
 enabled-by-default: true
@@ -22,5 +24,7 @@ Must:
 
 ## Examples
 
-    - [ ] Given desk is marked available for the requested day, when employee requests a reservation, then ReservationConfirmed
-    - [ ] Given desk is already reserved for the requested day, when employee requests a reservation, then ReservationRejected
+    - [ ] Given desk is marked available for the requested day, when employee requests a reservation, then
+      ReservationConfirmed
+    - [ ] Given desk is already reserved for the requested day, when employee requests a reservation, then
+      ReservationRejected

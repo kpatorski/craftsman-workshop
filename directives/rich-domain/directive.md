@@ -2,7 +2,8 @@
 id: rich-domain
 title: Behaviour lives on the domain object
 description: >
-  Business rules sit on the domain object or the use-case boundary, never in a data-free service that only shuffles other objects around.
+  Business rules sit on the domain object or the use-case boundary, never in a data-free service that only shuffles
+  other objects around.
 applies-when: deciding where a business rule or behaviour belongs
 precedence: the project's existing domain modelling convention wins
 enabled-by-default: true

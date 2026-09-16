@@ -2,10 +2,13 @@
 id: tdd-loop
 title: Test-first implementation loop
 description: >
-  The loop to run whenever behaviour is added or changed. Not "write all tests, then all code" — it advances in small batches, and the design direction is confirmed with the developer before it hardens. Cases found mid-loop are captured as stubs at once.
+  The loop to run whenever behaviour is added or changed. Not "write all tests, then all code" — it advances in small
+  batches, and the design direction is confirmed with the developer before it hardens. Cases found mid-loop are captured
+  as stubs at once.
 input: a behaviour to build, in a located target
 output: a green suite, tests and production code both refactored
-steps: [decide-test-level, scaffold-suite, enumerate-test-cases, cover-cycle, snapshot-green, refactor-tests, refactor-production, finish-loop]
+steps: [decide-test-level, scaffold-suite, enumerate-test-cases, cover-cycle, snapshot-green, refactor-tests,
+  refactor-production, finish-loop]
 done-when: the whole suite is green and both tests and production code are refactored
 ---
 

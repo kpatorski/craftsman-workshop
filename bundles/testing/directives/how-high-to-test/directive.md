@@ -2,7 +2,9 @@
 id: how-high-to-test
 title: How high to test a behaviour
 description: >
-  Picks the level a behaviour is tested at. Production code is package-private by default; something is public only when it is part of the cross-module communication API. Test as high as possible so tests read in business language and avoid needless mocking and duplication. Class-per-class testing is the thing being avoided, not a fallback.
+  Picks the level a behaviour is tested at. Production code is package-private by default; something is public only when
+  it is part of the cross-module communication API. Test as high as possible so tests read in business language and
+  avoid needless mocking and duplication. Class-per-class testing is the thing being avoided, not a fallback.
 applies-when: deciding what to write a test suite against, in `decide-test-level`
 precedence: the project's existing test-level convention wins
 enabled-by-default: true

@@ -2,11 +2,14 @@
 id: requirements-analysis
 title: Requirements analysis loop
 description: >
-  Turns a requirements input into reviewed, written spec files — event storming for the analysis itself, then one spec per accepted candidate.
+  Turns a requirements input into reviewed, written spec files — event storming for the analysis itself, then one spec
+  per accepted candidate.
 input: the input read by ingest
 output: reviewed, written spec files and a current specs/README.md
 steps: [restate-understanding, event-storming, propose-candidate-specs, detail-spec, collect-open-questions, finalize]
-done-when: "every accepted candidate has a spec file, every blocking open question is resolved or left explicitly `status: blocked`, and specs/README.md is current"
+done-when: >
+  every accepted candidate has a spec file, every blocking open question is resolved or left explicitly
+  `status: blocked`, and specs/README.md is current
 ---
 
 ## Schema

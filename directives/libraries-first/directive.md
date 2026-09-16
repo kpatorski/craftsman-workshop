@@ -2,7 +2,8 @@
 id: libraries-first
 title: Check for an existing library before writing a util
 description: >
-  A project-local utility is a last resort, checked against the standard library, the framework already in use, and well-known utility libraries first.
+  A project-local utility is a last resort, checked against the standard library, the framework already in use, and
+  well-known utility libraries first.
 applies-when: about to write a utility method
 precedence: the project's existing convention wins
 enabled-by-default: true

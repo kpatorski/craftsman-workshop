@@ -2,7 +2,9 @@
 id: implement
 title: Drive a coding task in a HUMAN <-> AI loop
 description: >
-  Entry point for turning one defined task — a spec, or a task description on its own — into working code. Never a large generated drop: advances in small, checkpoint-gated moves, following whichever of the scenarios below actually fits the task.
+  Entry point for turning one defined task — a spec, or a task description on its own — into working code. Never a large
+  generated drop: advances in small, checkpoint-gated moves, following whichever of the scenarios below actually fits
+  the task.
 input: a task description or a spec file, plus optionally `style=<name|path>` and `session=<path>`
 output: a green, refactored suite and production code, or a session left `blocked`/`active` with a clear `Next`
 entry-point: true
@@ -19,8 +21,10 @@ Introduces no new fields — see `core.md`.
     - [scenario-change-existing-code](../scenario-change-existing-code/protocol.md) — changing behaviour that already
       has tests.
     - [scenario-utils](../scenario-utils/protocol.md) — a genuine shared utility.
-    - [scenario-missing-tests](../../bundles/legacy-code/protocols/scenario-missing-tests/protocol.md) — covering existing, untested, working code.
-    - [scenario-bootstrap-module](../../bundles/module-bootstrap/protocols/scenario-bootstrap-module/protocol.md) — a greenfield module.
+    - [scenario-missing-tests](../../bundles/legacy-code/protocols/scenario-missing-tests/protocol.md) — covering
+      existing, untested, working code.
+    - [scenario-bootstrap-module](../../bundles/module-bootstrap/protocols/scenario-bootstrap-module/protocol.md) — a
+      greenfield module.
 2. If none fits cleanly, say so and ask the developer whether to proceed with the closest one or stop — never invent a
    process none of them describe.
 3. Everything past this point — loading the enabled directives an inner step's `applies-when` calls for, opening or

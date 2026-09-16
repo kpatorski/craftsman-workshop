@@ -2,7 +2,8 @@
 id: interfaces
 title: No interface without a reason
 description: >
-  An interface is justified by a second real implementation, or an explicit strategic reason such as a port or a testing seam at a boundary — never introduced "just in case".
+  An interface is justified by a second real implementation, or an explicit strategic reason such as a port or a testing
+  seam at a boundary — never introduced "just in case".
 applies-when: deciding whether to introduce an interface
 precedence: the project's existing convention wins
 enabled-by-default: true

@@ -2,7 +2,9 @@
 id: test-as-story
 title: Structure every test as given / when / then
 description: >
-  The body reads like prose. Use Spock's native given/when/then labels, or //given //when //then comments where the framework has none (JUnit). Each block is one or two intent-revealing calls, not a wall of setup. Stubbing and object building move into small helpers named in human language.
+  The body reads like prose. Use the test framework's native given/when/then labels if it has them, or
+  //given //when //then comments if it doesn't. Each block is one or two intent-revealing calls, not a wall of
+  setup. Stubbing and object building move into small helpers named in human language.
 applies-when: writing the body of a test
 precedence: the project's existing test structure wins
 enabled-by-default: true

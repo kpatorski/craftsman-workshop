@@ -2,7 +2,8 @@
 id: scenario-utils
 title: Write or change a util
 description: >
-  Utils are avoided, but occasionally genuinely needed. A util is shared code, so it is tested at unit level — the class itself — never through a module entry point. This is the one place where a test name may reference the util method.
+  Utils are avoided, but occasionally genuinely needed. A util is shared code, so it is tested at unit level — the class
+  itself — never through a module entry point. This is the one place where a test name may reference the util method.
 input: a genuine need for stateless, shared code with no domain identity
 output: same as tdd-loop's output — a green, refactored suite and production code for the util
 match: task is to add or change a genuine utility — stateless, shared, no domain identity
@@ -22,5 +23,6 @@ Introduces no new fields — see `core.md`. `overrides` is defined there,
 
 1. [challenge-the-util](../challenge-the-util/protocol.md) — confirm a util is really the right home.
 2. [locate-target](../locate-target/protocol.md) — find where the util belongs.
-3. [tdd-loop](../../bundles/tdd/protocols/tdd-loop/protocol.md) — build it test-first, with the overrides above applied to its
-   `decide-test-level` step and to the [test-naming](../../bundles/testing/directives/test-naming/directive.md) directive.
+3. [tdd-loop](../../bundles/tdd/protocols/tdd-loop/protocol.md) — build it test-first, with the overrides above applied
+   to its `decide-test-level` step and to the [test-naming](../../bundles/testing/directives/test-naming/directive.md)
+   directive.

@@ -2,7 +2,8 @@
 id: single-responsibility
 title: One responsibility per class
 description: >
-  A class does one thing. Split by responsibility while keeping the business intent cohesive — this is SOLID's S, applied without ceremony.
+  A class does one thing. Split by responsibility while keeping the business intent cohesive — this is SOLID's S,
+  applied without ceremony.
 applies-when: a class is taking on more than one concern
 precedence: the project's existing convention wins
 enabled-by-default: true

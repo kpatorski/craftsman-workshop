@@ -2,8 +2,13 @@
 id: domain-design
 title: Turn a requirements input into reviewed, written task specs
 description: >
-  Entry point for the developer's own event-storming method, run in a HUMAN <-> AI loop. Takes a raw requirements input and, if present, a `business-rules.md` (from `analyse`, or written by hand) with Given/When/Then rules already extracted — authoritative when present, but not a hard dependency. There is only ever one path here, nothing to dispatch between.
-input: "a requirements input (file, URL, or inline text), plus optionally `business-rules.md` and `style=<name|path>` / `session=<path>`"
+  Entry point for the developer's own event-storming method, run in a HUMAN <-> AI loop. Takes a raw requirements input
+  and, if present, a `business-rules.md` (from `analyse`, or written by hand) with Given/When/Then rules already
+  extracted — authoritative when present, but not a hard dependency. There is only ever one path here, nothing to
+  dispatch between.
+input: >
+  a requirements input (file, URL, or inline text), plus optionally `business-rules.md` and `style=<name|path>` /
+  `session=<path>`
 output: "`specs/NNN-slug.md` files plus a current `specs/README.md` index"
 entry-point: true
 steps: [ingest, requirements-analysis]

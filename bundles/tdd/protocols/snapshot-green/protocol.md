@@ -2,7 +2,9 @@
 id: snapshot-green
 title: Snapshot the green suite before refactoring
 description: >
-  Once the whole suite is green, take a snapshot so the refactor is reversible without disturbing the working tree — `git stash create` + `git stash store` (snapshot, not a revert; the tree stays intact for refactor-tests). A real checkpoint commit only if the developer asks for one.
+  Once the whole suite is green, take a snapshot so the refactor is reversible without disturbing the working tree —
+  `git stash create` + `git stash store` (snapshot, not a revert; the tree stays intact for refactor-tests). A real
+  checkpoint commit only if the developer asks for one.
 input: a fully green suite
 output: a restore point with all tests passing, working tree unchanged
 ---

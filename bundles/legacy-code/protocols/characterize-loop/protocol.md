@@ -2,10 +2,12 @@
 id: characterize-loop
 title: Characterization test loop
 description: >
-  Adds tests to code that already exists. No production code is written and nothing is designed — each test captures what the code does now.
+  Adds tests to code that already exists. No production code is written and nothing is designed — each test captures
+  what the code does now.
 input: existing, working, untested code
 output: passing characterization tests, committed on their own
-steps: [decide-test-level, scaffold-suite, enumerate-cases-from-code, characterize-cycle, finish-characterize, commit-tests]
+steps: [decide-test-level, scaffold-suite, enumerate-cases-from-code, characterize-cycle, finish-characterize,
+  commit-tests]
 done-when: every observed behaviour path has a passing test and they are committed on their own
 ---
 

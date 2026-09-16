@@ -2,9 +2,12 @@
 id: production-code
 title: Production code assessment
 description: >
-  Rules applied whenever production code is written or refactored. No imposed review order — each rule is checked on its own merit.
+  Rules applied whenever production code is written or refactored. No imposed review order — each rule is checked on its
+  own merit.
 applies-when: writing or refactoring production code
-composes: [visibility, naming, rich-domain, error-handling, interfaces, abstraction-timing, feature-structure, determinism, specifications, single-responsibility, framework-isolation, libraries-first, functional-style, no-explanatory-comments]
+composes: [visibility, naming, rich-domain, error-handling, interfaces, abstraction-timing, feature-structure,
+  determinism, specifications, single-responsibility, framework-isolation, libraries-first, functional-style,
+  no-explanatory-comments]
 precedence: the project's existing conventions win
 enabled-by-default: true
 ---

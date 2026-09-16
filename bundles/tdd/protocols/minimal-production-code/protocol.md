@@ -2,7 +2,8 @@
 id: minimal-production-code
 title: Write the least production code that makes the batch pass
 description: >
-  Implement only what makes the current batch green. No speculative structure. If writing it reveals a new case, add a failing stub for it right away and carry on.
+  Implement only what makes the current batch green. No speculative structure. If writing it reveals a new case, add a
+  failing stub for it right away and carry on.
 input: the current batch of test bodies from cover-batch
 output: production code making the current batch pass; suite green for covered stubs
 uses: [production-code]

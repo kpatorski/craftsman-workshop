@@ -2,7 +2,8 @@
 id: definition-of-done
 title: What "done" means unless a spec says otherwise
 description: >
-  Mirrors, in spirit, what an `implement` procedure calls `done-when` — stated independently here since specs and the implementation workshop are separate, independently-installed content.
+  Mirrors, in spirit, what an `implement` procedure calls `done-when` — stated independently here since specs and the
+  implementation workshop are separate, independently-installed content.
 applies-when: deciding whether a spec's work is finished
 precedence: a spec may state extra done-criteria explicitly and those win, on top of this default
 enabled-by-default: true

@@ -2,7 +2,8 @@
 id: dummy-values
 title: Use placeholder values, not domain-specific ones
 description: >
-  Stubbed and built objects use repeatable placeholders like "any-name", "any-street". The value signals it is irrelevant to the behaviour under test.
+  Stubbed and built objects use repeatable placeholders like "any-name", "any-street". The value signals it is
+  irrelevant to the behaviour under test.
 applies-when: choosing a value for a stubbed or built object in a test
 precedence: the project's existing test-data convention wins
 enabled-by-default: true

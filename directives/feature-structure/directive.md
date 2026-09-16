@@ -2,7 +2,8 @@
 id: feature-structure
 title: Organise by feature, not by layer
 description: >
-  Packages are organised by use case, each one self-contained. The four-part shape below is JVM-flavored terminology; the underlying idea — no shared technical layers, no shared entity classes across use cases — is language-agnostic.
+  Packages are organised by use case, each one self-contained. The four-part shape below is JVM-flavored terminology;
+  the underlying idea — no shared technical layers, no shared entity classes across use cases — is language-agnostic.
 applies-when: laying out packages, or deciding where a new class belongs
 precedence: the project's existing package layout wins
 enabled-by-default: true

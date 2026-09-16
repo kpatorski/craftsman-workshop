@@ -2,7 +2,8 @@
 id: prefer-mockito-under-junit
 title: Mockito in JUnit suites
 description: >
-  A JUnit suite mocks and stubs with Mockito, not a competing library. Split out from the old `mocking-tooling` rule's JUnit side so it can be toggled independently of the Spock side — see `prefer-spock-mocks`.
+  A JUnit suite mocks and stubs with Mockito, not a competing library. Split out from the old `mocking-tooling` rule's
+  JUnit side so it can be toggled independently of the Spock side — see `prefer-spock-mocks`.
 applies-when: a JUnit suite needs a mock or a stub for a collaborator
 precedence: the project's existing mocking convention wins
 enabled-by-default: false

@@ -2,7 +2,8 @@
 id: test-naming
 title: Name a test by the state it describes
 description: >
-  The name states the resulting behaviour or state, not a wish and not the implementation. It describes the scenario in the product owner's language — the PO knows the business rules, not whether method X was called.
+  The name states the resulting behaviour or state, not a wish and not the implementation. It describes the scenario in
+  the product owner's language — the PO knows the business rules, not whether method X was called.
 applies-when: naming a test method
 precedence: the project's existing naming convention wins
 enabled-by-default: true

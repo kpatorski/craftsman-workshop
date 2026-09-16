@@ -2,7 +2,8 @@
 id: finalize-digest
 title: Write the rules file
 description: >
-  Writes the confirmed rules to business-rules.md and closes the run. Named `finalize-digest`, not `finalize` — that id was already taken by `domain-design`'s own closing step; see the `craftsman` plan, R5.
+  Writes the confirmed rules to business-rules.md and closes the run. Named `finalize-digest`, not `finalize` — that id
+  was already taken by `domain-design`'s own closing step; see the `craftsman` plan, R5.
 input: all confirmed rules from extract-rules
 output: business-rules.md, grouped by section
 checkpoint:

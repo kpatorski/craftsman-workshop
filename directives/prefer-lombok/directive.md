@@ -2,7 +2,9 @@
 id: prefer-lombok
 title: Prefer Lombok over hand-written boilerplate
 description: >
-  On JVM projects, generate constructors, accessors and builders with Lombok annotations instead of writing them by hand. Accessors are fluent — `name()`, never `getName()`. Split out from the old `default-stack` reference so it can be toggled independently of the rest of the JVM stack.
+  On JVM projects, generate constructors, accessors and builders with Lombok annotations instead of writing them by
+  hand. Accessors are fluent — `name()`, never `getName()`. Split out from the old `default-stack` reference so it can
+  be toggled independently of the rest of the JVM stack.
 applies-when: writing or changing a JVM class that needs a constructor, an accessor or a builder
 precedence: the project's existing convention wins — if the codebase hand-writes boilerplate, follow the codebase
 enabled-by-default: false
