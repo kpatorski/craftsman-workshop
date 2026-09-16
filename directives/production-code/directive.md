@@ -7,7 +7,7 @@ description: >
 applies-when: writing or refactoring production code
 composes: [visibility, naming, rich-domain, error-handling, interfaces, abstraction-timing, feature-structure,
   determinism, specifications, single-responsibility, framework-isolation, libraries-first, functional-style,
-  no-explanatory-comments]
+  no-explanatory-comments, aggregate-design, value-objects]
 precedence: the project's existing conventions win
 enabled-by-default: true
 ---
@@ -18,7 +18,7 @@ Introduces no new fields — see `core.md`.
 
 ## Directive
 
-Fourteen composed directives, checked on their own merit, in no particular order:
+Sixteen composed directives, checked on their own merit, in no particular order:
 
 1. [visibility](../visibility/directive.md) — lowest visibility by default.
 2. [naming](../naming/directive.md) — domain-language names, verb-noun use cases.
@@ -34,5 +34,7 @@ Fourteen composed directives, checked on their own merit, in no particular order
 12. [libraries-first](../libraries-first/directive.md) — check for an existing library before writing a util.
 13. [functional-style](../functional-style/directive.md) — functional constructs where they clarify.
 14. [no-explanatory-comments](../no-explanatory-comments/directive.md) — rename and extract instead of commenting.
+15. [aggregate-design](../aggregate-design/directive.md) — small aggregates, referenced by identity.
+16. [value-objects](../value-objects/directive.md) — concepts without identity are Value Objects.
 
-Enabling or disabling this directive enables or disables all fourteen together; each can still be toggled on its own.
+Enabling or disabling this directive enables or disables all sixteen together; each can still be toggled on its own.

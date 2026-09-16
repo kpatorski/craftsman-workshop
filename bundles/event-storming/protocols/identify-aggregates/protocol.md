@@ -5,6 +5,7 @@ description: >
   Groups events under the aggregate that owns them.
 input: events and their attached rules
 output: aggregates, each with its owned events and rules
+uses: [aggregate-design]
 checkpoint:
   type: ask
   blocking: true
@@ -46,7 +47,9 @@ Introduces no new fields — see `core.md`.
      both, a saga or reconciling process that corrects a rare violation after the fact, or a documented, accepted
      risk of a race. Never claim this constraint "just holds" without naming the mechanism — that is the same
      mistake as claiming an aggregate protects something it structurally cannot see, one layer up.
-4. Draw the aggregate boundary — whichever resolution was chosen.
+4. Draw the aggregate boundary — whichever resolution was chosen. Keep the result small — see
+   [aggregate-design](../../../../directives/aggregate-design/directive.md) for sizing and how sibling aggregates
+   should be referenced.
 
 **This boundary is a consistency guarantee, not a Java class.** "One aggregate" means one persisted record every
 owning command must read and write through — it does not mean one shared domain class reused verbatim by every use

@@ -98,6 +98,8 @@ description for the caveat.
 | 29 | [no-explanatory-comments](no-explanatory-comments/directive.md) | Rename and extract instead of commenting            |
 | 30 | [defer-discovered-gaps](defer-discovered-gaps/directive.md)     | Park a coverage gap, don't derail                   |
 | 31 | [architecture-profile](architecture-profile/directive.md)       | Architecture the tool must respect                  |
+| 35 | [aggregate-design](aggregate-design/directive.md)               | Small aggregates, referenced by identity            |
+| 36 | [value-objects](value-objects/directive.md)                     | Concepts without identity are Value Objects         |
 
 **Disabled**
 
@@ -120,4 +122,4 @@ Empty — every entry that was here moved to the `spec-writing` bundle.
 
 Empty.
 
-41 directives total.
+43 directives total.
