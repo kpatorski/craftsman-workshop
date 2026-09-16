@@ -1,5 +1,5 @@
 ---
-id: event-storming
+id: event-storming-loop
 title: Event storming from a requirements input
 description: >
   Big Picture event storming run against the input document. Breadth-first: collect everything before judging any of it.
