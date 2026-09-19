@@ -11,8 +11,7 @@ repeat-until: every section of the input has its rules extracted and confirmed
 
 ## Schema
 
-Introduces no new fields — see `core.md`. Replaces the old
-`loop` kind — see `repeat-until`.
+Introduces no new fields — see `core.md`. Replaces the old `loop` kind — see `repeat-until`.
 
 ## Protocol
 
