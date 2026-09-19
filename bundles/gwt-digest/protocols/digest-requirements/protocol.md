@@ -6,9 +6,13 @@ description: >
   section/story fragment they came from. No domain modelling here — no events, aggregates, or contexts; that is a
   downstream concern. Purely: prose in, structured rules out.
 input: raw input text, split into sections, from read-input
-output: every section has its rules extracted and confirmed, and the rules file is written
+output: >
+  every section has its rules extracted and triaged, business-rules.md holds the cited ones, and
+  open-questions.md (if anything was parked) holds the rest
 steps: [extract-rules, finalize-digest]
-done-when: every section has its rules extracted and confirmed, and the rules file is written
+done-when: >
+  every section has its rules extracted and triaged, business-rules.md holds the cited ones, and
+  open-questions.md (if anything was parked) holds the rest
 ---
 
 ## Schema

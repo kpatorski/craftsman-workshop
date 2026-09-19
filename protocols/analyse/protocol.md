@@ -7,7 +7,9 @@ description: >
   dispatch between. Never references an id from any other workshop content; its output is plain structured data any
   downstream reader can consume without `analyse` knowing that reader exists.
 input: "a requirements input (file, URL, or inline text), plus optionally `style=<name|path>` / `session=<path>`"
-output: "`business-rules.md`, grouped by section, ready for `domain-design` or any other reader"
+output: >
+  `business-rules.md`, grouped by section, ready for `domain-design` or any other reader; plus
+  `open-questions.md` when any candidate could not be tied to a stated business reason
 entry-point: true
 steps: [read-input, digest-requirements]
 done-when: digest-requirements's done-when holds
@@ -20,7 +22,8 @@ Introduces no new fields — see `core.md`.
 ## Protocol
 
 1. [read-input](../read-input/protocol.md) — read the input and split it into sections.
-2. [digest-requirements](../../bundles/gwt-digest/protocols/digest-requirements/protocol.md) — extract Given/When/Then rules section by section, write the rules file.
+2. [digest-requirements](../../bundles/gwt-digest/protocols/digest-requirements/protocol.md) — extract and triage
+   Given/When/Then rules section by section, writing the cited ones and parking the rest.
 
 Session file handling, directive loading, and resuming are the execution mechanics described in the `craftsman` skill
 itself, not repeated per protocol — see [implement](../implement/protocol.md) for the same note.

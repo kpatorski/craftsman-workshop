@@ -2,19 +2,14 @@
 id: extract-rules-batch
 title: Extract GWT rules for one section
 description: >
-  Extracts Given/When/Then rules for one section at the domain level — the UI may trigger a business process,
-  it is never the content of the rule — confirms them, and appends them to business-rules.md
-  immediately, never deferred to the end of the run. Found live: a 21-batch digest left every confirmed rule
-  sitting only in the (gitignored, see EXECUTION.md) session file until finalize-digest's last step, so a
-  developer watching the run had nothing real to read for the whole thing — "work done, invisible on disk".
+  Extracts candidate Given/When/Then rules for one section at the domain level — the UI may trigger a business
+  process, it is never the content of the rule. Extraction and phrasing only: nothing is confirmed or written
+  here. Whether a candidate is a real business rule or an artefact of how the old system happened to be built
+  is triage-rules-batch's question, asked against evidence rather than judgement.
 input: one section of the input from read-input
-output: GWT rules for this section, confirmed and already appended to business-rules.md
-checkpoint:
-  type: ask
-  blocking: true
-  prompt: >
-    Section <n> <title> — rules extracted: <list>. <Anything left out as presentation-only, named.> Complete?
-    Right phrasing?
+output: >
+  candidate GWT rules for this section, phrased at the domain level — not yet confirmed, not yet written
+  anywhere
 ---
 
 ## Schema
@@ -47,17 +42,16 @@ Introduces no new fields — see `core.md`.
    Given/When/Then material: leave them out rather than dressing them up as rules, and name what was left out
    at the checkpoint.
 6. One rule per distinct precondition/outcome pair.
-7. Stop and confirm before moving to the next section.
-8. **Once confirmed, append this section's rules to business-rules.md in the same turn** — in the canonical block
-   form below. Create the file (a one-line header naming the source) on the first batch; append on every batch
-   after. Never wait for finalize-digest to write something a developer could already read right now.
+7. Hand every candidate from this section to
+   [triage-rules-batch](../triage-rules-batch/protocol.md) — nothing here is confirmed or written to
+   business-rules.md; that only happens once a candidate has a cited business reason, or the developer has
+   resolved one that doesn't.
 
 ## Examples
 
-Canonical block form:
+A correctly phrased candidate — domain-level, ready for triage:
 
     ~~~rule
-    id: reservation-confirmed-when-desk-available
     section: "Book a desk"
     given: Desk is marked available for the requested day
     when: Employee requests a reservation for that desk and day
