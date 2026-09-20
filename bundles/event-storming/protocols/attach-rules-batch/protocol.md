@@ -12,7 +12,15 @@ output: precondition phrases (or attached rule ids) for the events in this batch
 checkpoint:
   type: ask
   blocking: true
-  prompt: "Rules attached — <event>: <phrases>; … Continue to the next batch, or adjust?"
+  prompt: >
+    Rules attached, batch <n>:
+
+    - <event>: <phrases>
+    - <event>: <phrases>
+
+    (one line per event, never joined into one paragraph — see EXECUTION.md, "Checkpoint protocol")
+
+    Continue to the next batch, or adjust?
 ---
 
 ## Schema
