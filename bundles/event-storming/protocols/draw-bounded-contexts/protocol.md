@@ -70,4 +70,5 @@ Introduces no new fields — see `core.md`.
    `attach-rules-batch`, `identify-aggregates`, `derive-commands`, `derive-views`, `derive-use-cases` added theirs
    for each slice), so this is the last section, not the first time anything in it becomes visible. This step runs
    after every slice because it needs all the aggregates; if it shows an earlier slice's aggregate sat in the
-   wrong context, that is raised here as a revision, never applied silently.
+   wrong context, that is raised here as a revision, never applied silently — and since that slice is already
+   implemented, named as a change to existing code, with the slice and commit.

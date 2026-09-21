@@ -14,7 +14,8 @@ checkpoint:
   blocking: true
   prompt: >
     Aggregate for this slice: <name -> events, with the invariant it protects; new, extended from an earlier
-    slice, or a REVISION of one — say which, and what changed and why>. <If step 3's visibility check failed for
+    slice, or a REVISION of one — say which, what changed and why, and if that aggregate is already built: the
+    slice and commit, and that this means changing existing code and tests>. <If step 3's visibility check failed for
     any proposed root: name both resolutions with what each actually costs — (a) merge into <aggregate>, one true
     consistency boundary, the invariant always holds; (b) keep <name>s separate, downgrade this from an aggregate
     invariant to an application-level constraint, enforced by <mechanism — a spanning unique constraint, a
@@ -32,7 +33,10 @@ Introduces no new fields — see `core.md`.
    a time, so a boundary drawn now can turn out to be wrong once a later slice arrives. When this slice's events
    belong with an earlier aggregate in a way that changes what that aggregate was confirmed to be, that is a
    **revision**: name it as one, with what changes and why, at this checkpoint. Never re-cut an earlier boundary
-   silently.
+   silently. An earlier slice's aggregate is already implemented and committed, so a revision is not a redraw on a
+   model — it is a change to existing code and tests. Say that too, naming the slice and commit that built it
+   (recorded in `## Slices`); the spec for this slice then carries that change, and `implement` will take it as a
+   change to existing code.
 2. For each aggregate, name the invariant it actually protects — the thing that must never become false, which is
    why these events belong together and nowhere else. "Owns these events" without a stated invariant is not a
    finished answer; a developer confirming boundaries needs the reasoning, not just the grouping, to catch a wrong

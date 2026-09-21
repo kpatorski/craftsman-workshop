@@ -30,6 +30,9 @@ Introduces no new fields — see `core.md`.
 3. Everything past this point — loading the enabled directives an inner step's `applies-when` calls for, opening or
    resuming the per-task session file, walking the chosen scenario's steps, honouring every checkpoint — is the
    execution mechanics described in the `craftsman` skill itself, not repeated per protocol.
+4. When this protocol runs as a step of another one — [slice-loop](../slice-loop/protocol.md) does this for every
+   slice — it runs inside the caller's session: no session file of its own, its steps nest under the caller's in
+   the one Call stack, and its checkpoints stop exactly as they would if `implement` had been invoked directly.
 
 ## Examples
 

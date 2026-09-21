@@ -34,9 +34,13 @@ Introduces no new fields — see `core.md`.
 2. Small, tightly-coupled slices may be proposed as one merged candidate — never merged silently, always flagged
    as a proposal.
 3. Choose the first slice deliberately: prefer one that touches the central aggregate and exercises more than one
-   kind of rule, over a trivial one — a check of direction on a trivial slice tells the developer very little.
-   Say why it was chosen; the developer can override.
-4. Write the confirmed list to `event-model.md` as `## Slices`, in order, each `pending`.
+   kind of rule, over a trivial one — the first slice is built completely and judged as the example for all the
+   rest, and a check of direction on a trivial one tells the developer very little. Say why it was chosen; the
+   developer can override.
+4. Keep each slice to what one `implement` run can finish — every slice is modelled, specified and built
+   test-first before the next begins, so an oversized one is an oversized TDD run, not just a long spec.
+5. Write the confirmed list to `event-model.md` as `## Slices`, in order, each `pending`. Each entry later carries
+   its status, its spec's path, and the commit that implemented it — see `slice-loop`.
 
 This step does not know the aggregates yet — that is deliberate. A slice list drawn now is provisional, and a
 later slice can turn out to belong with an earlier one; that is raised at the checkpoint of the step that finds

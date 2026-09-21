@@ -8,6 +8,7 @@ output: the target package and, for changes, the existing test file(s)
 checkpoint:
   type: ask
   blocking: true
+  when: the module to work in was not already settled by an earlier slice of this run
   prompt: "I'll work in <path>. Right place?"
 ---
 
