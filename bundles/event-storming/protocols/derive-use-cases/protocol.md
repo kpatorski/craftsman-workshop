@@ -2,12 +2,13 @@
 id: derive-use-cases
 title: Derive use cases from command + aggregate + event
 description: >
-  Derives candidate use cases from command + aggregate + event triples, merging only where one real decision
-  justifies it — same aggregate alone is not that decision.
-input: commands, aggregates and events from the preceding event-storming steps
+  Confirms the current slice's use case as a real command + aggregate + event triple, merging only where one real
+  decision justifies it — same aggregate alone is not that decision. The slice list was drawn before the aggregates
+  were known, so this is where a slice is checked against what the model now says.
+input: the current slice's commands, aggregate and events from the preceding steps of model-slice
 output: >
-  a list of candidate use cases, each tied to its command / aggregate / event triple, every merge flagged with the
-  single decision that justifies it
+  the slice's use case(s), each tied to its command / aggregate / event triple, every merge flagged with the
+  single decision that justifies it, and any change to the slice list named
 uses: [naming]
 checkpoint:
   type: notify
@@ -36,9 +37,11 @@ Introduces no new fields — see `core.md`.
 6. A process manager surfaced by [derive-commands](../derive-commands/protocol.md) is a use case in its own
    right — named with its trigger event, the command it issues, and its compensation. Never folded into either
    aggregate's use case.
-7. Once confirmed, append a `## Use cases` section to `event-model.md` — each candidate with its triple and, where
-   merged, the one decision that justified it.
+7. Once confirmed, add this slice's use case(s) to `event-model.md`'s `## Use cases` section (create it on the
+   first slice) — each with its triple and, where merged, the one decision that justified it.
 
-This names *candidate* use cases; whether two candidates become one *spec* is `propose-candidate-specs`' call
-under `one-task-granularity` — the criterion there is "can one implement run finish it", a different question
-from "is this one operation in the domain". Never pre-merge silently.
+The slice list was drawn by `propose-candidate-specs` from events alone. If the triples found here say a slice
+should really be two, or belongs with one already done, say so at this checkpoint and update `## Slices` — never
+absorb the change silently. Whether two use cases become one *spec* is still `one-task-granularity`'s question
+("can one implement run finish it"), not this step's: "is this one operation in the domain" is a different
+question.

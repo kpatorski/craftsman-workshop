@@ -2,9 +2,9 @@
 id: event-storming
 title: Event storming from a requirements input
 description: >
-  The Big Picture event-storming method: collect every domain event first, then attach the rules, group events
-  under their aggregate, and derive the commands, read models and use cases each one implies. Ends with bounded
-  contexts drawn between the pieces that don't belong in the same one.
+  The Big Picture event-storming method, sliced: collect every domain event first, for the whole input, then take
+  one use case at a time — attach its rules, group its events under an aggregate, derive its commands, read models
+  and use case. Ends with bounded contexts drawn between the pieces that don't belong in the same one.
 ---
 
 ## Schema
@@ -18,9 +18,11 @@ bundle's output, or written by hand) with Given/When/Then rules already extracte
 not a hard dependency. Output is a full picture: events, each with its aggregate, commands, views, use cases, and
 the bounded contexts between them.
 
-Big Picture first, rules second: `collect-events` names every event before `attach-event-rules` asks what must
-hold for each one — the same "map everything, then go deep" shape as `enumerate-test-cases` before `cover-batch`
-in the `tdd` bundle, applied to modelling instead of testing.
+Big Picture first, then one slice at a time: `collect-events` names every event for the whole input — cheap, and
+it gives every later step sight of the siblings an aggregate's invariants depend on. Everything after that is
+`model-slice`, run for one use case at a time, so a developer can judge the direction on the first complete example
+before the rest are modelled the same way. The cost is that an aggregate drawn from one slice can need revising when
+a later one arrives; every step that finds this names it as a revision rather than re-cutting a boundary silently.
 
 ## Protocols
 
@@ -28,7 +30,7 @@ in the `tdd` bundle, applied to modelling instead of testing.
 
 | No | Id                                                                   | Title                                             |
 |----|----------------------------------------------------------------------|---------------------------------------------------|
-| 1  | [event-storming-loop](protocols/event-storming-loop/protocol.md)     | Event storming from a requirements input          |
+| 1  | [model-slice](protocols/model-slice/protocol.md)                     | Model one use-case slice, from rules to use case  |
 | 2  | [collect-events](protocols/collect-events/protocol.md)               | Collect every domain event, Big Picture style     |
 | 3  | [attach-event-rules](protocols/attach-event-rules/protocol.md)       | Attach the rules that must hold for each event    |
 | 4  | [attach-rules-batch](protocols/attach-rules-batch/protocol.md)       | Attach rules for a batch of events                |

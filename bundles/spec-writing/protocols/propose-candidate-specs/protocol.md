@@ -1,15 +1,26 @@
 ---
 id: propose-candidate-specs
-title: Turn use cases into a candidate spec list
+title: Turn events into an ordered list of slices
 description: >
-  Turns confirmed use cases into a candidate spec list.
-input: event-model.md's `## Use cases` and `## Bounded contexts` sections, written incrementally during event-storming
-output: an ordered list of candidate spec titles, each tagged with its source use case(s) and a task shape
+  Turns the collected events into an ordered list of candidate use cases — slices — each of which becomes one
+  spec. The slices are provisional at this point: only the intent and the events it emits are known, and
+  `derive-use-cases` confirms each one as a real command / aggregate / event triple when its turn comes. The order
+  is settled here, with the developer, and the first slice is the one that will be judged as the example for
+  everything after it.
+input: >
+  event-model.md's `## Events`, plus any use cases the requirements input itself already lists (imported and
+  confirmed rather than re-derived)
+output: >
+  an ordered list of slices — candidate spec titles, each with the events it emits and a task shape — written to
+  event-model.md's `## Slices`, all `pending`
 uses: [one-task-granularity, classify-task-shape]
 checkpoint:
   type: ask
   blocking: true
-  prompt: "Candidate specs: <list, proposed merges marked>. Add, drop, merge, or split?"
+  prompt: >
+    Slices, in the order I would take them: <each slice on its own line — name, the events it emits, task shape,
+    merges marked>. First: <name>, because <why it is the best example to judge the direction on>. Add, drop,
+    merge, split, or reorder?
 ---
 
 ## Schema
@@ -18,9 +29,15 @@ Introduces no new fields — see `core.md`.
 
 ## Protocol
 
-1. Read `event-model.md`'s confirmed use cases — and any new-module bootstrap needs surfaced by its bounded
-   contexts — and propose one candidate spec title per task. This is a read, not a re-derivation from the
-   conversation: every use case and context it needs was already written there, section by section, during
-   `event-storming-loop`.
-2. Small, tightly-coupled use cases on the same aggregate may be proposed as one merged candidate — never merged
-   silently, always flagged as a proposal.
+1. Read `event-model.md`'s `## Events` and propose one slice per task, naming each by the intent that triggers its
+   events. Where the input already lists its own use cases, take them as the starting point and say so.
+2. Small, tightly-coupled slices may be proposed as one merged candidate — never merged silently, always flagged
+   as a proposal.
+3. Choose the first slice deliberately: prefer one that touches the central aggregate and exercises more than one
+   kind of rule, over a trivial one — a check of direction on a trivial slice tells the developer very little.
+   Say why it was chosen; the developer can override.
+4. Write the confirmed list to `event-model.md` as `## Slices`, in order, each `pending`.
+
+This step does not know the aggregates yet — that is deliberate. A slice list drawn now is provisional, and a
+later slice can turn out to belong with an earlier one; that is raised at the checkpoint of the step that finds
+it, never absorbed silently.

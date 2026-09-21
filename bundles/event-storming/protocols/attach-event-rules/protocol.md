@@ -7,10 +7,10 @@ description: >
   the preconditions — rather than inventing from scratch. Without digested rules, write short precondition phrases
   directly: sticky notes above the event card, not a full sentence (e.g. "Resource is available", "User has role
   ADMIN").
-input: the events collected by collect-events, plus digested rules if present
-output: every event has its rules attached and confirmed
+input: the current slice's events from collect-events, plus digested rules if present
+output: every event of the current slice has its rules attached and confirmed
 steps: [attach-rules-batch]
-repeat-until: every event has its rules attached and confirmed
+repeat-until: every event of the current slice has its rules attached and confirmed
 ---
 
 ## Schema
@@ -19,6 +19,7 @@ Introduces no new fields — see `core.md`. Replaces the old `loop` kind — see
 
 ## Protocol
 
-Repeat until the condition holds, processed in small batches, each stopping for confirmation:
+Repeat until the condition holds, processed in small batches, each stopping for confirmation. Only the current
+slice's events are asked about — an event an earlier slice already attached rules to is skipped, not asked again:
 
 1. [attach-rules-batch](../attach-rules-batch/protocol.md)

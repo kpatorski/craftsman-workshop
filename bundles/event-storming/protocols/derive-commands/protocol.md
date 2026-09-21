@@ -4,10 +4,10 @@ title: Derive the command that triggers each event
 description: >
   Derives the command that triggers each event — whether it can be rejected and by which rule, whether it needs
   more than one aggregate (and if so, the process that carries it), attached to its aggregate.
-input: aggregates with their owned events, and the rules attach-event-rules attached to each event
+input: the current slice's aggregate with its owned events, and the rules attach-event-rules attached to each event
 output: >
-  one command per event, attached to its aggregate, each marked rejectable — with its failure outcomes named — or
-  unconditional; plus any process manager a multi-aggregate command forced
+  one command per event of the current slice, attached to its aggregate, each marked rejectable — with its
+  failure outcomes named — or unconditional; plus any process manager a multi-aggregate command forced
 uses: [naming, rich-domain, error-handling]
 checkpoint:
   type: ask
@@ -53,5 +53,6 @@ Introduces no new fields — see `core.md`.
      into either aggregate's use case.
 4. A "command" that only reads and changes nothing is not a command — it is a view; hand it to
    [derive-views](../derive-views/protocol.md).
-5. Once confirmed, append a `## Commands` section to `event-model.md` — each command with its event, aggregate,
-   rejectable/unconditional marker and failure outcomes, plus any process manager named in step 3.
+5. Once confirmed, add this slice's commands to `event-model.md`'s `## Commands` section (create it on the first
+   slice) — each command with its event, aggregate, rejectable/unconditional marker and failure outcomes, plus any
+   process manager named in step 3.

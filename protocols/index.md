@@ -91,12 +91,14 @@ orchestrator that calls into both bundles, and the two shared reading steps.
 
 **Enabled**
 
-| No | Id                                                         | Title                                                       |
-|----|------------------------------------------------------------|-------------------------------------------------------------|
-| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs |
-| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                  |
-| 44 | [ingest](ingest/protocol.md)                               | Read the input                                              |
-| 45 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                               |
+| No | Id                                                         | Title                                                        |
+|----|------------------------------------------------------------|--------------------------------------------------------------|
+| 39 | [domain-design](domain-design/protocol.md)                 | Turn a requirements input into reviewed, written task specs  |
+| 40 | [requirements-analysis](requirements-analysis/protocol.md) | Requirements analysis loop                                   |
+| 41 | [ingest](ingest/protocol.md)                               | Read the input                                               |
+| 42 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                                |
+| 43 | [slice-loop](slice-loop/protocol.md)                       | Take each slice from rules to a reviewed spec, one at a time |
+| 44 | [confirm-direction](confirm-direction/protocol.md)         | Confirm the direction on one finished slice                  |
 
 **Disabled**
 
@@ -119,4 +121,4 @@ itself and the shared `read-input` step.
 
 Empty — nothing has been switched off yet.
 
-62 protocols total.
+64 protocols total.

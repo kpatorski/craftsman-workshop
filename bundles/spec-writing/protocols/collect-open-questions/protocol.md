@@ -3,7 +3,7 @@ id: collect-open-questions
 title: Surface every unresolved open question
 description: >
   Surfaces every unresolved open question across all drafted specs together.
-input: every spec drafted by detail-spec
+input: every spec drafted by slice-loop
 output: every remaining open question resolved, or explicitly left open with the spec marked blocked
 checkpoint:
   type: ask

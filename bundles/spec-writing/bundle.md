@@ -2,9 +2,9 @@
 id: spec-writing
 title: Turn accepted use cases into written task specs
 description: >
-  Turns a list of use cases into candidate specs, drafts each accepted one to a self-contained format — acceptance
-  criteria, a definition of done, explicit dependencies — and closes the run with every open question surfaced
-  rather than guessed.
+  Turns collected events into an ordered list of slices — candidate specs — drafts each one to a self-contained
+  format — acceptance criteria, a definition of done, explicit dependencies — and closes the run with every open
+  question surfaced rather than guessed.
 ---
 
 ## Schema
@@ -13,20 +13,21 @@ No fields of its own — see `core.md`.
 
 ## Bundle
 
-Input is a list of use cases, each already tied to a command, an aggregate, and an event — event storming's output,
-whatever produced it. This bundle does not depend on any one source for that list, only on its shape.
+Input is the events collected for the whole input, plus any use cases the input itself already lists — event
+storming's output, whatever produced it. `propose-candidate-specs` orders them into slices, and each slice is then
+drafted as one spec, once its use case has been modelled. This bundle does not depend on any one source for that
+material, only on its shape.
 
 ## Protocols
 
 **Enabled**
 
-| No | Id                                                                       | Title                                     |
-|----|--------------------------------------------------------------------------|-------------------------------------------|
-| 1  | [propose-candidate-specs](protocols/propose-candidate-specs/protocol.md) | Turn use cases into a candidate spec list |
-| 2  | [detail-spec](protocols/detail-spec/protocol.md)                         | Draft each accepted candidate spec        |
-| 3  | [draft-spec](protocols/draft-spec/protocol.md)                           | Draft one spec                            |
-| 4  | [collect-open-questions](protocols/collect-open-questions/protocol.md)   | Surface every unresolved open question    |
-| 5  | [finalize](protocols/finalize/protocol.md)                               | Write the specs and close the run         |
+| No | Id                                                                       | Title                                      |
+|----|--------------------------------------------------------------------------|--------------------------------------------|
+| 1  | [propose-candidate-specs](protocols/propose-candidate-specs/protocol.md) | Turn events into an ordered list of slices |
+| 2  | [draft-spec](protocols/draft-spec/protocol.md)                           | Draft one spec                             |
+| 3  | [collect-open-questions](protocols/collect-open-questions/protocol.md)   | Surface every unresolved open question     |
+| 4  | [finalize](protocols/finalize/protocol.md)                               | Write the specs and close the run          |
 
 **Disabled**
 

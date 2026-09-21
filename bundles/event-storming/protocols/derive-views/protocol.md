@@ -4,10 +4,11 @@ title: Derive the read models the use cases will need
 description: >
   Derives the read models the use cases will need, and where each one reads from — the owning aggregate directly,
   a same-context query, or an eventually-consistent projection.
-input: commands and events from derive-commands, marked rejectable or unconditional
+input: the current slice's commands and events from derive-commands, marked rejectable or unconditional
 output: >
-  a list of views, each with its source — the owning aggregate's repository, a query over the same storage, or an
-  event-fed projection — and, where the source is a projection, the staleness the business accepts
+  a list of views for the current slice, each with its source — the owning aggregate's repository, a query over
+  the same storage, or an event-fed projection — and, where the source is a projection, the staleness the
+  business accepts
 uses: [feature-structure, framework-isolation]
 checkpoint:
   type: notify
@@ -46,5 +47,5 @@ Introduces no new fields — see `core.md`.
    is listed at [draw-bounded-contexts](../draw-bounded-contexts/protocol.md), not invented separately here.
 5. Do not invent views nobody asked for: every view traces to a command someone must decide to issue, or an
    outcome someone must see.
-6. Once confirmed, append a `## Views` section to `event-model.md` — each view with its source and, where the
-   source is a projection, the staleness the business accepts.
+6. Once confirmed, add this slice's views to `event-model.md`'s `## Views` section (create it on the first slice)
+   — each view with its source and, where the source is a projection, the staleness the business accepts.

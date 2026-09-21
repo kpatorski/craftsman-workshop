@@ -7,7 +7,7 @@ description: >
   (same shape, same fix): a many-batch run left every confirmed rule sitting only in the session file (gitignored,
   see EXECUTION.md) until the very last step, so a developer watching the run had nothing real to read for the
   whole thing — "work done, invisible on disk".
-input: a batch of events from collect-events
+input: a batch of the current slice's events from collect-events
 output: precondition phrases (or attached rule ids) for the events in this batch, already written to event-model.md
 checkpoint:
   type: ask

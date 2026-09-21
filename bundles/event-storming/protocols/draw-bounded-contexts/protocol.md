@@ -66,7 +66,8 @@ Introduces no new fields — see `core.md`.
    past it (see [framework-isolation](../../../../directives/framework-isolation/directive.md)); Separate Ways →
    nothing, and say so.
 6. Once confirmed, append a `## Bounded contexts` section to `event-model.md` and close it out — every earlier
-   step already wrote its own section as it was confirmed (`collect-events` created the file; `attach-rules-batch`,
-   `identify-aggregates`, `derive-commands`, `derive-views`, `derive-use-cases` each appended theirs), so this is
-   the last section, not the first time anything in it becomes visible. `event-model.md` is the input
-   `propose-candidate-specs` reads from next — never re-derive the model from the conversation there.
+   step already wrote its entries as they were confirmed, slice by slice (`collect-events` created the file;
+   `attach-rules-batch`, `identify-aggregates`, `derive-commands`, `derive-views`, `derive-use-cases` added theirs
+   for each slice), so this is the last section, not the first time anything in it becomes visible. This step runs
+   after every slice because it needs all the aggregates; if it shows an earlier slice's aggregate sat in the
+   wrong context, that is raised here as a revision, never applied silently.

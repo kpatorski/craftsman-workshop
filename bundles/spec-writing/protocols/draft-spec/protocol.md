@@ -3,7 +3,7 @@ id: draft-spec
 title: Draft one spec
 description: >
   Drafts one spec from an accepted candidate, applying spec-rules.
-input: one accepted candidate from propose-candidate-specs
+input: the current slice — one candidate from propose-candidate-specs — with its modelling already in event-model.md
 output: a spec file in specs/, not yet final
 uses: [spec-rules]
 checkpoint:

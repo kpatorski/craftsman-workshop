@@ -26,5 +26,5 @@ Introduces no new fields — see `core.md`.
    mechanical copy: merge duplicates, and don't promote a trivial rule outcome to event status.
 4. Work in rough chronological order, breadth-first — capture everything before judging it.
 5. **Once confirmed, create `event-model.md`** in the project root (a one-line header naming the source, then a
-   `## Events` section listing them in order) — the first write of the loop; every later step appends its own
-   section to this same file as it is confirmed, never waiting for `draw-bounded-contexts` to close the run.
+   `## Events` section listing them in order) — the first write of the run; every later step adds its own entries
+   to this same file as they are confirmed, slice by slice, never waiting for `draw-bounded-contexts` to close it.
