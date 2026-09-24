@@ -17,7 +17,7 @@ scratch against `core.md`.
 ## Layout
 
 - `directives/`, `protocols/` — fundament: entries used by more than one theme, or a single standalone preference.
-  19 protocols, 27 directives.
+  21 protocols, 28 directives.
 - `bundles/` — 7 themed groups, each installable and toggleable as a unit: `testing`, `tdd` (requires `testing`),
   `legacy-code` (requires `testing`, `tdd`), `module-bootstrap`, `event-storming`, `spec-writing`, `gwt-digest`.
 - Every collection has its own `index.md` — the lookup table, `## Examples` walking the fundament-vs-bundle and

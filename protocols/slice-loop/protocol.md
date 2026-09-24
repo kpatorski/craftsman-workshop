@@ -11,7 +11,7 @@ input: the ordered slice list in event-model.md's `## Slices`, confirmed by prop
 output: >
   every slice has its modelling in event-model.md, a reviewed spec in specs/, its use case implemented and
   committed, and a confirmed direction
-steps: [model-slice, draft-spec, implement, confirm-direction]
+steps: [model-slice, model-crud-slice, draft-spec, implement, confirm-direction]
 repeat-until: every slice in event-model.md's `## Slices` is `done`
 ---
 
@@ -23,11 +23,15 @@ Introduces no new fields — see `core.md`.
 
 Repeat until the condition holds, always taking the first slice not yet `done`, in the confirmed order:
 
-1. [model-slice](../../bundles/event-storming/protocols/model-slice/protocol.md)
+1. Model the slice — whichever alternative fits the `model` its entry in `## Slices` carries (each has its own
+   `match`):
+    - [model-slice](../../bundles/event-storming/protocols/model-slice/protocol.md) — `model: domain`.
+    - [model-crud-slice](../model-crud-slice/protocol.md) — `model: crud`. If it finds a rule that is more than
+      validation, the slice becomes `domain` and goes to `model-slice` instead.
 2. [draft-spec](../../bundles/spec-writing/protocols/draft-spec/protocol.md)
 3. [implement](../implement/protocol.md) — with the spec just drafted as its task. It chooses its own scenario: the
-   first slice of a greenfield project is a bootstrap, a later one a new use case, one that changes an aggregate an
-   earlier slice already built is a change to existing code.
+   first slice of a greenfield project is a bootstrap, a later one a new use case (a plain CRUD one has its own
+   scenario), one that changes an aggregate an earlier slice already built is a change to existing code.
 4. [confirm-direction](../confirm-direction/protocol.md)
 
 Mark the slice `active` in `## Slices` when it starts. When `implement` finishes, record the spec's path and the

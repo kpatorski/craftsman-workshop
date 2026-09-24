@@ -17,6 +17,8 @@ Introduces no new fields — see `core.md`.
 ## Protocol
 
 1. Read the task. Check each alternative below's `match` against it, in order, and run the first one that fits:
+    - [scenario-new-crud-use-case](../scenario-new-crud-use-case/protocol.md) — a new use case whose spec states
+      `Model: crud`. Checked before the one below, which would otherwise also fit.
     - [scenario-new-use-case](../scenario-new-use-case/protocol.md) — a new use case in a module that already has some.
     - [scenario-change-existing-code](../scenario-change-existing-code/protocol.md) — changing behaviour that already
       has tests.
@@ -36,5 +38,6 @@ Introduces no new fields — see `core.md`.
 
 ## Examples
 
-"Add a `CancelReservation` use case to the booking module" matches `scenario-new-use-case`. "Cover the
+"Add a `CancelReservation` use case to the booking module" matches `scenario-new-use-case`. "Add
+`RenameExerciseCategory`", with a spec stating `Model: crud`, matches `scenario-new-crud-use-case`. "Cover the
 `PricingCalculator` class, which works but has no tests" matches `scenario-missing-tests`.

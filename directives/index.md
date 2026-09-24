@@ -98,16 +98,17 @@ description for the caveat.
 | 29 | [no-explanatory-comments](no-explanatory-comments/directive.md) | Rename and extract instead of commenting            |
 | 30 | [defer-discovered-gaps](defer-discovered-gaps/directive.md)     | Park a coverage gap, don't derail                   |
 | 31 | [architecture-profile](architecture-profile/directive.md)       | Architecture the tool must respect                  |
-| 35 | [aggregate-design](aggregate-design/directive.md)               | Small aggregates, referenced by identity            |
-| 36 | [value-objects](value-objects/directive.md)                     | Concepts without identity are Value Objects         |
+| 32 | [aggregate-design](aggregate-design/directive.md)               | Small aggregates, referenced by identity            |
+| 33 | [value-objects](value-objects/directive.md)                     | Concepts without identity are Value Objects         |
+| 34 | [crud-or-domain](crud-or-domain/directive.md)                   | A plain CRUD use case gets no domain modelling      |
 
 **Disabled**
 
 | No | Id                                                                          | Title                                                      |
 |----|-----------------------------------------------------------------------------|------------------------------------------------------------|
-| 32 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
-| 33 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
-| 34 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
+| 35 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
+| 36 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
+| 37 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
 
 ### Specs
 
@@ -122,4 +123,4 @@ Empty — every entry that was here moved to the `spec-writing` bundle.
 
 Empty.
 
-43 directives total.
+44 directives total.

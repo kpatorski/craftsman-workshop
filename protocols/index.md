@@ -70,17 +70,18 @@ call into `tdd`, the same shape as `requirements-analysis`), and the shared step
 | 2  | [scenario-new-use-case](scenario-new-use-case/protocol.md)                 | Add a new use case to an existing module               |
 | 3  | [scenario-change-existing-code](scenario-change-existing-code/protocol.md) | Change behaviour in existing code                      |
 | 4  | [scenario-utils](scenario-utils/protocol.md)                               | Write or change a util                                 |
-| 32 | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in         |
-| 33 | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                        |
-| 34 | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                |
-| 35 | [read-existing-tests](read-existing-tests/protocol.md)                     | Read the existing suite first                          |
-| 36 | [check-coverage](check-coverage/protocol.md)                               | Check the target is covered before changing it         |
-| 37 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                   |
-| 38 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes |
+| 5  | [locate-target](locate-target/protocol.md)                                 | Locate the module / package / class to work in         |
+| 6  | [create-empty-package](create-empty-package/protocol.md)                   | Create the empty target package                        |
+| 7  | [challenge-the-util](challenge-the-util/protocol.md)                       | Confirm a util is really the right home                |
+| 8  | [read-existing-tests](read-existing-tests/protocol.md)                     | Read the existing suite first                          |
+| 9  | [check-coverage](check-coverage/protocol.md)                               | Check the target is covered before changing it         |
+| 10 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                   |
+| 11 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes |
+| 12 | [scenario-new-crud-use-case](scenario-new-crud-use-case/protocol.md)       | Add a plain CRUD use case to a module                  |
 
 **Disabled**
 
-Empty — nothing has been switched off yet. Populated by `craftsman disable protocol <id>`.
+Empty — nothing has been switched off yet.
 
 ### Domain design
 
@@ -99,6 +100,7 @@ orchestrator that calls into both bundles, and the two shared reading steps.
 | 42 | [restate-understanding](restate-understanding/protocol.md) | Restate what needs to be done                                                 |
 | 43 | [slice-loop](slice-loop/protocol.md)                       | Take each slice from rules to working code, one at a time                     |
 | 44 | [confirm-direction](confirm-direction/protocol.md)         | Confirm the direction on one finished slice                                   |
+| 45 | [model-crud-slice](model-crud-slice/protocol.md)           | Model a plain CRUD slice                                                      |
 
 **Disabled**
 
@@ -121,4 +123,4 @@ itself and the shared `read-input` step.
 
 Empty — nothing has been switched off yet.
 
-64 protocols total.
+66 protocols total.

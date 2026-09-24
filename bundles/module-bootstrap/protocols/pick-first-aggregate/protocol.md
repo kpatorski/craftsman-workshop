@@ -21,4 +21,6 @@ Introduces no new fields — see `core.md`.
 1. From the domain-design output, choose the aggregate to build first. When the task already names the use case —
    as `slice-loop` does, having settled the order with the developer — that use case is the first; there is nothing
    to choose, and nothing to ask again.
-2. Hand its first case to [scenario-new-use-case](../../../../protocols/scenario-new-use-case/protocol.md).
+2. Hand its first case to [scenario-new-use-case](../../../../protocols/scenario-new-use-case/protocol.md) — or to
+   [scenario-new-crud-use-case](../../../../protocols/scenario-new-crud-use-case/protocol.md) when its spec states
+   `Model: crud`, in which case there is no aggregate to pick and the first use case is simply the first slice.

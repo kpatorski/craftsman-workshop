@@ -16,7 +16,8 @@ Introduces no new fields — see `core.md`.
 ## Directive
 
 Style: Clean Architecture — default, overridable per project. Also respected: DDD tactical patterns, bounded-context
-isolation, application logic kept out of infrastructure.
+isolation, application logic kept out of infrastructure. The DDD patterns apply where a use case carries domain
+behaviour; a plain CRUD use case is exempt from them — see [crud-or-domain](../crud-or-domain/directive.md).
 
 Layering:
 
@@ -28,5 +29,6 @@ Communication: events between bounded contexts; ports & adapters at the boundary
 
 Package layout: see [feature-structure](../feature-structure/directive.md).
 
-Assumes event storming is done — events, aggregates, commands and views are known before implementation starts. See the
-`domain-design` entry point for how that gets produced.
+Assumes event storming is done for the use cases that have domain behaviour — events, aggregates, commands and views
+are known before implementation starts. See the `domain-design` entry point for how that gets produced. A plain CRUD
+use case has none of these, by design.

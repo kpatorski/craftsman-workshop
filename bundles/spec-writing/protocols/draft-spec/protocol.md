@@ -18,5 +18,7 @@ Introduces no new fields — see `core.md`.
 
 ## Protocol
 
-1. Write Context / Acceptance criteria / Out of scope / Open questions for one candidate.
+1. Write Context / Acceptance criteria / Out of scope / Open questions for one candidate. State the slice's model
+   (`Model: crud` or `Model: domain`, from `## Slices`) on the line under the title — `implement` reads it to pick
+   its scenario.
 2. Apply [spec-rules](../../directives/spec-rules/directive.md) throughout.

@@ -11,6 +11,7 @@ input: the current slice from event-model.md's `## Slices`, plus every event alr
 output: >
   the slice's events with their rules, its aggregate (new, or an earlier one extended or revised), its command(s),
   its view(s) and its use case, all confirmed and already written into event-model.md's sections
+match: the current slice's model is `domain`
 steps: [attach-event-rules, identify-aggregates, derive-commands, derive-views, derive-use-cases]
 done-when: the slice's rules, aggregate, commands, views and use case are all confirmed
 ---
