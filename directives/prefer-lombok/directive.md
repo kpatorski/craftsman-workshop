@@ -17,7 +17,9 @@ because this names a concrete library — see `core.md`, "Fields specific to `di
 
 ## Directive
 
-- `@RequiredArgsConstructor` / `@AllArgsConstructor` instead of a hand-written constructor.
+- `@RequiredArgsConstructor` / `@AllArgsConstructor` / `@NoArgsConstructor` instead of a hand-written constructor —
+  including one that exists only to be private or empty: `@NoArgsConstructor(access = AccessLevel.PRIVATE)`, not
+  `private Foo() {}`.
 - `@Accessors(fluent = true)` — an accessor is `name()`, not `getName()`.
 - `@Builder` only when a constructor has more than three parameters, or optional ones.
 - Never `@Data` — it pulls in `equals`, `hashCode` and `toString` unasked. Pick the annotations you need.

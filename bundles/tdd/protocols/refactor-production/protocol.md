@@ -22,3 +22,6 @@ Introduces no new fields — see `core.md`.
 1. Apply the [production-code](../../../../directives/production-code/directive.md) directive.
 2. Re-run the full relevant suite after each change.
 3. Stop and fix immediately on any red.
+4. Before the checkpoint, compare the production diff against every enabled directive whose `applies-when` matches it,
+   not only the components of `production-code` — re-read each one rather than trusting memory of it. Fix what it
+   finds, re-run the suite, then show the diff.

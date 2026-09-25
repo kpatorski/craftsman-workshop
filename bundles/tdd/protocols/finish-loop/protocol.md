@@ -9,7 +9,9 @@ checkpoint:
   type: ask
   blocking: true
   shows: [file-list, full-diff]
-  prompt: "Use case done: <summary>. Whole suite green. Commit it, or more changes first?"
+  prompt: >
+    Use case done: <summary>. Directive check: <no violations, or what was fixed>. Whole suite green.
+    Commit it, or more changes first?
 ---
 
 ## Schema
@@ -18,6 +20,10 @@ Introduces no new fields — see `core.md`.
 
 ## Protocol
 
-1. Show what was produced — new files, the test list, the whole diff.
-2. Confirm the procedure's `done-when` holds.
-3. Ask what happens next.
+1. Check the whole diff, tests and production code, against every directive that is enabled and whose `applies-when`
+   matches the change — not only the ones already loaded this run. Read each such directive again and compare it to
+   the diff line by line; do not rely on having followed it while writing. Fix every violation, re-run the suite,
+   and only then continue. Name each fix in the checkpoint.
+2. Show what was produced — new files, the test list, the whole diff.
+3. Confirm the procedure's `done-when` holds.
+4. Ask what happens next.
