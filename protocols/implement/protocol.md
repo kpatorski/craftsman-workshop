@@ -25,6 +25,7 @@ Introduces no new fields — see `core.md`.
     - [scenario-utils](../scenario-utils/protocol.md) — a genuine shared utility.
     - [scenario-missing-tests](../../bundles/legacy-code/protocols/scenario-missing-tests/protocol.md) — covering
       existing, untested, working code.
+    - [scenario-readme](../scenario-readme/protocol.md) — writing or reworking the project's README, no code change.
     - [scenario-bootstrap-module](../../bundles/module-bootstrap/protocols/scenario-bootstrap-module/protocol.md) — a
       greenfield module.
 2. If none fits cleanly, say so and ask the developer whether to proceed with the closest one or stop — never invent a

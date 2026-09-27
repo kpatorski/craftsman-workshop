@@ -78,6 +78,8 @@ call into `tdd`, the same shape as `requirements-analysis`), and the shared step
 | 10 | [restate-current-behaviour](restate-current-behaviour/protocol.md)         | Restate what the code currently does                   |
 | 11 | [confirm-conventions](confirm-conventions/protocol.md)                     | Confirm structural conventions before creating classes |
 | 12 | [scenario-new-crud-use-case](scenario-new-crud-use-case/protocol.md)       | Add a plain CRUD use case to a module                  |
+| 13 | [write-readme](write-readme/protocol.md)                                   | Write or update the README                             |
+| 14 | [scenario-readme](scenario-readme/protocol.md)                             | Write or rework the README                             |
 
 **Disabled**
 
@@ -123,4 +125,4 @@ itself and the shared `read-input` step.
 
 Empty — nothing has been switched off yet.
 
-66 protocols total.
+68 protocols total.
