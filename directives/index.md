@@ -102,14 +102,15 @@ description for the caveat.
 | 33 | [value-objects](value-objects/directive.md)                     | Concepts without identity are Value Objects         |
 | 34 | [crud-or-domain](crud-or-domain/directive.md)                   | A plain CRUD use case gets no domain modelling      |
 | 35 | [readme](readme/directive.md)                                   | A README any developer can follow                   |
+| 36 | [commit-message](commit-message/directive.md)                   | Write the commit message by the seven rules         |
 
 **Disabled**
 
 | No | Id                                                                          | Title                                                      |
 |----|-----------------------------------------------------------------------------|------------------------------------------------------------|
-| 36 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
-| 37 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
-| 38 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
+| 37 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
+| 38 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
+| 39 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
 
 ### Specs
 
@@ -124,4 +125,4 @@ Empty — every entry that was here moved to the `spec-writing` bundle.
 
 Empty.
 
-45 directives total.
+46 directives total.

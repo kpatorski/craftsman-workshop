@@ -7,6 +7,7 @@ description: >
   checkpoint commit only if the developer asks for one.
 input: a fully green suite
 output: a restore point with all tests passing, working tree unchanged
+uses: [commit-message]
 ---
 
 ## Schema
@@ -22,4 +23,6 @@ Introduces no new fields — see `core.md`.
 no way to snapshot without history to snapshot *onto*, so make a real initial commit instead — it serves as the
 restore point directly. This is still a git commit, so the usual blocking checkpoint applies (`EXECUTION.md`,
 "Checkpoint protocol" — every checkpoint before a git commit is blocking); it does not become silent just because
-it is a fallback rather than the usual path.
+it is a fallback rather than the usual path. Once agreed, its message follows
+[commit-message](../../../../directives/commit-message/directive.md), as does a checkpoint commit the developer asks
+for.

@@ -5,7 +5,7 @@ description: >
   Closes the TDD loop and confirms what happens next.
 input: the refactored, green suite and production code
 output: a closed tdd-loop run, with the developer's decision on what happens next
-uses: [readme]
+uses: [readme, commit-message]
 checkpoint:
   type: ask
   blocking: true
@@ -31,4 +31,5 @@ Introduces no new fields — see `core.md`.
    and only then continue. Name each fix in the checkpoint.
 3. Show what was produced — new files, the test list, the whole diff.
 4. Confirm the procedure's `done-when` holds.
-5. Ask what happens next.
+5. Ask what happens next. If the answer is to commit, write the message per
+   [commit-message](../../../../directives/commit-message/directive.md).

@@ -5,6 +5,7 @@ description: >
   Commits the characterization tests on their own, once finish-characterize is approved.
 input: the approved characterization tests from finish-characterize
 output: a separate commit containing only the added tests
+uses: [commit-message]
 ---
 
 ## Schema
@@ -14,4 +15,5 @@ Introduces no new fields — see `core.md`.
 ## Protocol
 
 1. Runs only after finish-characterize is approved.
-2. Commit the characterization tests as a standalone commit — never folded into an unrelated change.
+2. Commit the characterization tests as a standalone commit — never folded into an unrelated change — with the
+   message written per [commit-message](../../../../directives/commit-message/directive.md).
