@@ -22,3 +22,8 @@ Must:
 - never widen the current change to cover a newly spotted unrelated gap
 - the deferred gap becomes a separate piece of work later
 - tell the developer in one line when something is parked, and record it in the session's Parked list
+- park only work outside the current task — a decision a later step of this same run will take is not a gap, it
+  waits at that step
+- an item leaves the Parked list as soon as it is taken up, moved to open questions, or no longer relevant — it
+  becomes an ordinary step or task then, never a separate record of its own; before the run ends every remaining item
+  is checked, so what is still parked is only what is really still open
