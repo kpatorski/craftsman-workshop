@@ -12,7 +12,8 @@ checkpoint:
   shows: [file-list, full-diff]
   prompt: >
     Use case done: <summary>. README: <updated — what changed, or untouched — nothing a developer runs changed>.
-    Directive check: <no violations, or what was fixed>. Whole suite green. Commit it, or more changes first?
+    Directive check (independent): <no violations, or fixed / disputed / unchecked, one line each>. Whole suite
+    green. Commit it, or more changes first?
 ---
 
 ## Schema
@@ -26,9 +27,10 @@ Introduces no new fields — see `core.md`.
    If it does, update README.md per [readme](../../../../directives/readme/directive.md) in this same change, and run
    the commands you changed. If it does not, leave the README alone and say so at the checkpoint.
 2. Check the whole diff, tests and production code, against every directive that is enabled and whose `applies-when`
-   matches the change — not only the ones already loaded this run. Read each such directive again and compare it to
-   the diff line by line; do not rely on having followed it while writing. Fix every violation, re-run the suite,
-   and only then continue. Name each fix in the checkpoint.
+   matches the change — not only the ones already loaded this run — by independent review (`EXECUTION.md`,
+   "Independent directive review"): fresh, read-only reviewers that see only the change and the directives, never
+   the session that wrote it. Fix every finding that holds, re-run the suite, and only then continue. Name each fix,
+   each disputed finding and anything left unchecked in the checkpoint.
 3. Show what was produced — new files, the test list, the whole diff.
 4. Confirm the procedure's `done-when` holds.
 5. Ask what happens next. If the answer is to commit, write the message per
