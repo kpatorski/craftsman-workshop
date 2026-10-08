@@ -42,7 +42,9 @@ Introduces no new fields — see `core.md`.
    Given/When/Then material: leave them out rather than dressing them up as rules, and name what was left out
    at the checkpoint.
 6. One rule per distinct precondition/outcome pair.
-7. Hand every candidate from this section to
+7. Keep with every candidate the sentence of the input it was drawn from, quoted exactly — triage and the developer
+   check a candidate against its source, not against a memory of it.
+8. Hand every candidate from this section to
    [triage-rules-batch](../triage-rules-batch/protocol.md) — nothing here is confirmed or written to
    business-rules.md; that only happens once a candidate has a cited business reason, or the developer has
    resolved one that doesn't.
