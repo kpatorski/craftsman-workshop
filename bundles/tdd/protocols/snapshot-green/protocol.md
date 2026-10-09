@@ -18,6 +18,12 @@ Introduces no new fields — see `core.md`.
 
 `git stash create` then `git stash store` — never a plain `git stash`, which would touch the working tree.
 
+**The change adds new files** (a new use case is mostly new files, so this is the usual case): `git stash create`
+snapshots tracked files only and silently leaves untracked ones out — when everything is new it prints nothing and
+there is no snapshot at all. Stage first, then put the index back: `git add -A`, `git stash create`,
+`git stash store`, `git reset`. The working tree stays as it was. Then check the snapshot before relying on it:
+`git stash show --stat stash@{0}` must list every file of the change, the new ones included.
+
 **No prior commit exists yet** (the repo has no `HEAD` — the normal state for the very first TDD cycle right after
 `bootstrap-module`, not an edge case): `git stash create` has nothing to diff against and fails outright. There is
 no way to snapshot without history to snapshot *onto*, so make a real initial commit instead — it serves as the
