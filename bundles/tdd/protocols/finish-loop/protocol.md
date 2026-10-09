@@ -12,8 +12,8 @@ checkpoint:
   shows: [file-list, full-diff]
   prompt: >
     Use case done: <summary>. README: <updated — what changed, or untouched — nothing a developer runs changed>.
-    Directive check (independent): <no violations, or fixed / disputed / unchecked, one line each>. Whole suite
-    green. Commit it, or more changes first?
+    Directive check (independent): <no violations, or fixed / project convention / disputed / already settled /
+    unchecked, one line each>. Whole suite green. Commit it, or more changes first?
 ---
 
 ## Schema
@@ -29,8 +29,11 @@ Introduces no new fields — see `core.md`.
 2. Check the whole diff, tests and production code, against every directive that is enabled and whose `applies-when`
    matches the change — not only the ones already loaded this run — by independent review (`EXECUTION.md`,
    "Independent directive review"): fresh, read-only reviewers that see only the change and the directives, never
-   the session that wrote it. Fix every finding that holds, re-run the suite, and only then continue. Name each fix,
-   each disputed finding and anything left unchecked in the checkpoint.
+   the session that wrote it. This is the loop's one review, so it covers the production code and the tests alike.
+   Fix every violation that holds, re-run the suite, have the fixes reviewed once, and only then continue. A
+   finding that follows the project's existing convention is not fixed here — it goes to the developer at the
+   checkpoint, together with each fix, each disputed finding, what an earlier checkpoint already settled and
+   anything left unchecked.
 3. Show what was produced — new files, the test list, the whole diff.
 4. Confirm the procedure's `done-when` holds.
 5. Ask what happens next. If the answer is to commit, write the message per
