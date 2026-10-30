@@ -125,4 +125,20 @@ itself and the shared `read-input` step.
 
 Empty — nothing has been switched off yet.
 
-68 protocols total.
+### Review
+
+`pr-review` is the entry point. The review itself — understanding the change, walking it use case by use case,
+serving the review page — lives in the [code-review](../bundles/code-review/bundle.md) bundle; this section keeps only
+the entry point.
+
+**Enabled**
+
+| No | Id                                 | Title                                        |
+|----|------------------------------------|----------------------------------------------|
+| 61 | [pr-review](pr-review/protocol.md) | Review a pull request in a HUMAN <-> AI loop |
+
+**Disabled**
+
+Empty — nothing has been switched off yet.
+
+79 protocols total.
