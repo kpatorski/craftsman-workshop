@@ -79,38 +79,43 @@ description for the caveat.
 
 **Enabled**
 
-| No | Id                                                              | Title                                               |
-|----|-----------------------------------------------------------------|-----------------------------------------------------|
-| 15 | [production-code](production-code/directive.md)                 | Production code assessment                          |
-| 16 | [visibility](visibility/directive.md)                           | Lowest visibility by default                        |
-| 17 | [naming](naming/directive.md)                                   | Domain-language names, verb-noun use cases          |
-| 18 | [rich-domain](rich-domain/directive.md)                         | Behaviour lives on the domain object                |
-| 19 | [error-handling](error-handling/directive.md)                   | Results over exceptions, no internal null           |
-| 20 | [interfaces](interfaces/directive.md)                           | No interface without a reason                       |
-| 21 | [abstraction-timing](abstraction-timing/directive.md)           | Stay concrete until the second use case             |
-| 22 | [feature-structure](feature-structure/directive.md)             | Organise by feature, not by layer                   |
-| 23 | [determinism](determinism/directive.md)                         | No ambient time or randomness in business logic     |
-| 24 | [specifications](specifications/directive.md)                   | Explicit business rules as Specifications           |
-| 25 | [single-responsibility](single-responsibility/directive.md)     | One responsibility per class                        |
-| 26 | [framework-isolation](framework-isolation/directive.md)         | The domain drives the structure                     |
-| 27 | [libraries-first](libraries-first/directive.md)                 | Check for an existing library before writing a util |
-| 28 | [functional-style](functional-style/directive.md)               | Functional constructs where they clarify            |
-| 29 | [no-explanatory-comments](no-explanatory-comments/directive.md) | Rename and extract instead of commenting            |
-| 30 | [defer-discovered-gaps](defer-discovered-gaps/directive.md)     | Park a coverage gap, don't derail                   |
-| 31 | [architecture-profile](architecture-profile/directive.md)       | Architecture the tool must respect                  |
-| 32 | [aggregate-design](aggregate-design/directive.md)               | Small aggregates, referenced by identity            |
-| 33 | [value-objects](value-objects/directive.md)                     | Concepts without identity are Value Objects         |
-| 34 | [crud-or-domain](crud-or-domain/directive.md)                   | A plain CRUD use case gets no domain modelling      |
-| 35 | [readme](readme/directive.md)                                   | A README any developer can follow                   |
-| 36 | [commit-message](commit-message/directive.md)                   | Write the commit message by the seven rules         |
+| No | Id                                                              | Title                                                                             |
+|----|-----------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| 15 | [production-code](production-code/directive.md)                 | Production code assessment                                                        |
+| 16 | [visibility](visibility/directive.md)                           | Lowest visibility by default                                                      |
+| 17 | [naming](naming/directive.md)                                   | Domain-language names, verb-noun use cases                                        |
+| 18 | [rich-domain](rich-domain/directive.md)                         | Behaviour lives on the domain object                                              |
+| 19 | [error-handling](error-handling/directive.md)                   | Results over exceptions, no internal null                                         |
+| 20 | [interfaces](interfaces/directive.md)                           | No interface without a reason                                                     |
+| 21 | [abstraction-timing](abstraction-timing/directive.md)           | Stay concrete until the second use case                                           |
+| 22 | [feature-structure](feature-structure/directive.md)             | Organise by feature, not by layer                                                 |
+| 23 | [determinism](determinism/directive.md)                         | No ambient time or randomness in business logic                                   |
+| 24 | [specifications](specifications/directive.md)                   | Explicit business rules as Specifications                                         |
+| 25 | [single-responsibility](single-responsibility/directive.md)     | One responsibility per class                                                      |
+| 26 | [framework-isolation](framework-isolation/directive.md)         | The domain drives the structure                                                   |
+| 27 | [libraries-first](libraries-first/directive.md)                 | Check for an existing library before writing a util                               |
+| 28 | [functional-style](functional-style/directive.md)               | Functional constructs where they clarify                                          |
+| 29 | [no-explanatory-comments](no-explanatory-comments/directive.md) | Rename and extract instead of commenting                                          |
+| 30 | [defer-discovered-gaps](defer-discovered-gaps/directive.md)     | Park a coverage gap, don't derail                                                 |
+| 31 | [architecture-profile](architecture-profile/directive.md)       | Architecture the tool must respect                                                |
+| 32 | [aggregate-design](aggregate-design/directive.md)               | Small aggregates, referenced by identity                                          |
+| 33 | [value-objects](value-objects/directive.md)                     | Concepts without identity are Value Objects                                       |
+| 34 | [crud-or-domain](crud-or-domain/directive.md)                   | A plain CRUD use case gets no domain modelling                                    |
+| 35 | [readme](readme/directive.md)                                   | A README any developer can follow                                                 |
+| 36 | [commit-message](commit-message/directive.md)                   | Write the commit message by the seven rules                                       |
+| 37 | [method-exits](method-exits/directive.md)                       | A method's condition says when it does its work                                   |
+| 38 | [logging](logging/directive.md)                                 | Log what someone will need to find, once, without secrets                         |
+| 39 | [security](security/directive.md)                               | Distrust input, bound it, and destroy only what is meant                          |
+| 40 | [module-dependencies](module-dependencies/directive.md)         | Dependencies point one way and go through the front door                          |
+| 41 | [type-contracts](type-contracts/directive.md)                   | A subtype keeps its parent's promise, an interface asks only what its client uses |
 
 **Disabled**
 
 | No | Id                                                                          | Title                                                      |
 |----|-----------------------------------------------------------------------------|------------------------------------------------------------|
-| 37 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
-| 38 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
-| 39 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
+| 42 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
+| 43 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
+| 44 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
 
 ### Specs
 
@@ -125,4 +130,4 @@ Empty — every entry that was here moved to the `spec-writing` bundle.
 
 Empty.
 
-46 directives total.
+51 directives total.
