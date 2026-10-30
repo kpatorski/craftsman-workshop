@@ -49,6 +49,7 @@ This top table only tracks the bundles themselves.
 | 5  | module-bootstrap | Found a new project or module                       | —            | [module-bootstrap/bundle.md](module-bootstrap/bundle.md) |
 | 6  | tdd              | Test-first implementation loop                      | testing      | [tdd/bundle.md](tdd/bundle.md)                           |
 | 7  | legacy-code      | Characterization test loop                          | testing, tdd | [legacy-code/bundle.md](legacy-code/bundle.md)           |
+| 8  | code-review      | Review a pull request                               | —            | [code-review/bundle.md](code-review/bundle.md)           |
 
 **Disabled**
 
