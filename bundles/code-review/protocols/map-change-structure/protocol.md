@@ -42,7 +42,8 @@ it notices becomes a finding here; a call that looks wrong is recorded on its st
    behaves in this use case without the change and with it, one to three sentences each, in the same terms.
 5. Write its `flow`:
     - `steps` — the calls from the entry point down, one per unit the use case passes through, each with its file
-      and line and whether the change added, modified, deleted it or left it unchanged. A step whose call crosses a
+      and line and whether the change added, modified, deleted it or left it unchanged, and in `from` the path and
+      line of the call that reaches it — every step but the entry point has one. A step whose call crosses a
       boundary the project keeps — a domain class reaching into infrastructure, one module into another's internals —
       names that boundary in `crosses`.
     - `branches` — the ways the use case can end (refused, done, failed), each with whether a test covers it.
