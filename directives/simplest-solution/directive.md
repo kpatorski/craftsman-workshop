@@ -39,13 +39,19 @@ Never simplified away — these hard limits hold on every rung:
 - a test for logic that branches, loops, parses, or handles money
 
 In a review, a simplification is a finding of category `simplify`. Its comment names the rung, shows the code before
-and after, and — for rung 6 — says in its first sentence that it adds a dependency.
+and after, and says what the proposal rests on:
+
+- rungs 4 and 5 — the build file and the line that declares the framework module or the dependency, e.g.
+  `pom.xml:42 org.springframework.retry:spring-retry`. Not found in the build → it is rung 6, not 4 or 5.
+- rung 6 — in its first sentence that it adds a dependency, then its coordinates, version, and last release date, or
+  that the release date is unchecked.
 
 Must not:
 
 - replace code with a library call that behaves differently at the edges (`null`, empty input, time zone, rounding)
   without saying so
 - propose a new dependency for one small function that is clearer written by hand
+- propose a framework feature or a library without having looked for it in the build file
 - shorten code until it is harder to read — shorter only when as clear
 
 [libraries-first](../libraries-first/directive.md) is the utility-method case of rungs 3 to 6.
