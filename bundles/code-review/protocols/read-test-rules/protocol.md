@@ -26,7 +26,7 @@ Introduces no new fields — see `core.md`.
 This step reads tests only. A rule that lives only in production code is not guessed from it here — it shows up when
 [review-use-cases](../review-use-cases/protocol.md) reads the code.
 
-1. For each use case in `structure`, take the tests in its group of the PR map that the change adds or changes. Note
+1. For each use case in `structure`, take the tests among its files that the change adds or changes. Note
    every use case whose production code changes with no test change at all.
 2. Read each test as a statement of a rule: its name, what it sets up, what it does, what it expects. Write the rule
    as one sentence in the language of the requirements — "A reservation cannot be cancelled less than an hour before

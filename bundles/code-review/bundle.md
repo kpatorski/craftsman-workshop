@@ -14,9 +14,9 @@ No fields of its own — see `core.md`.
 ## Bundle
 
 Understanding comes before judging. The review reads the PR's description and the requirements it links, finds the
-use cases, bounded contexts and boundaries the change touches, and reads the tests for the business rules — all of
-it confirmed with the developer before a single line of code is judged. Only then does it walk the code, use case by
-use case, from the entry point down: module, class, method, parameters.
+use cases the change adds or changes, how each one runs and which boundaries its calls cross, and reads the tests for
+the business rules — all of it confirmed with the developer before a single line of code is judged. Only then does it
+walk the code, use case by use case, from the entry point down: module, class, method, parameters.
 
 What it produces is a set of findings, never comments sent on its own: the developer edits, deletes or marks each
 one, and decides when to send. The directives here say what a finding is and how its comment reads; what the code

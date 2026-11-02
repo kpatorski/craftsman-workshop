@@ -4,14 +4,14 @@ title: Explain the places that are hard to follow
 description: >
   Writes, unasked, a few short explanations — engineer to engineer — of the places in the change a reviewer is likely
   to stop at: why it is done this way and how it works in this context. Only the few that matter most; every other
-  place is explained when the developer asks for it on the page.
-input: the review state with a confirmed `structure`, `map` and `rules` (`read-test-rules`)
-output: at most five `triage` explanations in the review state, each about a group of the PR map or a file
+  place is explained when the developer asks about it on the page.
+input: the review state with a confirmed `structure` and `rules` (`read-test-rules`)
+output: at most five threads the agent opened in the review state, each about a use case or a file's lines
 checkpoint:
   type: notify
   prompt: >
-    "Explained <n> places: <what each is about, one per line>. <m> other places could use an explanation — ask for one
-    on the page with Explain."
+    "Explained <n> places: <what each is about, one per line>. <m> other places could use an explanation — select
+    them on the page and ask."
 ---
 
 ## Schema
@@ -40,8 +40,9 @@ An explanation explains; it never judges. What looks wrong while writing one is 
       them says why, write that the reason is not in the change and is a question for the author; never make one up;
     - how it works in this context — the part that is not visible in the lines themselves;
     - what to look at when reviewing it.
-4. Store each explanation with `review_state.py` as soon as it is written, `pending` while it is written and `ready`
-   when done, so the page shows them one by one. Then notify.
+4. Store each explanation with `review_state.py` as soon as it is written, as a thread the agent opens (`open-thread`)
+   about the use case or the file and lines it explains, so the page shows them one by one. A deleted file whose work
+   moved elsewhere is always a candidate: say where it went and what, if anything, did not move with it. Then notify.
 
 Writing the explanations may be done side by side, one per explanation, as delegated read-only preparation
 (`EXECUTION.md`); choosing which places to explain stays in the run itself.
