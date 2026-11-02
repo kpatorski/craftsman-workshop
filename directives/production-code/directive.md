@@ -8,7 +8,7 @@ applies-when: writing or refactoring production code
 composes: [visibility, naming, rich-domain, error-handling, interfaces, abstraction-timing, feature-structure,
   determinism, specifications, single-responsibility, framework-isolation, libraries-first, functional-style,
   no-explanatory-comments, aggregate-design, value-objects, method-exits, logging,
-  security, module-dependencies, type-contracts]
+  security, module-dependencies, type-contracts, simplest-solution]
 precedence: the project's existing conventions win
 enabled-by-default: true
 ---
@@ -19,7 +19,7 @@ Introduces no new fields — see `core.md`.
 
 ## Directive
 
-Twenty-one composed directives, checked on their own merit, in no particular order:
+Twenty-two composed directives, checked on their own merit, in no particular order:
 
 1. [visibility](../visibility/directive.md) — lowest visibility by default.
 2. [naming](../naming/directive.md) — domain-language names, verb-noun use cases.
@@ -44,5 +44,6 @@ Twenty-one composed directives, checked on their own merit, in no particular ord
     door.
 21. [type-contracts](../type-contracts/directive.md) — a subtype keeps its parent's promise, an interface asks
     only what its client uses.
+22. [simplest-solution](../simplest-solution/directive.md) — the simplest code that does the job, or none at all.
 
-Enabling or disabling this directive enables or disables all twenty-one together; each can still be toggled on its own.
+Enabling or disabling this directive enables or disables all twenty-two together; each can still be toggled on its own.

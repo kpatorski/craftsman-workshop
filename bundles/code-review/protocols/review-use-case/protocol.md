@@ -37,7 +37,9 @@ from the page. Code is read in the review's worktree.
     - **parameters** — each parameter and return type: whether it says what the value is, and whether it belongs to
       the layer it crosses.
 
-   At every level, check what the change adds or changes against the criteria. Look at the unchanged code of the
+   At every level, check what the change adds or changes against the criteria, and for every unit it adds, go down
+   [simplest-solution](../../../../directives/simplest-solution/directive.md)'s ladder: a simpler form that holds is
+   a `simplify` finding. Look at the unchanged code of the
    units the change works inside too, and at what the use case reaches outside the change — that is where `scout` and
    `out-of-scope` findings come from.
 3. Have the change checked independently: run `EXECUTION.md`'s "Independent directive review", steps 1–4 and 6, on

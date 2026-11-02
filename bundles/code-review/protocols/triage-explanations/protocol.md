@@ -34,7 +34,7 @@ An explanation explains; it never judges. What looks wrong while writing one is 
 2. Rank them by how much a reviewer loses without the explanation, and take at most five. Count the rest; they are
    not written.
 3. Write each one short — a few sentences, at most a short list — for an engineer who knows the language and the
-   framework but not this code:
+   framework but not this code, per [engineer-prose](../../directives/engineer-prose/directive.md):
     - what it does in this change;
     - why it is done this way — from the code, the commit messages, the PR's description, the tickets. When none of
       them says why, write that the reason is not in the change and is a question for the author; never make one up;

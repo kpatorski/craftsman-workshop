@@ -23,13 +23,13 @@ never polls.
 
 For each message, by its `type`, then record its `id` in `handled` with `review_state.py`:
 
-- `ask` — read the thread it names and reply in the same thread (`reply`), short, engineer to engineer, never a
-  made-up reason. The thread's `about` and `quote` say what the question is about; answer about that. When it asks
-  for a change to a finding, change only the fields the developer has not edited; for an edited field, reply with the
-  proposed text and leave it to the developer to take it on the page. When it asks for a new finding, add it: from a
-  directive, written per [review-comment](../../directives/review-comment/directive.md); or, when the developer
-  states the problem themselves, with no directive and the developer's point as its substance. Say in the reply what
-  was changed or added.
+- `ask` — read the thread it names and reply in the same thread (`reply`), per
+  [engineer-prose](../../directives/engineer-prose/directive.md), never a made-up reason. The thread's `about` and
+  `quote` say what the question is about; answer about that. When it asks for a change to a finding, change only the
+  fields the developer has not edited; for an edited field, reply with the proposed text and leave it to the developer
+  to take it on the page. When it asks for a new finding, add it: from a directive, written per
+  [review-comment](../../directives/review-comment/directive.md); or, when the developer states the problem themselves,
+  with no directive and the developer's point as its substance. Say in the reply what was changed or added.
 - `refresh` — run [refresh-review](../refresh-review/protocol.md).
 - `answer` — an answer to a checkpoint that is no longer open: say so in a thread about the whole review, and ask
   whether it changes anything already done.
