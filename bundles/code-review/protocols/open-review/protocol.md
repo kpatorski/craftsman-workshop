@@ -39,9 +39,17 @@ Introduces no new fields — see `core.md`.
    without checking anything out in the developer's working tree.
 4. Create the worktree: `git worktree add --detach <review folder>/worktree <head>`. Every file the review reads, it
    reads here — the developer's checkout may be on another branch, or mid-change.
-5. Create the review state with `review_state.py init` — source, `checkout` (the path after `--checkout`), `base`
-   (the merge base of target and head), `head`, and the diff `base...head`. The PR in `source` carries its `title`,
-   `base-branch` and `head-branch`; the page shows them in its header.
+5. Write the diff `base...head` into the review's folder — `git diff --output=<review folder>/init.diff
+   <base>...<head>`, where `base` is the merge base of target and head — and create the review state with it:
+
+   ```
+   review_state.py <review folder> init '{"source": {...}, "checkout": "<path after --checkout>",
+     "base": "<sha>", "head": "<sha>", "diff": "<review folder>/init.diff"}'
+   ```
+
+   `init` moves the diff to `diff/<head>.diff`. `source` is `{"kind": "pull-request", "url", "repository", "number",
+   "title", "base-branch", "head-branch"}`, or `{"kind": "branches", "target", "source", "pull-request"}` with the
+   same PR object or null — see `REVIEW.md`; the page shows the title and the branches in its header.
 6. Settle the comment language: English when the description is in English or there is no PR; otherwise stop here
    and ask (the checkpoint above), and record the answer in the review state.
 
