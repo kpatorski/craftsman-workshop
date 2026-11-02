@@ -5,7 +5,7 @@ description: >
   Reads one use case's code from its entry point down — module, class, method, parameters — checks it against the
   enabled directives, and has independent reviewers check the same code, so the findings do not depend on one reader's
   blind spots. Every finding is written as a proposed PR comment and shown on the page at once.
-input: one use case from the review state's `structure`, with its files in the PR map
+input: one use case from the review state's `structure`, with its files
 output: the use case `reviewed`, its findings in the review state
 checkpoint:
   type: notify
@@ -48,11 +48,16 @@ from the page. Code is read in the review's worktree.
 4. Merge the walk's findings with the reviewers': the same problem at the same place is one finding. The same problem
    at several places of this use case is one finding with several locations, the first being the clearest.
 5. Bring in what earlier steps left as questions: a requirement no test states, a rule that contradicts one, a use
-   case with no test change, a doubtful link in `structure`. Each becomes a finding only when an enabled directive
-   covers it; otherwise it stays the question it already is.
+   case with no test change, a step whose call `crosses` a boundary. Each becomes a finding only when an enabled
+   directive covers it; otherwise it stays the question it already is.
 6. Write every finding per `review-comment`, in the review's comment language: `category`, `title`, `description`,
-   `comment`, `locations` (with the `head` commit), `directive`, `kind`, and `when` for `out-of-scope`. Store each with
-   `review_state.py` as `proposed` as soon as it is written, so the page fills while the walk goes on.
+   `comment`, `locations` (with the `head` commit), `directive`, `kind`, `severity`, and `when` for `out-of-scope`.
+   `severity` is how much it costs to merge the code as it is:
+    - `must-fix` — it breaks a requirement, loses or exposes data, or opens a security hole;
+    - `should-fix` — it works, but makes the code harder to change or to trust, and is cheap to fix now;
+    - `nit` — a small matter of naming or form the reviewer would not hold the PR for.
+
+   Store each with `review_state.py` as `proposed` as soon as it is written, so the page fills while the walk goes on.
 7. Mark the use case `reviewed`, then notify.
 
 ## Examples

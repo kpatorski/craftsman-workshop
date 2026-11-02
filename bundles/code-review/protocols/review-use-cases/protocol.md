@@ -20,11 +20,10 @@ Repeat until the condition holds:
 
 1. [review-use-case](../review-use-case/protocol.md) — the next use case not yet `reviewed`.
 
-The files of the PR map's shared groups (a shared model, configuration, migrations, the build) are reviewed with the
-first use case that reaches them, and only once. A group no use case reaches is reviewed last, as a use case of its
-own.
+A file in several use cases is reviewed with the first use case that reaches it, and only once. The changed files no
+use case reaches (the server lists them apart) are reviewed last, together, as a use case of their own.
 
 ## Examples
 
 A PR with the use cases "Cancel a reservation" and "Release unpaid reservations" is reviewed in that order;
-`ReservationRepository`, in the shared group, is reviewed with "Cancel a reservation" and not again with the second.
+`ReservationRepository`, in both, is reviewed with "Cancel a reservation" and not again with the second.
