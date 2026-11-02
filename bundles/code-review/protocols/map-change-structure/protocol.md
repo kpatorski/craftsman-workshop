@@ -37,7 +37,9 @@ it notices becomes a finding here; a call that looks wrong is recorded on its st
    reaches stays out of every use case; the server lists such files apart, so none is lost, and they are questions for
    the checkpoint.
 4. Name every use case in the language of the requirements, verb and noun ("Cancel a reservation"), never after the
-   class that implements it, and write `says`: one sentence on what it does, for someone who has not read the code.
+   class that implements it. Write, per [engineer-prose](../../directives/engineer-prose/directive.md), `says` — one
+   sentence on what it does, for someone who has not read the code — and `before` and `after`: how the system
+   behaves in this use case without the change and with it, one to three sentences each, in the same terms.
 5. Write its `flow`:
     - `steps` — the calls from the entry point down, one per unit the use case passes through, each with its file
       and line and whether the change added, modified, deleted it or left it unchanged. A step whose call crosses a

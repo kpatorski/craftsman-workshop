@@ -108,14 +108,15 @@ description for the caveat.
 | 39 | [security](security/directive.md)                               | Distrust input, bound it, and destroy only what is meant                          |
 | 40 | [module-dependencies](module-dependencies/directive.md)         | Dependencies point one way and go through the front door                          |
 | 41 | [type-contracts](type-contracts/directive.md)                   | A subtype keeps its parent's promise, an interface asks only what its client uses |
+| 42 | [simplest-solution](simplest-solution/directive.md)             | The simplest code that does the job, or none at all                               |
 
 **Disabled**
 
 | No | Id                                                                          | Title                                                      |
 |----|-----------------------------------------------------------------------------|------------------------------------------------------------|
-| 42 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
-| 43 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
-| 44 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
+| 43 | [prefer-lombok](prefer-lombok/directive.md)                                 | Prefer Lombok over hand-written boilerplate                |
+| 44 | [prefer-liquibase-owned-schema](prefer-liquibase-owned-schema/directive.md) | Liquibase owns the schema, Hibernate never generates DDL   |
+| 45 | [prefer-result-type-library](prefer-result-type-library/directive.md)       | Use the online.goodcode:result library for the Result type |
 
 ### Specs
 
@@ -130,4 +131,4 @@ Empty — every entry that was here moved to the `spec-writing` bundle.
 
 Empty.
 
-51 directives total.
+52 directives total.

@@ -28,8 +28,10 @@ Introduces no new fields — see `core.md`.
 3. Read each ticket with whatever Jira access this environment has — its summary, description and acceptance
    criteria. No access, or a ticket that cannot be read: record why in `requirements`, never guess what the ticket
    says, and offer the developer to paste it at the checkpoint.
-4. Write the `scope`: a few sentences on what the change does and why, and what the description says is left out.
-   Write the `requirements`: what the tickets ask for, one item per requirement, each with its ticket key.
+4. Write the `scope` in three short parts, per [engineer-prose](../../directives/engineer-prose/directive.md):
+   **Before** — how the system behaves today in the part the PR touches; **After** — how it behaves once the PR is
+   merged, and why; **Left out** — what the description says the PR does not do. Write the `requirements`: what the
+   tickets ask for, one item per requirement, each with its ticket key.
 5. Note every place where the description and the tickets disagree — a requirement the description does not mention,
    something the description adds that no ticket asks for. These are questions for the checkpoint, not findings yet.
 6. Store all of it with `review_state.py`, then stop at the checkpoint. A correction is written into `scope` or

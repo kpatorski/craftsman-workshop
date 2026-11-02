@@ -51,6 +51,7 @@ Empty — nothing has been switched off yet.
 |----|----------------------------------------------------------|--------------------------------------------------------------------------|
 | 1  | [review-comment](directives/review-comment/directive.md) | A review comment names the problem, its consequence, and a fix           |
 | 2  | [review-posture](directives/review-posture/directive.md) | An existing convention changes a finding's kind, never whether it exists |
+| 3  | [engineer-prose](directives/engineer-prose/directive.md) | Review texts read like one engineer briefing another                     |
 
 **Disabled**
 
