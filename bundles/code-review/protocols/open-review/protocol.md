@@ -43,7 +43,8 @@ Introduces no new fields — see `core.md`.
 5. Create the worktree: `git worktree add --detach .claude/reviews/<review-id>/worktree <head>`. Every file the review
    reads, it reads here — the developer's checkout may be on another branch, or mid-change.
 6. Create the review state with `review_state.py init` — source, `base` (the merge base of target and head), `head`,
-   and the diff `base...head`.
+   and the diff `base...head`. The PR in `source` carries its `title`, `base-branch` and `head-branch`; the page shows
+   them in its header.
 7. Settle the comment language: English when the description is in English or there is no PR; otherwise stop here
    and ask (the checkpoint above), and record the answer in the review state.
 8. Open the review page: `dashboard_server.py on --project <repository>`, and print the review's URL on its own line.
