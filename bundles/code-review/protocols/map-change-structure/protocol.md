@@ -27,7 +27,8 @@ This step reads to find the shape, never to judge: names, signatures and calls, 
 it notices becomes a finding here; a call that looks wrong is recorded on its step as `crosses`, a note for
 [review-use-cases](../review-use-cases/protocol.md).
 
-1. List the changed files: `git diff --name-status <base>...<head>`, read in the review's worktree.
+1. List the changed files: `git -C <worktree> diff --name-status <base>...<head>`. Git runs in the worktree through
+   `-C`, never after a `cd`: the review's headless session refuses a `cd` followed by `git`.
 2. Find the entry points the change adds or changes — the places where something outside the code calls in: an HTTP
    endpoint, a message listener, a scheduled job, a command-line command, a public method of a module's API, and in a
    user interface a user's action or a route. Every entry point is one use case; its `entry` is the file and line

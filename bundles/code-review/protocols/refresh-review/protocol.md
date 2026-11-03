@@ -30,10 +30,10 @@ Introduces no new fields — see `core.md`.
    `base...head`, and record the new `base`, `head` and `refreshed`.
 5. When the description or the tickets changed, compare them with `scope` and `requirements` and name what differs in
    the notification. They are not rewritten without the developer: a correction comes as a message.
-6. Find what the new commits changed: `git diff <old head>..<head> --name-only`. Every use case with a changed file
-   goes back to `pending`. A newly changed file is added to every use case whose calls reach it, or to a new use case,
-   the way [map-change-structure](../map-change-structure/protocol.md) places it; a file none reaches stays out of
-   every use case, and the server lists it apart.
+6. Find what the new commits changed: `git -C <worktree> diff <old head>..<head> --name-only`. Every use case with a
+   changed file goes back to `pending`. A newly changed file is added to every use case whose calls reach it, or to a
+   new use case, the way [map-change-structure](../map-change-structure/protocol.md) places it; a file none reaches
+   stays out of every use case, and the server lists it apart.
 7. Re-check every finding that is not `deleted`, `merged` or `sent`, at the new head:
     - its lines moved — update its locations;
     - the problem is gone — set `maybe-resolved`; only the developer decides it is resolved;

@@ -21,7 +21,7 @@ Introduces no new fields — see `core.md`.
 ## Protocol
 
 The review reads and writes findings; it never edits the code and never posts anything — sending is the developer's,
-from the page. Code is read in the review's worktree.
+from the page. Code is read in the review's worktree; git runs there as `git -C <worktree> …`, never after a `cd`.
 
 1. Mark the use case `reviewing`. Collect the criteria: every enabled directive whose `applies-when` matches this
    use case's code, resolved to its file. [review-posture](../../directives/review-posture/directive.md) and
