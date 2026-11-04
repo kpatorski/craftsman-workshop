@@ -36,8 +36,16 @@ Introduces no new fields — see `core.md`.
 
    Nothing is answered on GitHub from here; that is the developer's, from the page.
 4. When the head has not moved, stop here: record `refreshed`, then notify.
-5. Move the review's worktree to the new head (`git -C <worktree> checkout --detach <head>`), store the diff of
-   `base...head`, and record the new `base`, `head` and `refreshed`.
+5. Note the old head, then move the review's worktree to the new head (`git -C <worktree> checkout --detach <head>`).
+   Write the diff `base...head` into the review's folder, the way [open-review](../open-review/protocol.md) does —
+   `git -C <worktree> diff --output=<review folder>/refresh.diff <base>...<head>` — and move the review to it:
+
+   ```
+   review_state.py <review folder> refresh '{"base": "<sha>", "head": "<sha>", "diff": "<review folder>/refresh.diff"}'
+   ```
+
+   `refresh` keeps the diff as `diff/<head>.diff`, records `base`, `head` and `refreshed`, and takes "viewed" off
+   every file whose change differs — the Code tab shows the new diff.
 6. When the description or the tickets changed, compare them with `scope` and `requirements` and name what differs in
    the notification. They are not rewritten without the developer: a correction comes as a message.
 7. Find what the new commits changed: `git -C <worktree> diff <old head>..<head> --name-only`. Every use case with a
