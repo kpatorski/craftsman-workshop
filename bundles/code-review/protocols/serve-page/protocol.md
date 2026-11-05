@@ -3,8 +3,8 @@ id: serve-page
 title: Answer the review page until the review is closed
 description: >
   Keeps the review's session working for the developer after the walk is done: every request sent from the review
-  page — a question about a finding, a file's lines, a use case or the whole review, a refresh — is handled as it
-  arrives, until the developer closes the review.
+  page — a question about a finding, a file's lines, a use case or the whole review, a refresh, a directive to
+  check — is handled as it arrives, until the developer closes the review.
 input: the review state with every use case `reviewed` and the findings deduplicated
 output: every request from the page handled; the review `closed`
 steps: [refresh-review]
@@ -31,6 +31,11 @@ For each message, by its `type`, then record its `id` in `handled` with `review_
   [review-comment](../../directives/review-comment/directive.md); or, when the developer states the problem themselves,
   with no directive and the developer's point as its substance. Say in the reply what was changed or added.
 - `refresh` — run [refresh-review](../refresh-review/protocol.md).
+- `check` — the developer switched on the directive it names after use cases were reviewed. Check every use case
+  already `reviewed`, and `untied` once reviewed, against that directive alone, as
+  [review-use-case](../review-use-case/protocol.md) steps 3, 4, 6 and 7 do: one reviewer per use case's part of the
+  diff, all started in the same turn. Add what holds as findings, record each result with `record-check`, and say in
+  the console how many findings it made in which use cases.
 - `answer` — an answer to a checkpoint that is no longer open: say so in a thread about the whole review, and ask
   whether it changes anything already done.
 - `close` — set `closed` in the review state and end the run. The state and the worktree stay; the review can be

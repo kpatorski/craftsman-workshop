@@ -21,7 +21,8 @@ Repeat until the condition holds:
 1. [review-use-case](../review-use-case/protocol.md) — the next use case not yet `reviewed`.
 
 A file in several use cases is reviewed with the first use case that reaches it, and only once. The changed files no
-use case reaches (the server lists them apart) are reviewed last, together, as a use case of their own.
+use case reaches (the server lists them apart) are reviewed last, together, as a use case of their own, whose checks
+are recorded under the use case `untied`.
 
 ## Examples
 
