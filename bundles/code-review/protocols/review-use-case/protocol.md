@@ -46,7 +46,8 @@ from the page. Code is read in the review's worktree; git runs there as `git -C 
    `out-of-scope` findings come from.
 3. Have the change checked independently: run `EXECUTION.md`'s "Independent directive review", steps 2–4 and 6, on
    this use case's part of the diff (`base...head`, this use case's files and the shared files it is the first to
-   reach), with every criterion from step 1 — groups of at most six, all started in the same turn. Step 1 there does
+   reach), with every criterion from step 1 — groups of at most six, all started in the same turn. Each reviewer gets
+   the developer's `context` from the review state, when there is one, with its part of the diff. Step 1 there does
    not run: the criteria are this protocol's step 1. Step 4 never fixes anything here: a `VIOLATION` that holds is a
    `violation` finding; a `CONVENTION` that holds is a `new-convention` finding when the changed code is a new unit,
    otherwise a `scout` finding — see `review-posture`. Step 5 does not run, because nothing is fixed.

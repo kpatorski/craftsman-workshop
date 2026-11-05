@@ -4,7 +4,7 @@ title: Answer the review page until the review is closed
 description: >
   Keeps the review's session working for the developer after the walk is done: every request sent from the review
   page — a question about a finding, a file's lines, a use case or the whole review, a refresh, a directive to
-  check — is handled as it arrives, until the developer closes the review.
+  check, a new context — is handled as it arrives, until the developer closes the review.
 input: the review state with every use case `reviewed` and the findings deduplicated
 output: every request from the page handled; the review `closed`
 steps: [refresh-review]
@@ -36,6 +36,9 @@ For each message, by its `type`, then record its `id` in `handled` with `review_
   [review-use-case](../review-use-case/protocol.md) steps 3, 4, 6 and 7 do: one reviewer per use case's part of the
   diff, all started in the same turn. Add what holds as findings, record each result with `record-check`, and say in
   the console how many findings it made in which use cases.
+- `context` — the developer added a note to the review's `context` or took one back. Read the notes, work by them
+  from the next step on, and say in the console in one sentence what that changes in the review; use cases already
+  reviewed are not reviewed again unless the developer asks.
 - `answer` — an answer to a checkpoint that is no longer open: say so in a thread about the whole review, and ask
   whether it changes anything already done.
 - `close` — set `closed` in the review state and end the run. The state and the worktree stay; the review can be

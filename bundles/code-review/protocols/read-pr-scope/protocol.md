@@ -23,7 +23,8 @@ Introduces no new fields — see `core.md`.
 ## Protocol
 
 1. Read what the author wrote: the PR's title and description. Without a PR, read the commit messages of
-   `base..head` and the source branch's name instead, and say on the page that there is no description.
+   `base..head` and the source branch's name instead, and say on the page that there is no description. Read the
+   developer's `context` from the review state, when there is one: it says what the description does not.
 2. Find the Jira tickets: keys (`ABC-123`) and Jira links in the title, the description and the branch name.
 3. Read each ticket with whatever Jira access this environment has — its summary, description and acceptance
    criteria. No access, or a ticket that cannot be read: record why in `requirements`, never guess what the ticket
@@ -32,8 +33,9 @@ Introduces no new fields — see `core.md`.
    **Before** — how the system behaves today in the part the PR touches; **After** — how it behaves once the PR is
    merged, and why; **Left out** — what the description says the PR does not do. Write the `requirements`: what the
    tickets ask for, one item per requirement, each with its ticket key.
-5. Note every place where the description and the tickets disagree — a requirement the description does not mention,
-   something the description adds that no ticket asks for. These are questions for the checkpoint, not findings yet.
+5. Note every place where the description, the tickets and the developer's `context` disagree — a requirement the
+   description does not mention, something the description adds that no ticket asks for. These are questions for the
+   checkpoint, not findings yet.
 6. Store all of it with `review_state.py`, then stop at the checkpoint. A correction is written into `scope` or
    `requirements` before the review goes on; pasted requirements are recorded as given by the developer.
 
