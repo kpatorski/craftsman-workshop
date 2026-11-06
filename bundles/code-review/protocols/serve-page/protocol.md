@@ -31,11 +31,12 @@ For each message, by its `type`, then record its `id` in `handled` with `review_
   [review-comment](../../directives/review-comment/directive.md); or, when the developer states the problem themselves,
   with no directive and the developer's point as its substance. Say in the reply what was changed or added.
 - `refresh` — run [refresh-review](../refresh-review/protocol.md).
-- `check` — the developer switched on the directive it names after use cases were reviewed. Check every use case
-  already `reviewed`, and `untied` once reviewed, against that directive alone, as
-  [review-use-case](../review-use-case/protocol.md) steps 3, 4, 6 and 7 do: one reviewer per use case's part of the
-  diff, all started in the same turn. Add what holds as findings, record each result with `record-check`, and say in
-  the console how many findings it made in which use cases.
+- `check` — the developer switched on the directive it names after use cases were reviewed. Read the plan again
+  (`review_directives.py <review folder> --plan`) and start that directive's reviewers alone: a `file` directive once
+  over its files, a `flow` one per use case already `reviewed`, and `untied` once reviewed — as
+  [review-use-case](../review-use-case/protocol.md) steps 3, 4, 6 and 7 do, all started in the same turn. Add what
+  holds as findings, record the results with one `record-check`, the plan's `not-applicable` checks for it included,
+  and say in the console how many findings it made in which use cases.
 - `context` — the developer added a note to the review's `context` or took one back. Read the notes, work by them
   from the next step on, and say in the console in one sentence what that changes in the review; use cases already
   reviewed are not reviewed again unless the developer asks.

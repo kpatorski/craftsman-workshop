@@ -5,7 +5,8 @@ directives say how code is written and know nothing of the review; this table is
 
 - `Files` — the changed files the directive is checked on:
   - `production` — every changed file that is not a test;
-  - `tests` — the test files: under a `test` folder, or named as a test (`*Test.*`, `*Spec.*`, `*.test.*`);
+  - `tests` — the test files: in a `test`, `tests` or `__tests__` folder, or named as a test (`*Test.*`, `*Tests.*`,
+    `*Spec.*`, `*.test.*`, `*.spec.*`, `test_*.py`);
   - `all` — every changed file;
   - `none` — not checked in a review: it is about writing specs or commits, or it only gathers other directives that
     have rows of their own.

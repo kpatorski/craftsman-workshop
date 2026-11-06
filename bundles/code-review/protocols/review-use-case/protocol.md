@@ -23,10 +23,11 @@ Introduces no new fields — see `core.md`.
 The review reads and writes findings; it never edits the code and never posts anything — sending is the developer's,
 from the page. Code is read in the review's worktree; git runs there as `git -C <worktree> …`, never after a `cd`.
 
-1. Mark the use case `reviewing`. Collect the criteria: run the plugin's `review_directives.py <review folder>`, by
-   its full path. It prints every directive this review checks, with its file — the developer switches them on the
-   review page — and every one of them is a criterion for this use case: none is left out because it seems not to
-   fit, the reviewers say which do not apply. [review-posture](../../directives/review-posture/directive.md) and
+1. Mark the use case `reviewing`. Collect the criteria: the directives of the plan's reviewers for this use case
+   (`review_directives.py <review folder> --plan`, read in [review-use-cases](../review-use-cases/protocol.md)), the
+   `flow` directives; the `file` ones were checked over the whole change before the first use case. The developer
+   switches the directives on the review page, and the plan leaves none out because it seems not to fit: the reviewers
+   say which do not apply. [review-posture](../../directives/review-posture/directive.md) and
    [review-comment](../../directives/review-comment/directive.md) are not among them; they govern how every finding
    below is kinded and written.
 2. Walk the use case from its `entry` down, one level at a time, each level before the next:
@@ -44,10 +45,10 @@ from the page. Code is read in the review's worktree; git runs there as `git -C 
    a `simplify` finding. Look at the unchanged code of the
    units the change works inside too, and at what the use case reaches outside the change — that is where `scout` and
    `out-of-scope` findings come from.
-3. Have the change checked independently: run `EXECUTION.md`'s "Independent directive review", steps 2–4 and 6, on
-   this use case's part of the diff (`base...head`, this use case's files and the shared files it is the first to
-   reach), with every criterion from step 1 — groups of at most six, all started in the same turn. Each reviewer gets
-   the developer's `context` from the review state, when there is one, with its part of the diff. Step 1 there does
+3. Have the change checked independently: run `EXECUTION.md`'s "Independent directive review", steps 2–4 and 6, once
+   per reviewer the plan gives this use case, on the part of the diff (`base...head`) of that reviewer's files, with
+   that reviewer's directives — all started in the same turn, each with `model: "sonnet"`. Each reviewer gets the
+   developer's `context` from the review state, when there is one, with its part of the diff. Step 1 there does
    not run: the criteria are this protocol's step 1. Step 4 never fixes anything here: a `VIOLATION` that holds is a
    `violation` finding; a `CONVENTION` that holds is a `new-convention` finding when the changed code is a new unit,
    otherwise a `scout` finding — see `review-posture`. Step 5 does not run, because nothing is fixed.
@@ -64,14 +65,18 @@ from the page. Code is read in the review's worktree; git runs there as `git -C 
     - `nit` — a small matter of naming or form the reviewer would not hold the PR for.
 
    Store each with `review_state.py` as `proposed` as soon as it is written, so the page fills while the walk goes on.
-7. Record what every criterion found in this use case, one `review_state.py <review folder> record-check` each —
-   `{"use-case": "<id>", "directive": "<id>", "result": ..., "note": ...}`:
-    - `findings` — a finding of this use case names the directive;
-    - `clean` — its reviewer found nothing, or nothing that held;
-    - `not-applicable` — its reviewer said so; its reason goes in `note`;
-    - `failed` — its group failed twice (step 6 of the independent review); say so at the checkpoint.
+7. Record what every directive found in this use case, all in one `review_state.py <review folder> record-check`
+   with a list of `{"use-case": "<id>", "directive": "<id>", "result": ..., "note": ...}`:
+    - for each criterion of step 1:
+        - `findings` — a finding of this use case names the directive;
+        - `clean` — its reviewer found nothing, or nothing that held;
+        - `not-applicable` — its reviewer said so; its reason goes in `note`;
+        - `failed` — its group failed twice (step 6 of the independent review); say so at the checkpoint;
+    - for each `file` directive the plan's `file-checks` gives this use case: `findings` when a finding naming it has
+      a location in this use case's files, `failed` when its reviewer failed twice, else `clean`;
+    - every check the plan's `not-applicable` gives this use case, as it is, with its `note`.
 
-   A criterion with no record is a gap, never reported as clean.
+   A directive with no record is a gap, never reported as clean.
 8. Mark the use case `reviewed`, then notify.
 
 ## Examples
@@ -86,6 +91,8 @@ from the page. Code is read in the review's worktree; git runs there as `git -C 
   on method exits, its comment proposing one named condition.
 - parameters: `cancel(String reservationId, String userId)` → a finding under `value-objects`, with both parameters
   as one finding with two locations.
-- every directive the review checks goes to the reviewers: `no-explanatory-comments` reports the comments the change
-  adds above `cancel(...)` and `refund(...)` → one finding with two locations, recorded as `findings`; `logging`,
-  with nothing logged in the use case, is recorded as `not-applicable`, "nothing is logged".
+- every directive the plan gives goes to the reviewers: `module-dependencies` reports the import of
+  `billing.internal.RefundCalculator`, recorded as `findings`; `security`, with no input from outside in the use case,
+  is recorded as `not-applicable`, "no input from outside". `no-explanatory-comments`, a `file` directive, found the
+  comments above `cancel(...)` before the use cases, so it is recorded here as `findings` too; `test-naming`, with no
+  test file in the use case, is recorded as the plan says: `not-applicable`, "no test files in this use case".
