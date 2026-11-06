@@ -33,10 +33,16 @@ it notices becomes a finding here; a call that looks wrong is recorded on its st
    endpoint, a message listener, a scheduled job, a command-line command, a public method of a module's API, and in a
    user interface a user's action or a route. Every entry point is one use case; its `entry` is the file and line
    where it starts.
-3. From each entry point, follow the calls down through the changed code. Every changed file the calls reach belongs
-   to the use case — a file reached from several use cases belongs to each of them. A changed file no entry point
-   reaches stays out of every use case; the server lists such files apart, so none is lost, and they are questions for
-   the checkpoint.
+3. Give each use case its changed files, in this order:
+    1. **calls** — from the entry point, follow the calls down through the changed code; every changed file they
+       reach belongs to the use case;
+    2. **types** — every changed file declaring a type the use case's steps use: a parameter, a return value, a field,
+       an object they create, an exception they throw;
+    3. **package** — a changed file still in no use case belongs to the use case whose files share its package, when
+       exactly one does. When two or more do, it stays in none.
+
+   A file reached from several use cases belongs to each of them. A changed file in no use case is listed apart by
+   the server, so none is lost; each is a question for the checkpoint.
 4. Name every use case in the language of the requirements, verb and noun ("Cancel a reservation"), never after the
    class that implements it. Write, per [engineer-prose](../../directives/engineer-prose/directive.md), `says` — one
    sentence on what it does, for someone who has not read the code — and `before` and `after`: how the system
@@ -60,8 +66,10 @@ delegated read-only preparation (`EXECUTION.md`); the names, the flows and the c
 
 A PR adds `POST /reservations/{id}/cancel` and a nightly job that releases unpaid reservations. Two use cases:
 "Cancel a reservation" (entry: the controller's method) and "Release unpaid reservations" (entry: the job).
-`ReservationRepository`, which both call, is in the files of both. A changed `docker-compose.yml` no entry point
-reaches is in neither; the checkpoint asks why it is in the PR.
+`ReservationRepository`, which both call, is in the files of both. `CancellationRequest`, the record the controller
+passes to the service, is called by no one but is a parameter of a step, so it is in "Cancel a reservation" too. A
+changed `CancellationPolicy` that no step names, in the package of "Cancel a reservation" only, joins that use case. A
+changed `docker-compose.yml` no use case reaches is in neither; the checkpoint asks why it is in the PR.
 
 "Refund in full" calls `billing.internal.RefundGateway` instead of billing's public `Billing`: that step's `crosses`
 says "billing.internal", and the page draws the call in red.
