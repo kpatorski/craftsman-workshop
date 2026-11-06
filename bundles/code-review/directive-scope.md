@@ -11,8 +11,9 @@ directives say how code is written and know nothing of the review; this table is
   - `none` — not checked in a review: it is about writing specs or commits, or it only gathers other directives that
     have rows of their own.
 - `Reach` — what a reviewer needs to see:
-  - `file` — one file is enough to judge it (a name, a comment, a method's exits). It is checked once over the whole
-    change, the files in batches.
+  - `file` — one file is enough to judge it (a name, a comment, a method's exits, who uses a class it makes public). It
+    is checked once over the whole change, the files in batches; the reviewer looks up in the code whatever else the
+    file's code relies on.
   - `flow` — it needs the use case: what calls what, across files and modules. It is checked per use case.
 
 A directive with no row here is checked on `all` files with `flow` reach, and the review page and the dashboard name
@@ -20,18 +21,18 @@ it, so a row can be added.
 
 | Directive                        | Files      | Reach |
 |----------------------------------|------------|-------|
-| `abstraction-timing`             | production | flow  |
+| `abstraction-timing`             | production | file  |
 | `aggregate-design`               | production | flow  |
 | `architecture-profile`           | production | flow  |
 | `commit-message`                 | none       | -     |
 | `crud-or-domain`                 | none       | -     |
 | `defer-discovered-gaps`          | none       | -     |
 | `determinism`                    | production | file  |
-| `error-handling`                 | production | flow  |
+| `error-handling`                 | production | file  |
 | `feature-structure`              | production | flow  |
 | `framework-isolation`            | production | flow  |
 | `functional-style`               | production | file  |
-| `interfaces`                     | production | flow  |
+| `interfaces`                     | production | file  |
 | `libraries-first`                | all        | file  |
 | `logging`                        | production | file  |
 | `method-exits`                   | production | file  |
@@ -53,9 +54,9 @@ it, so a row can be added.
 | `simplest-solution`              | production | flow  |
 | `single-responsibility`          | production | file  |
 | `specifications`                 | production | file  |
-| `type-contracts`                 | production | flow  |
+| `type-contracts`                 | production | file  |
 | `value-objects`                  | production | file  |
-| `visibility`                     | production | flow  |
+| `visibility`                     | production | file  |
 | `acceptance-criteria-format`     | none       | -     |
 | `classify-task-shape`            | none       | -     |
 | `definition-of-done`             | none       | -     |

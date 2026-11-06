@@ -23,11 +23,11 @@ Introduces no new fields — see `core.md`.
 The review reads and writes findings; it never edits the code and never posts anything — sending is the developer's,
 from the page. Code is read in the review's worktree; git runs there as `git -C <worktree> …`, never after a `cd`.
 
-1. Mark the use case `reviewing`. Collect the criteria: the directives of the plan's reviewers for this use case
-   (`review_directives.py <review folder> --plan`, read in [review-use-cases](../review-use-cases/protocol.md)), the
-   `flow` directives; the `file` ones were checked over the whole change before the first use case. The developer
-   switches the directives on the review page, and the plan leaves none out because it seems not to fit: the reviewers
-   say which do not apply. [review-posture](../../directives/review-posture/directive.md) and
+1. Mark the use case `reviewing`. Collect the criteria: the directives of the plan's `flow` reviewers that took this use
+   case (`review_directives.py <review folder> --plan`, read in [review-use-cases](../review-use-cases/protocol.md));
+   the `file` directives are checked over the whole change, not per use case. The developer switches the directives on
+   the review page, and the plan leaves none out because it seems not to fit: the reviewers say which do not apply.
+   [review-posture](../../directives/review-posture/directive.md) and
    [review-comment](../../directives/review-comment/directive.md) are not among them; they govern how every finding
    below is kinded and written.
 2. Walk the use case from its `entry` down, one level at a time, each level before the next:
@@ -45,13 +45,13 @@ from the page. Code is read in the review's worktree; git runs there as `git -C 
    a `simplify` finding. Look at the unchanged code of the
    units the change works inside too, and at what the use case reaches outside the change — that is where `scout` and
    `out-of-scope` findings come from.
-3. Have the change checked independently: run `EXECUTION.md`'s "Independent directive review", steps 2–4 and 6, once
-   per reviewer the plan gives this use case, on the part of the diff (`base...head`) of that reviewer's files, with
-   that reviewer's directives — all started in the same turn, each with `model: "sonnet"`. Each reviewer gets the
-   developer's `context` from the review state, when there is one, with its part of the diff. Step 1 there does
-   not run: the criteria are this protocol's step 1. Step 4 never fixes anything here: a `VIOLATION` that holds is a
-   `violation` finding; a `CONVENTION` that holds is a `new-convention` finding when the changed code is a new unit,
-   otherwise a `scout` finding — see `review-posture`. Step 5 does not run, because nothing is fixed.
+3. Take this use case's part of the independent check, started for the whole change in
+   [review-use-cases](../review-use-cases/protocol.md): what the `flow` reviewers reported under this use case, and what
+   the `file` reviewers reported in its files that no earlier use case took. Verify it as `EXECUTION.md`'s "Independent
+   directive review" step 4 says; a reviewer that failed or left a directive out is run again once, as its step 6 says,
+   for this use case's part. Step 4 never fixes anything here: a `VIOLATION` that holds is a `violation` finding; a
+   `CONVENTION` that holds is a `new-convention` finding when the changed code is a new unit, otherwise a `scout`
+   finding — see `review-posture`. Step 5 does not run, because nothing is fixed.
 4. Merge the walk's findings with the reviewers': the same problem at the same place is one finding. The same problem
    at several places of this use case is one finding with several locations, the first being the clearest.
 5. Bring in what earlier steps left as questions: a requirement no test states, a rule that contradicts one, a use

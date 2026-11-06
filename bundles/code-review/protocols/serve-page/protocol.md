@@ -32,8 +32,8 @@ For each message, by its `type`, then record its `id` in `handled` with `review_
   with no directive and the developer's point as its substance. Say in the reply what was changed or added.
 - `refresh` — run [refresh-review](../refresh-review/protocol.md).
 - `check` — the developer switched on the directive it names after use cases were reviewed. Read the plan again
-  (`review_directives.py <review folder> --plan`) and start that directive's reviewers alone: a `file` directive once
-  over its files, a `flow` one per use case already `reviewed`, and `untied` once reviewed — as
+  (`review_directives.py <review folder> --plan`) and start that directive's reviewers alone, as the plan packs them: a
+  `file` directive over its files, a `flow` one on the use cases already `reviewed`, and `untied` once reviewed — as
   [review-use-case](../review-use-case/protocol.md) steps 3, 4, 6 and 7 do, all started in the same turn. Add what
   holds as findings, record the results with one `record-check`, the plan's `not-applicable` checks for it included,
   and say in the console how many findings it made in which use cases.
