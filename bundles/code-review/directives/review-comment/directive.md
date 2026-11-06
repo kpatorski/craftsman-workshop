@@ -29,7 +29,8 @@ Must:
 - in English, unless the developer chose another language for this review — a PR whose description is in another
   language is a question to the developer before the first comment is written, never a guess
 - one problem per comment — two problems are two findings
-- a code snippet only when the fix is not clear from a sentence, and then only the lines that change
+- a code snippet when the fix is not clear from a sentence — a new type, a changed signature — or when the developer
+  asks for one, a placeholder in their draft included; only the lines that matter
 - an `out-of-scope` finding says so first and whether it is for this PR or a follow-up — so the history shows the
   topic was seen, not skipped
 - a `new-convention` finding says the existing code does it the other way and why new code need not
